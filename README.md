@@ -1,3 +1,15 @@
+# MILESTONE PROGETTO BACK
+
+# M-1: CREAZIONE DATABASE
+
+# M-2: CREAZIONE E IMPLEMENTAZIONE MODEL CONTROLLER SEEDER ROTTE MIGRAZIONI
+
+# M-3: CREARE AUTENTICAZIONE EMAIL TRAMITE BREEZE
+
+# M-4: CREAZIONE LAYOUT LARAVEL
+
+
+
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
 
 <p align="center">

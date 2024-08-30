@@ -2,10 +2,10 @@
 
 namespace Database\Seeders;
 
+
+use App\Models\User;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
-use App\Models\User;
-use Illuminate\Support\Facades\Hash;
 
 class UserSeeder extends Seeder
 {
@@ -14,20 +14,29 @@ class UserSeeder extends Seeder
      */
     public function run(): void
     {
-        // \App\Models\User::factory(10)->create();
+        $hacker = new User();
+        $hacker->email = "tihofregato@gmail.com";
+        $hacker->password = "ciao1234";
+        $hacker->save();
 
-        // \App\Models\User::factory()->create([
-        //     'name' => 'Test User',
-        //     'email' => 'test@example.com',
-        // ]);
+        $franco = new User();
+        $franco->email = "ciao@gmail.com";
+        $franco->password = "ciao1234";
+        $franco->save();
 
-        if (!User::where("email", "luca@lambia.it")->first()) {
-            $mainUser = new User();
-            $mainUser->name = "Luca";
-            $mainUser->email = "luca@lambia.it";
-            $mainUser->email_verified_at = now();
-            $mainUser->password = Hash::make('1backdoor2big');
-            $mainUser->save();
-        }
+        $giancarlo = new User();
+        $giancarlo->email = "bella@gmail.com";
+        $giancarlo->password = "ciao1234";
+        $giancarlo->save();
+
+        $paolo = new User();
+        $paolo->email = "carissimo@gmail.com";
+        $paolo->password = "ciao1234";
+        $paolo->save();
+
+        $lorenzo = new User();
+        $lorenzo->email = "addio@gmail.com";
+        $lorenzo->password = "ciao1234";
+        $lorenzo->save();
     }
 }
