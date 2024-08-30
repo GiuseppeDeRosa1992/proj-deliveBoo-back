@@ -16,7 +16,7 @@ class RestaurantController extends Controller
     public function index()
     {
         $data = [
-            'restaurants' => Restaurant::orderByDesc('id')->paginate(9)
+            'restaurants' => Restaurant::orderByDesc('id')
         ];
         return view('admin.restaurants.index', $data);
     }
@@ -47,8 +47,8 @@ class RestaurantController extends Controller
         //$data['slug'] = Str::slug($request->title, '-');
 
         //creo variabile dove metto il percorso per lo storage dove vanno a finire le immagini che prendo dal create e poi le attacco alla variabile data dove passo tutti i dati del validate
-        //$img_path = Storage::put('images', $request['img_preview']);
-        //$data['img_preview'] = $img_path;
+        $img_path = Storage::put('images', $request['image']);
+        $data['image'] = $img_path;
 
 
         $newRestaurant = new Restaurant();
@@ -117,6 +117,8 @@ class RestaurantController extends Controller
      */
     public function destroy(Restaurant $restaurant)
     {
+        Storage::delete($restaurant->image);
+
         $restaurant->delete();
 
         return redirect()->route('admin.restaurants.index');
