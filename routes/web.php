@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Admin\UserController;
 use App\Http\Controllers\Admin\DashboardController; //<---- Import del controller precedentemente creato!
 
 /*
@@ -23,9 +24,12 @@ Route::middleware(['auth'])
     ->name('admin.') //definisce il pattern con cui generare i nomi delle rotte cioè "admin.qualcosa"
     ->group(function () {
 
+
+
         //Siamo nel gruppo quindi:
         // - il percorso "/" diventa "admin/"
         // - il nome della rotta ->name("dashboard") diventa ->name("admin.dashboard")
+        Route::resource('/users', UserController::class);
         Route::get('/', [DashboardController::class, 'index'])->name('dashboard');
     });
 
