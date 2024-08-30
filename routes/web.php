@@ -2,10 +2,12 @@
 
 
 
+
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\UserController;
 use App\Http\Controllers\Admin\RestaurantController;
 use App\Http\Controllers\Admin\DishController;
+use App\Http\Controllers\Admin\OrderController;
 use App\Http\Controllers\Admin\DashboardController; //<---- Import del controller precedentemente creato!
 
 /*
@@ -36,6 +38,7 @@ Route::middleware(['auth'])
         Route::resource('/users', UserController::class);
         Route::resource('/restaurants', RestaurantController::class);
         Route::resource('/dishes', DishController::class);
+        Route::resource('/orders', OrderController::class);
         Route::get('/', [DashboardController::class, 'index'])->name('dashboard');
     });
 

@@ -39,7 +39,7 @@ class DishController extends Controller
             'name' => 'required|min:10',
             'description' => 'required',
             'image' => 'required',
-            'price' => 'required|numeric',
+            'price' => 'required|decimal:5,2',
             'visible' => 'required|boolean'
         ]);
 
@@ -95,7 +95,7 @@ class DishController extends Controller
             'name' => 'required|min:10',
             'description' => 'required',
             'image' => 'required',
-            'price' => 'required|numeric',
+            'price' => 'required|decimal:5,2',
             'visible' => 'required|boolean'
         ]);
 
