@@ -82,7 +82,8 @@ class RestaurantController extends Controller
     public function show(Restaurant $restaurant)
     {
         $data = [
-            'restaurants' => $restaurant
+            'restaurants' => $restaurant,
+            $restaurant = Restaurant::where('id', $restaurant->id)->where('user_id', auth()->id())->firstOrFail(),
         ];
         return view('admin.restaurants.show', $data);
     }
