@@ -130,7 +130,7 @@ class RestaurantController extends Controller
      */
     public function destroy(Restaurant $restaurant)
     {
-        Storage::delete($restaurant->image);
+        // Storage::delete($restaurant->image);
 
         $restaurant->delete();
 

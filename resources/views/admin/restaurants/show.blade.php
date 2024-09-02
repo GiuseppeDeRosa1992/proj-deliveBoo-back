@@ -4,7 +4,7 @@
 	<div class="col-4 mt-3 m-auto">
 		<div class="card p-0 h-100">
 			<div class="col-12 text-center">
-				<img src="{{ url('storage/' . $restaurants->image ) }}" class="img-fluid rounded-start" alt="immagine-ristorante">
+				<img src="{{ Storage::url($restaurants->image) }}" class="img-fluid rounded-start" alt="immagine-ristorante">
 
 			</div>
 			<div class="row g-0 m-0">
