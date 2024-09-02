@@ -6,8 +6,8 @@ use App\Http\Controllers\Controller;
 use App\Models\Dish;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
-use illuminate\Support\Facades\Auth;
-use illuminate\Support\Str;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Str;
 
 class DishController extends Controller
 {
