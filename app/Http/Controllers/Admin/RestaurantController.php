@@ -16,7 +16,9 @@ class RestaurantController extends Controller
      */
     public function index()
     {
+        //filtro i piatti tramite l'user loggato
         $user = Auth::user();
+        //recupero con la variabile user i dati del ristorante associato ad ogni user
         $data = [
             'restaurants' => $user->restaurants()->orderByDesc('id')->get()
         ];

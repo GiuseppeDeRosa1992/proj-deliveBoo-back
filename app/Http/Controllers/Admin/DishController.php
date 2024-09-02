@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Dish;
 use Illuminate\Http\Request;
 use illuminate\Support\Facades\Storage;
+use Illuminate\Support\Facades\Auth;
 use illuminate\Support\Str;
 
 class DishController extends Controller
@@ -15,8 +16,11 @@ class DishController extends Controller
      */
     public function index()
     {
+        //filtro i piatti tramite l'user loggato
+        $user = Auth::user();
+        //recupero con wherein solo i piatti con il restaurant_id associato
         $data = [
-            'dishes' => Dish::orderByDesc('id')
+            'dishes' => Dish::whereIn('restaurant_id', $user->restaurants()->pluck('id'))->orderByDesc('id')->get()
         ];
         return view('admin.dishes.index', $data);
     }
