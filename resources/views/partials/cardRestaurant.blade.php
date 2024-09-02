@@ -5,13 +5,19 @@
 				<div class="card p-0 h-100">
 					<div class="row g-0 m-0">
 						<div class="col-12">
-							<img src="{{ Storage::url($restaurant->image) }}" class="img-fluid rounded-start mb-2" alt="{{$restaurant->name}}">
+							<img src="{{ Storage::url($restaurant->image) }}" class="img-fluid rounded-start mb-2"
+								alt="{{ $restaurant->name }}">
 						</div>
 						<h5 class="card-title"><b>Nome Ristorante:</b> {{ $restaurant->name }}</h5>
 					</div>
 					<a href="{{ route('admin.restaurants.show', $restaurant->id) }}" class="btn btn-outline-primary my-2">Dettagli
 						Ristorante
 						<i class="fa-solid fa-info"></i></a>
+
+					<a href="{{ route('admin.dishes.index') }}" class="btn btn-outline-primary my-2">Piatti
+						Ristorante
+						<i class="fa-solid fa-info"></i></a>
+
 					<a href="{{ route('admin.restaurants.edit', $restaurant->id) }}" class="btn btn-outline-primary my-2">Modifica
 						Ristorante
 						<i class="fa-solid fa-pencil"></i></a>
