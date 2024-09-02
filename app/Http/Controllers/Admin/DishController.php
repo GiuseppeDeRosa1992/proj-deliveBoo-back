@@ -103,7 +103,11 @@ class DishController extends Controller
             'name' => 'required|min:10',
             'description' => 'required',
             'image' => 'required',
-            'price' => 'required|decimal:5,2',
+            'price' => [
+                'required',
+                'regex:/^\d+(.\d{1,2})?$/',
+                'max:7',
+            ],
             'visible' => 'required|boolean'
         ]);
 
