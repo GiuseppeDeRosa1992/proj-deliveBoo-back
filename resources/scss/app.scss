@@ -1,1 +1,42 @@
-@import '~bootstrap/scss/bootstrap'
+@import '~bootstrap/scss/bootstrap';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+.main-logo {
+    height: 8vh;
+}
+
+.container a {
+    padding: 0;
+}
+
+.navbar {
+    font-size: 23px;
+}
+
+.navlink:hover {
+    // font-weight: bold;
+    color: rgb(231, 153, 45);
+}
+
+
+.jumbo {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 80px;
+    background-color: rgb(231, 153, 45);
+}
+
+.jumbo h1 {
+    font-size: 80px;
+}
+
+.jumbo h2 {
+    font-size: 60px;
+}
