@@ -5,9 +5,9 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Models\Restaurant;
 use Illuminate\Http\Request;
-use illuminate\Support\Facades\Storage;
+use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\Auth;
-use illuminate\Support\Str;
+use Illuminate\Support\Str;
 
 class RestaurantController extends Controller
 {
@@ -51,17 +51,17 @@ class RestaurantController extends Controller
         //$data['slug'] = Str::slug($request->title, '-');
 
         //creo variabile dove metto il percorso per lo storage dove vanno a finire le immagini che prendo dal create e poi le attacco alla variabile data dove passo tutti i dati del validate
-        // $img_path = Storage::put('images', $request['image']);
-        // $data['image'] = $img_path;
+        $img_path = Storage::put('images', $request['image']);
+        $data['image'] = $img_path;
         // $img_path = $request->file('image')->store('images');
         // $data['image'] = $img_path;
-        if ($request->hasFile('image')) {
-            $img_path = $request->file('image')->store('images', 'public');
-            $data['image'] = asset('storage/' . $img_path);
-        } else {
-            // Gestisci il caso in cui non viene caricato nessun file
-            $data['image'] = null;
-        }
+        // if ($request->hasFile('image')) {
+        //     $img_path = $request->file('image')->store('images', 'public');
+        //     $data['image'] = asset('storage/' . $img_path);
+        // } else {
+        //     // Gestisci il caso in cui non viene caricato nessun file
+        //     $data['image'] = null;
+        // }
 
 
 
@@ -104,21 +104,26 @@ class RestaurantController extends Controller
     public function update(Request $request, Restaurant $restaurant)
     {
         $data = $request->validate([
-            'user_id' => 'required',
             'name' => 'required|min:10',
             'image' => 'required',
             'p_iva' => 'required',
             'address' => 'required'
         ]);
 
-        if ($request->has('image')) {
-            // save the image
-            $img_path = Storage::put('images', $request['image']);
+        if ($request->hasFile('image')) {
+            // save the new image
+            $img_path = $request->file('image')->store('images', 'public');
             $data['image'] = $img_path;
+
+            // delete the old image if it exists and is not a URL
             if ($restaurant->image && !Str::startsWith($restaurant->image, 'http')) {
                 Storage::delete($restaurant->image);
             }
+        } else {
+            // keep the existing image if no new image is uploaded
+            $data['image'] = $restaurant->image;
         }
+
 
         $restaurant->update($data);
 
