@@ -1,11 +1,15 @@
 @extends('layouts.app')
 
 @section('content')
-    <h1>Questi sono i Ristoranti</h1>
+	<div class="container">
+		<h1 class="text-center py-2">Questi sono i Ristoranti</h1>
 
-    <button type="submit" class="btn btn-outline-primary">
-        <a href="{{ route('admin.restaurants.create') }}"> Crea un nuovo ristorante<i class="fa-solid fa-pencil"></i></a>
-    </button>
+		<div class="text-center py-2">
+			<button type="submit" class="btn btn-outline-primary">
+				<a href="{{ route('admin.restaurants.create') }}"> Crea un nuovo ristorante<i class="fa-solid fa-pencil"></i></a>
+			</button>
+		</div>
 
-    @include('partials.cardRestaurant')
+		@include('partials.cardRestaurant')
+	</div>
 @endsection
