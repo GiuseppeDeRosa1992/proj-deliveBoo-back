@@ -1,1 +1,7 @@
-<h1>index ristorante</h1>
+@extends('layouts.app')
+
+@section('content')
+	<h1>Questi sono i Ristoranti</h1>
+
+	@include('partials.cardDish')
+@endsection
