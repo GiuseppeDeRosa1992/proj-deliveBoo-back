@@ -46,6 +46,7 @@
 
 										@method('DELETE')
 										<button type="submit" href="" class="btn btn-outline-danger my-2" data-bs-dismiss="modal">
+											elimina
 											<i class="fa-solid fa-trash-can"></i>
 										</button>
 									</form>

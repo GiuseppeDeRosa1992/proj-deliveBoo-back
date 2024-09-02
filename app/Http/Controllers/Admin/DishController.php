@@ -121,9 +121,12 @@ class DishController extends Controller
      * Remove the specified resource from storage.
      */
     public function destroy(Dish $dish)
-    {
-        Storage::delete($dish->image);
 
+    {
+        /*ATTENZIONE---> Modifica da non definitiva*/
+       /** Storage::delete($dish->image);*/
+       
+     
         $dish->delete();
 
         return redirect()->route('admin.dishes.index');
