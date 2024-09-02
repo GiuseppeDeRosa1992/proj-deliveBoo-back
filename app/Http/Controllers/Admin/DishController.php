@@ -5,8 +5,8 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Models\Dish;
 use Illuminate\Http\Request;
-use illuminate\Support\Facades\Storage;
-use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Storage;
+use illuminate\Support\Facades\Auth;
 use illuminate\Support\Str;
 
 class DishController extends Controller
@@ -42,8 +42,12 @@ class DishController extends Controller
             'restaurant_id' => 'required',
             'name' => 'required|min:10',
             'description' => 'required',
-            'image' => 'required',
-            'price' => 'required|decimal:5,2',
+            'image' => 'required|image',
+            'price' => [
+                'required',
+                'regex:/^\d+(\.\d{1,2})?$/',
+                'max:7',
+            ],
             'visible' => 'required|boolean'
         ]);
 
