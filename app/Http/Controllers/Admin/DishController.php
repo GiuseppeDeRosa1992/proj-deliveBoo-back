@@ -77,7 +77,8 @@ class DishController extends Controller
     public function show(Dish $dish)
     {
         $data = [
-            'dishes' => $dish
+            'dishes' => $dish,
+            $dish = Dish::where('id', $dish->id)->where('restaurant_id', auth()->id())->firstOrFail(),
         ];
         return view('admin.dishes.show', $data);
     }
@@ -132,9 +133,9 @@ class DishController extends Controller
 
     {
         /*ATTENZIONE---> Modifica da non definitiva*/
-       /** Storage::delete($dish->image);*/
-       
-     
+        /** Storage::delete($dish->image);*/
+
+
         $dish->delete();
 
         return redirect()->route('admin.dishes.index');
