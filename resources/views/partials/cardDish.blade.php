@@ -47,12 +47,21 @@
                                     <form method="POST" action="{{ route('admin.dishes.destroy', $dish->id) }}">
                                         @csrf
 
+<<<<<<< HEAD
                                         @method('DELETE')
                                         <button type="submit" href="" class="btn btn-outline-danger my-2"
                                             data-bs-dismiss="modal">
                                             <i class="fa-solid fa-trash-can"></i>
                                         </button>
                                     </form>
+=======
+										@method('DELETE')
+										<button type="submit" href="" class="btn btn-outline-danger my-2" data-bs-dismiss="modal">
+											elimina
+											<i class="fa-solid fa-trash-can"></i>
+										</button>
+									</form>
+>>>>>>> cb386e5b24010ad7d702a0906aee848033c009e0
 
                                 </div>
                             </div>
