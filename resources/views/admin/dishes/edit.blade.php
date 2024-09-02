@@ -1,6 +1,6 @@
 @extends('layouts.app')
 @section('content')
-   
+<div class="container">
 {{-- MESSAGGIO DI ERRORE SE NON SI COMPLETANO I CAMPI CHE SONO OBBLIGATORI --}}
 <div>
     @if ($errors->any())
@@ -74,7 +74,7 @@
 
 </form>
 
-
+</div>
 
 
 @endsection
