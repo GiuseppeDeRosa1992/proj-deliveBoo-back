@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-	<h1>Questi sono i Ristoranti</h1>
+    <h1>Questi sono i Ristoranti</h1>
 
-	@include('partials.cardDish')
+    @include('partials.cardRestaurant')
 @endsection

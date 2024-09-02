@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Restaurant;
 use Illuminate\Http\Request;
 use illuminate\Support\Facades\Storage;
+use Illuminate\Support\Facades\Auth;
 use illuminate\Support\Str;
 
 class RestaurantController extends Controller
@@ -15,8 +16,9 @@ class RestaurantController extends Controller
      */
     public function index()
     {
+        $user = Auth::user();
         $data = [
-            'restaurants' => Restaurant::orderByDesc('id')
+            'restaurants' => $user->restaurants()->orderByDesc('id')->get()
         ];
         return view('admin.restaurants.index', $data);
     }

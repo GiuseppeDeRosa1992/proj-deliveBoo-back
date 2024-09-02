@@ -16,18 +16,22 @@ class Restaurant extends Model
         'p_iva',
         'address'
     ];
-    public function user() {
-        return $this->hasMany(User::class);
+    public function user()
+    {
+        return $this->belongsTo(User::class);
     }
-    public function order() {
+    public function order()
+    {
         return $this->belongsTo(Order::class);
     }
 
-    public function dish() {
+    public function dish()
+    {
         return $this->belongsTo(Dish::class);
     }
 
-    public function type() {
+    public function type()
+    {
         return $this->belongsToMany(Type::class);
     }
 }
