@@ -82,6 +82,7 @@ class DishController extends Controller
 
         return redirect()->route('admin.dishes.index');
     }
+
     public function show(Dish $dish)
     {
         $data = [
@@ -90,6 +91,7 @@ class DishController extends Controller
         ];
         return view('admin.dishes.show', $data);
     }
+
     public function edit(Dish $dish)
     {
         $data = [
