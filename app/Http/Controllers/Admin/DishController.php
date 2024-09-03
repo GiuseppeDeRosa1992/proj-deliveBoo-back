@@ -36,13 +36,14 @@ class DishController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
+    public function store(Dish $dish,Request $request)
     {
+        $restaurant_id = $dish->restaurant_id;
         $data = $request->validate([
-            'restaurant_id' => 'required',
-            'name' => 'required|min:10',
-            'description' => 'required',
-            'image' => 'required|image',
+            //'restaurant_id' => 'nullable',
+            'name' => 'required|min:4',
+            'description' => 'required|string|min:10',
+            'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg,webp|max:2048',
             'price' => [
                 'required',
                 'regex:/^\d+(\.\d{1,2})?$/',
@@ -50,6 +51,8 @@ class DishController extends Controller
             ],
             'visible' => 'required|boolean'
         ]);
+
+        $data['restaurant_id'] = $restaurant_id;
 
         //aggiungo slug al progetto
         //$data['slug'] = Str::slug($request->title, '-');
@@ -60,8 +63,10 @@ class DishController extends Controller
 
 
         $newDish = new Dish();
+        $dish->update($data);
 
         $newDish->fill($data);
+        
         $newDish->save();
 
         //dopo che ho slavato come nel seeder gli passo i linguaggi stavolta a mano tramite il create con le checkbox
@@ -100,13 +105,13 @@ class DishController extends Controller
     public function update(Request $request, Dish $dish)
     {
         $data = $request->validate([
-            'restaurant_id' => 'required',
-            'name' => 'required|min:10',
-            'description' => 'required',
-            'image' => 'required',
+            'restaurant_id' => 'nullable',
+            'name' => 'required|min:4',
+            'description' => 'required|string|min:10',
+            'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg,webp|max:2048',
             'price' => [
                 'required',
-                'regex:/^\d+(.\d{1,2})?$/',
+                'regex:/^\d+(\.\d{1,2})?$/',
                 'max:7',
             ],
             'visible' => 'required|boolean'

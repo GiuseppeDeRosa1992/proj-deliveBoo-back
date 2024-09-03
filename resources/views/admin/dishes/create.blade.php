@@ -24,21 +24,12 @@
         <form action="{{ route('admin.dishes.store') }}" method="post" enctype="multipart/form-data">
             @csrf
 
-            <div class="mb-3">
-                <label for="restaurant_id" class="form-label">ID Ristorante</label>
-                <input type="text" class="form-control" name="restaurant_id" id="restaurant_id"
-                    aria-describedby="restaurantIdHelper" placeholder="ID del ristorante"
-                    value="{{ old('restaurant_id') }}" />
-                <small id="restaurantIdHelper" class="form-text text-muted">Inserisci l'ID del ristorante</small>
-                @error('restaurant_id')
-                    <div class="form-text text-danger">{{ $message }}</div>
-                @enderror
-            </div>
 
+           
             <div class="mb-3">
                 <label for="name" class="form-label">Nome</label>
                 <input type="text" class="form-control" name="name" id="name" aria-describedby="nameHelper"
-                    placeholder="Nome del piatto" value="{{ old('name') }}" />
+                    placeholder="Nome del piatto" value="{{ old('name') }}" required minlength="4"/>
                 <small id="nameHelper" class="form-text text-muted">Inserisci il nome del piatto</small>
                 @error('name')
                     <div class="form-text text-danger">{{ $message }}</div>
@@ -47,7 +38,7 @@
 
             <div class="mb-3">
                 <label for="description" class="form-label">Descrizione</label>
-                <textarea class="form-control" name="description" id="description" rows="3">{{ old('description') }}</textarea>
+                <textarea class="form-control" name="description" id="description" rows="3" required minlength="10">{{ old('description') }}</textarea>
                 @error('description')
                     <div class="form-text text-danger">{{ $message }}</div>
                 @enderror
@@ -55,7 +46,7 @@
 
             <div class="mb-3">
                 <label for="image" class="form-label">Immagine</label>
-                <input type="file" class="form-control" name="image" id="image" aria-describedby="imageHelper" />
+                <input type="file" class="form-control" name="image" id="image" aria-describedby="imageHelper" required accept="image/*" />
                 <small id="imageHelper" class="form-text text-muted">Carica un'immagine per il piatto</small>
                 @error('image')
                     <div class="form-text text-danger">{{ $message }}</div>
@@ -67,7 +58,7 @@
                 <input type="text" class="form-control" name="price" id="price" aria-describedby="priceHelper"
                     placeholder="Prezzo del piatto" value="{{ old('price') }}" pattern="^\d+(\.\d{1,2})?$"
                     title="Inserisci un prezzo valido, ad esempio 12.34 (fino a 5 caratteri totali, inclusi fino a 2 decimali)"
-                    maxlength="7" />
+                    maxlength="7" required />
                 <small id="priceHelper" class="form-text text-muted">Inserisci il prezzo del piatto (fino a 5 caratteri,
                     inclusi decimali)</small>
                 @error('price')
@@ -76,8 +67,8 @@
             </div>
 
             <div class="mb-3">
-                <label for="visible" class="form-label">Visibile</label>
-                <select class="form-select" name="visible" id="visible">
+                <label for="visible" class="form-label" >Visibile</label>
+                <select class="form-select" name="visible" id="visible" required>
                     <option value="1" {{ old('visible') == '1' ? 'selected' : '' }}>Visibile</option>
                     <option value="0" {{ old('visible') == '0' ? 'selected' : '' }}>Non visibile</option>
                 </select>
