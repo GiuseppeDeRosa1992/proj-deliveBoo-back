@@ -36,9 +36,10 @@ class DishController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Dish $dish,Request $request)
+    public function store(Request $request)
     {
-        $restaurant_id = $dish->restaurant_id;
+        $restaurant_id = auth()->user()->restaurant_id;
+
         $data = $request->validate([
             //'restaurant_id' => 'nullable',
             'name' => 'required|min:4',
@@ -63,10 +64,10 @@ class DishController extends Controller
 
 
         $newDish = new Dish();
-        $dish->update($data);
+        Dish::create($data);
 
         $newDish->fill($data);
-        
+
         $newDish->save();
 
         //dopo che ho slavato come nel seeder gli passo i linguaggi stavolta a mano tramite il create con le checkbox
