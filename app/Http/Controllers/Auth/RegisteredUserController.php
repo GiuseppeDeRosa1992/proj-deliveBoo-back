@@ -3,6 +3,8 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
+use App\Models\Restaurant;
+use App\Models\Type;
 use App\Models\User;
 use App\Providers\RouteServiceProvider;
 use Illuminate\Auth\Events\Registered;
@@ -20,7 +22,12 @@ class RegisteredUserController extends Controller
      */
     public function create(): View
     {
-        return view('auth.register');
+        $types = Type::all();
+
+        $data = [
+            'types' => $types
+        ];
+        return view('auth.register', $data);
     }
 
     /**
@@ -31,8 +38,8 @@ class RegisteredUserController extends Controller
     public function store(Request $request): RedirectResponse
     {
         $request->validate([
-            'name' => ['required', 'string', 'max:255'],
-            'email' => ['required', 'string', 'email', 'max:255', 'unique:'.User::class],
+            'name' => ['required', 'string', 'max:255',],
+            'email' => ['required', 'string', 'email', 'ends_with:.com,.it', 'max:255', 'unique:' . User::class],
             'password' => ['required', 'confirmed', Rules\Password::defaults()],
         ]);
 
@@ -41,6 +48,17 @@ class RegisteredUserController extends Controller
             'email' => $request->email,
             'password' => Hash::make($request->password),
         ]);
+
+        // $user_id = auth()->user()->user_id;
+        // Restaurant::create([
+        //     'user_id' => $user_id,
+        //     'name' => 'required|min:5',
+        //     'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg,webp|max:2048',
+        //     'p_iva' => 'required|numeric|digits:11',
+        //     'address' => 'required|max:255',
+        //     'types' => 'array|required|min:1',
+        //     'types.*' => 'exists:types,id',
+        // ]);
 
         event(new Registered($user));
 

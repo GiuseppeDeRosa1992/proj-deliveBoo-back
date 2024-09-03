@@ -48,7 +48,7 @@ class RestaurantController extends Controller
     public function store(Request $request)
     {
         $data = $request->validate([
-            'user_id' => 'nullable',
+            // 'user_id' => 'nullable',
             'name' => 'required|min:5',
             'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg,webp|max:2048',
             'p_iva' => 'required|numeric|digits:11',
@@ -80,7 +80,7 @@ class RestaurantController extends Controller
         $restaurant->image = $request->file('image')->store('images');
         $restaurant->p_iva = $request->p_iva;
         $restaurant->address = $request->address;
-        $restaurant->user_id = auth()->user()->id; // Imposta automaticamente l'user_id
+        $restaurant->user_id = Auth::id(); // Imposta automaticamente l'user_id
         $restaurant->save();
         $restaurant->type()->sync($data['types']);
 
@@ -112,8 +112,6 @@ class RestaurantController extends Controller
             'types' => $types
         ];
         return view('admin.restaurants.edit', $data);
-
-
     }
 
     /**
