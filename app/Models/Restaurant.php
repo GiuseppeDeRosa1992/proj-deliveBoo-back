@@ -15,6 +15,7 @@ class Restaurant extends Model
         'image',
         'p_iva',
         'address'
+
     ];
     public function user()
     {

@@ -33,13 +33,13 @@ class RestaurantController extends Controller
     public function create()
     {
 
-        $types = Type::all();
+        //   $types = Type::all();
 
-        $data = [
-            'types' => $types
-        ];
+        //  $data = [
+        //    'types' => $types
+        //   ];
 
-        return view('admin.restaurants.create', $data);
+        //  return view('admin.restaurants.create', $data);
     }
 
     /**
@@ -47,22 +47,24 @@ class RestaurantController extends Controller
      */
     public function store(Request $request)
     {
-        $data = $request->validate([
-            // 'user_id' => 'nullable',
-            'name' => 'required|min:5',
-            'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg,webp|max:2048',
-            'p_iva' => 'required|numeric|digits:11',
-            'address' => 'required|max:255',
-            'types' => 'array|required|min:1',
-            'types.*' => 'exists:types,id',
-        ]);
+        //   $data = $request->validate([
+        // 'user_id' => 'nullable',
+        //       'name' => 'required|min:5',
+        //       'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg,webp|max:2048',
+        //       'p_iva' => 'required|numeric|digits:11',
+        //       'address' => 'required|max:255',
+        //       'types' => 'array|required|min:1',
+        //       'types.*' => 'exists:types,id',
+        // ]);
 
         //aggiungo slug al progetto
         //$data['slug'] = Str::slug($request->title, '-');
 
         //creo variabile dove metto il percorso per lo storage dove vanno a finire le immagini che prendo dal create e poi le attacco alla variabile data dove passo tutti i dati del validate
-        $img_path = Storage::put('images', $request['image']);
-        $data['image'] = $img_path;
+        // $img_path = Storage::put('images', $request['image']);
+        // $data['image'] = $img_path;
+
+
         // $img_path = $request->file('image')->store('images');
         // $data['image'] = $img_path;
         // if ($request->hasFile('image')) {
@@ -75,14 +77,14 @@ class RestaurantController extends Controller
 
 
 
-        $restaurant = new Restaurant();
-        $restaurant->name = $request->name;
-        $restaurant->image = $request->file('image')->store('images');
-        $restaurant->p_iva = $request->p_iva;
-        $restaurant->address = $request->address;
-        $restaurant->user_id = Auth::id(); // Imposta automaticamente l'user_id
-        $restaurant->save();
-        $restaurant->type()->sync($data['types']);
+        // $restaurant = new Restaurant();
+        // $restaurant->name = $request->name;
+        // $restaurant->image = $request->file('image')->store('images');
+        // $restaurant->p_iva = $request->p_iva;
+        // $restaurant->address = $request->address;
+        // $restaurant->user_id = Auth::id(); // Imposta automaticamente l'user_id
+        // $restaurant->save();
+        //$restaurant->type()->sync($data['types']);
 
         return redirect()->route('admin.restaurants.index')->with('success', 'Ristorante aggiunto con successo!');
     }

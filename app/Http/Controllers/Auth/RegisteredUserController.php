@@ -65,12 +65,13 @@ class RegisteredUserController extends Controller
             $img_path = null; // Se non c'è immagine, si può gestire questo caso
         }
 
-        Restaurant::create([
+        $restaurant = Restaurant::create([
             'user_id' => $user->id,
             'name' => $request->restaurant_name,
             'address' => $request->restaurant_address,
             'p_iva' => $request->p_iva,
             'image' => $img_path,
+            //'types_id' => $types
         ]);
 
         // $user_id = auth()->user()->user_id;
@@ -83,6 +84,8 @@ class RegisteredUserController extends Controller
         //     'types' => 'array|required|min:1',
         //     'types.*' => 'exists:types,id',
         // ]);
+
+        $restaurant->type()->attach($request->types);
 
         event(new Registered($user));
 
