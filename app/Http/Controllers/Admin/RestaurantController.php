@@ -4,9 +4,11 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Models\Restaurant;
+use App\Models\Type;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Str;
 
 class RestaurantController extends Controller
@@ -31,7 +33,13 @@ class RestaurantController extends Controller
     public function create()
     {
 
-        return view('admin.restaurants.create');
+        $types = Type::all();
+
+        $data = [
+            'types' => $types
+        ];
+
+        return view('admin.restaurants.create', $data);
     }
 
     /**
@@ -40,11 +48,13 @@ class RestaurantController extends Controller
     public function store(Request $request)
     {
         $data = $request->validate([
-            // 'user_id' => 'required',
-            'name' => 'required|min:10',
-            'image' => 'required',
-            'p_iva' => 'required',
-            'address' => 'required'
+            'user_id' => 'nullable',
+            'name' => 'required|min:5',
+            'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg,webp|max:2048',
+            'p_iva' => 'required|numeric|digits:11',
+            'address' => 'required|max:255',
+            'types' => 'array|required|min:1',
+            'types.*' => 'exists:types,id',
         ]);
 
         //aggiungo slug al progetto
@@ -72,6 +82,7 @@ class RestaurantController extends Controller
         $restaurant->address = $request->address;
         $restaurant->user_id = auth()->user()->id; // Imposta automaticamente l'user_id
         $restaurant->save();
+        $restaurant->type()->sync($data['types']);
 
         return redirect()->route('admin.restaurants.index')->with('success', 'Ristorante aggiunto con successo!');
     }
@@ -93,10 +104,16 @@ class RestaurantController extends Controller
      */
     public function edit(Restaurant $restaurant)
     {
+
+        $types = Type::all();
+
         $data = [
-            'restaurants' => $restaurant
+            'restaurants' => $restaurant,
+            'types' => $types
         ];
         return view('admin.restaurants.edit', $data);
+
+
     }
 
     /**
@@ -105,10 +122,12 @@ class RestaurantController extends Controller
     public function update(Request $request, Restaurant $restaurant)
     {
         $data = $request->validate([
-            'name' => 'required|min:10',
-            'image' => 'required',
-            'p_iva' => 'required',
-            'address' => 'required'
+            'name' => 'required|min:5',
+            'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg,webp|max:2048',
+            'p_iva' => 'required|numeric|digits:11',
+            'address' => 'required|max:255',
+            'types' => 'array',
+            'types.*' => 'exist:types,id'
         ]);
 
         if ($request->hasFile('image')) {
