@@ -10,7 +10,7 @@ use Illuminate\Http\Request;
 class RestaurantController extends Controller
 {
     public function index(){
-        $restaurants = Restaurant::all();
+        $restaurants = Restaurant::with('type')->get();
         return response()->json([
             'success'=> true,
             'result'=> $restaurants
