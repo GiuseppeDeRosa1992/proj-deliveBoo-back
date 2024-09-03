@@ -33,15 +33,19 @@ class DishController extends Controller
         return view('admin.dishes.create');
     }
 
-    /**
-     * Store a newly created resource in storage.
-     */
     public function store(Request $request)
     {
-        $restaurant_id = auth()->user()->restaurant_id;
+
+        $user = Auth::user();
+
+        $restaurant = $user->restaurants()->first();
+
+        if (!$restaurant) {
+            return redirect()->back()->with('error', 'Nessun ristorante associato a questo utente.');
+        };
 
         $data = $request->validate([
-            //'restaurant_id' => 'nullable',
+            'restaurant_id' => 'nullable',
             'name' => 'required|min:4',
             'description' => 'required|string|min:10',
             'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg,webp|max:2048',
@@ -53,7 +57,7 @@ class DishController extends Controller
             'visible' => 'required|boolean'
         ]);
 
-        $data['restaurant_id'] = $restaurant_id;
+        $data['restaurant_id'] = $restaurant->id;
 
         //aggiungo slug al progetto
         //$data['slug'] = Str::slug($request->title, '-');
@@ -63,12 +67,14 @@ class DishController extends Controller
         $data['image'] = $img_path;
 
 
-        $newDish = new Dish();
-        Dish::create($data);
+        $newDish = Dish::create($data);
+
+        
 
         $newDish->fill($data);
-
         $newDish->save();
+
+        return redirect()->route('admin.dishes.index')->with('success', 'Piatto creato con successo!');
 
         //dopo che ho slavato come nel seeder gli passo i linguaggi stavolta a mano tramite il create con le checkbox
         // $newProject->languages()->sync($data['languages']);
@@ -76,19 +82,6 @@ class DishController extends Controller
 
         return redirect()->route('admin.dishes.index');
     }
-
-    /**
-     * Display the specified resource.
-     */
-    public function show(Dish $dish)
-    {
-        $data = [
-            'dishes' => $dish,
-            $dish = Dish::where('id', $dish->id)->where('restaurant_id', auth()->id())->firstOrFail(),
-        ];
-        return view('admin.dishes.show', $data);
-    }
-
     /**
      * Show the form for editing the specified resource.
      */
