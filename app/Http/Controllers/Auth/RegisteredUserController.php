@@ -13,7 +13,9 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Validation\Rules;
+use Illuminate\Validation\Rules\Exists;
 use Illuminate\View\View;
+use Symfony\Contracts\Service\Attribute\Required;
 
 class RegisteredUserController extends Controller
 {
@@ -37,16 +39,38 @@ class RegisteredUserController extends Controller
      */
     public function store(Request $request): RedirectResponse
     {
+        // Validazione dei dati
         $request->validate([
-            'name' => ['required', 'string', 'max:255',],
-            'email' => ['required', 'string', 'email', 'ends_with:.com,.it', 'max:255', 'unique:' . User::class],
+            'name' => ['required', 'string', 'max:255'],
+            'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => ['required', 'confirmed', Rules\Password::defaults()],
+            'restaurant_name' => ['required', 'string', 'max:255'],
+            'restaurant_address' => ['required', 'string', 'max:255'],
+            'p_iva' => ['required', 'numeric', 'digits:11'],
+            'image' => ['required', 'image', 'mimes:jpeg,png,jpg,gif,svg,webp', 'max:2048'],
+            'types' => ['required', 'array', 'min:1'],
+            'types.*' => ['exists:types,id'],
         ]);
 
+        // Creazione dell'utente
         $user = User::create([
-            'name' => $request->name,
+            'name' => $request->name, // Assicurati che il campo 'name' venga passato qui
             'email' => $request->email,
             'password' => Hash::make($request->password),
+        ]);
+
+        if ($request->hasFile('image')) {
+            $img_path = $request->file('image')->store('restaurants/images', 'public');
+        } else {
+            $img_path = null; // Se non c'è immagine, si può gestire questo caso
+        }
+
+        Restaurant::create([
+            'user_id' => $user->id,
+            'name' => $request->restaurant_name,
+            'address' => $request->restaurant_address,
+            'p_iva' => $request->p_iva,
+            'image' => $img_path,
         ]);
 
         // $user_id = auth()->user()->user_id;

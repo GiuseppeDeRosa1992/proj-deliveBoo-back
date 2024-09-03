@@ -69,7 +69,7 @@ class DishController extends Controller
 
         $newDish = Dish::create($data);
 
-        
+
 
         $newDish->fill($data);
         $newDish->save();
@@ -82,9 +82,14 @@ class DishController extends Controller
 
         return redirect()->route('admin.dishes.index');
     }
-    /**
-     * Show the form for editing the specified resource.
-     */
+    public function show(Dish $dish)
+    {
+        $data = [
+            'dishes' => $dish,
+            $dish = Dish::where('id', $dish->id)->where('restaurant_id', auth()->id())->firstOrFail(),
+        ];
+        return view('admin.dishes.show', $data);
+    }
     public function edit(Dish $dish)
     {
         $data = [
