@@ -41,7 +41,7 @@ class RegisteredUserController extends Controller
     {
         // Validazione dei dati
         $request->validate([
-            'name' => ['required', 'string', 'max:255'],
+
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => ['required', 'confirmed', Rules\Password::defaults()],
             'restaurant_name' => ['required', 'string', 'max:255'],
@@ -54,7 +54,7 @@ class RegisteredUserController extends Controller
 
         // Creazione dell'utente
         $user = User::create([
-            'name' => $request->name, // Assicurati che il campo 'name' venga passato qui
+
             'email' => $request->email,
             'password' => Hash::make($request->password),
         ]);
