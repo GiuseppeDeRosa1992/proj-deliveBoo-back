@@ -43,9 +43,9 @@ class RegisteredUserController extends Controller
         $request->validate([
 
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
-            'password' => ['required', 'confirmed', Rules\Password::defaults()],
-            'restaurant_name' => ['required', 'string', 'max:255'],
-            'restaurant_address' => ['required', 'string', 'max:255'],
+            'password' => ['required', 'confirmed', 'max:255', Rules\Password::defaults()],
+            'restaurant_name' => ['required', 'string', 'min:3', 'max:255'],
+            'restaurant_address' => ['required', 'string', 'min:5', 'max:255'],
             'p_iva' => ['required', 'numeric', 'digits:11'],
             'image' => ['required', 'image', 'mimes:jpeg,png,jpg,gif,svg,webp', 'max:2048'],
             'types' => ['required', 'array', 'min:1'],

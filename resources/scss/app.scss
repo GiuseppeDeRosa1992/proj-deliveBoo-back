@@ -26,17 +26,9 @@
 
 
 .jumbo {
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding-top: 80px;
     background-color: rgb(231, 153, 45);
 }
 
-.jumbo h1 {
-    font-size: 80px;
-}
-
-.jumbo h2 {
-    font-size: 60px;
+.my-fs {
+    font-size: 5rem;
 }

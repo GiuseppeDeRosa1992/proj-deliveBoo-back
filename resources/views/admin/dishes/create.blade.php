@@ -4,8 +4,8 @@
     <div class="p-3 mb-4 bg-light">
         <div class="container d-flex justify-content-between align-items-center py-3">
             <h1 class="display-5 fw-bold">Crea un nuovo piatto</h1>
-            <a href="{{ route('admin.dishes.index') }}" class="btn btn-dark">
-                <i class="bi bi-arrow-left">Torna indietro</i>
+            <a href="{{ route('admin.dishes.index') }}" class="btn btn-dark p-2">
+                <i class="bi bi-arrow-left ">Torna indietro</i>
             </a>
         </div>
     </div>
@@ -25,11 +25,11 @@
             @csrf
 
 
-           
+
             <div class="mb-3">
                 <label for="name" class="form-label">Nome</label>
                 <input type="text" class="form-control" name="name" id="name" aria-describedby="nameHelper"
-                    placeholder="Nome del piatto" value="{{ old('name') }}" required minlength="4"/>
+                    placeholder="Nome del piatto" value="{{ old('name') }}" required minlength="4" />
                 <small id="nameHelper" class="form-text text-muted">Inserisci il nome del piatto</small>
                 @error('name')
                     <div class="form-text text-danger">{{ $message }}</div>
@@ -46,7 +46,8 @@
 
             <div class="mb-3">
                 <label for="image" class="form-label">Immagine</label>
-                <input type="file" class="form-control" name="image" id="image" aria-describedby="imageHelper" required accept="image/*" />
+                <input type="file" class="form-control" name="image" id="image" aria-describedby="imageHelper"
+                    required accept="image/*" />
                 <small id="imageHelper" class="form-text text-muted">Carica un'immagine per il piatto</small>
                 @error('image')
                     <div class="form-text text-danger">{{ $message }}</div>
@@ -67,7 +68,7 @@
             </div>
 
             <div class="mb-3">
-                <label for="visible" class="form-label" >Visibile</label>
+                <label for="visible" class="form-label">Visibile</label>
                 <select class="form-select" name="visible" id="visible" required>
                     <option value="1" {{ old('visible') == '1' ? 'selected' : '' }}>Visibile</option>
                     <option value="0" {{ old('visible') == '0' ? 'selected' : '' }}>Non visibile</option>
