@@ -191,7 +191,7 @@ class DishSeeder extends Seeder
         $Dish->restaurant_id = 2;
         $Dish->name = "Tacos al Pastor";
         $Dish->description = "Tacos con carne di pecora, avocado, peperoni";
-        $Dish->image = "https://picsum.photos/200/300";
+        $Dish->image = "https://raw.githubusercontent.com/GiuseppeDeRosa1992/immaginiDeliveboo-ristoranti-e-piatti/d19a3e2bcfc896c7c45a678e8e22db26b28097ac/IMG/el-taco-loco/tacos-al-pastor.webp";
         $Dish->price = 5.5;
         $Dish->visible = true;
         $Dish->save();
@@ -200,7 +200,7 @@ class DishSeeder extends Seeder
         $Dish->restaurant_id = 2;
         $Dish->name = "Tacos de Carnitas";
         $Dish->description = "Tacos con carne di mucca, centriolini, peperoncino, coriandolo";
-        $Dish->image = "https://picsum.photos/200/300";
+        $Dish->image = "https://raw.githubusercontent.com/GiuseppeDeRosa1992/immaginiDeliveboo-ristoranti-e-piatti/d19a3e2bcfc896c7c45a678e8e22db26b28097ac/IMG/el-taco-loco/tacos-de-carnitas.webp";
         $Dish->price = 4.5;
         $Dish->visible = true;
         $Dish->save();
@@ -209,7 +209,7 @@ class DishSeeder extends Seeder
         $Dish->restaurant_id = 2;
         $Dish->name = "Tacos de Pollo";
         $Dish->description = "Tacos con carne di pollo, coriandolo, formaggio";
-        $Dish->image = "https://picsum.photos/200/300";
+        $Dish->image = "https://raw.githubusercontent.com/GiuseppeDeRosa1992/immaginiDeliveboo-ristoranti-e-piatti/d19a3e2bcfc896c7c45a678e8e22db26b28097ac/IMG/el-taco-loco/tacos-de-pollo.webp";
         $Dish->price = 3.5;
         $Dish->visible = true;
         $Dish->save();
@@ -218,7 +218,7 @@ class DishSeeder extends Seeder
         $Dish->restaurant_id = 2;
         $Dish->name = "Tacos de Pescado";
         $Dish->description = "Tacos con polpo, jalapeno, pomodoro";
-        $Dish->image = "https://picsum.photos/200/300";
+        $Dish->image = "https://raw.githubusercontent.com/GiuseppeDeRosa1992/immaginiDeliveboo-ristoranti-e-piatti/d19a3e2bcfc896c7c45a678e8e22db26b28097ac/IMG/el-taco-loco/tacos-de-pescado.webp";
         $Dish->price = 4.5;
         $Dish->visible = true;
         $Dish->save();
@@ -227,7 +227,7 @@ class DishSeeder extends Seeder
         $Dish->restaurant_id = 2;
         $Dish->name = "Quesadilla con Queso";
         $Dish->description = "Carne di mucca con formaggio fuso";
-        $Dish->image = "https://picsum.photos/200/300";
+        $Dish->image = "https://raw.githubusercontent.com/GiuseppeDeRosa1992/immaginiDeliveboo-ristoranti-e-piatti/d19a3e2bcfc896c7c45a678e8e22db26b28097ac/IMG/el-taco-loco/quesadilla-queso.webp";
         $Dish->price = 6.5;
         $Dish->visible = true;
         $Dish->save();
@@ -236,7 +236,7 @@ class DishSeeder extends Seeder
         $Dish->restaurant_id = 2;
         $Dish->name = "Tacos de Chorizo";
         $Dish->description = "Tacos con carne di mucca, centriolini, peperoncino";
-        $Dish->image = "https://picsum.photos/200/300";
+        $Dish->image = "https://raw.githubusercontent.com/GiuseppeDeRosa1992/immaginiDeliveboo-ristoranti-e-piatti/d19a3e2bcfc896c7c45a678e8e22db26b28097ac/IMG/el-taco-loco/tacos-de-chorizo.webp";
         $Dish->price = 4.5;
         $Dish->visible = true;
         $Dish->save();
@@ -245,7 +245,7 @@ class DishSeeder extends Seeder
         $Dish->restaurant_id = 2;
         $Dish->name = "Tacos de Barbacoa";
         $Dish->description = "Tacos con carne di mucca, coriandolo, cheddar";
-        $Dish->image = "https://picsum.photos/200/300";
+        $Dish->image = "https://raw.githubusercontent.com/GiuseppeDeRosa1992/immaginiDeliveboo-ristoranti-e-piatti/d19a3e2bcfc896c7c45a678e8e22db26b28097ac/IMG/el-taco-loco/tacos-de-barbacoa.webp";
         $Dish->price = 3.5;
         $Dish->visible = true;
         $Dish->save();
@@ -254,7 +254,7 @@ class DishSeeder extends Seeder
         $Dish->restaurant_id = 2;
         $Dish->name = "Enchiladas de Pollo";
         $Dish->description = "Carne di pollo con cheddar";
-        $Dish->image = "https://picsum.photos/200/300";
+        $Dish->image = "https://raw.githubusercontent.com/GiuseppeDeRosa1992/immaginiDeliveboo-ristoranti-e-piatti/d19a3e2bcfc896c7c45a678e8e22db26b28097ac/IMG/el-taco-loco/enchilads-de-pollo.webp";
         $Dish->price = 6.5;
         $Dish->visible = true;
         $Dish->save();
@@ -263,7 +263,7 @@ class DishSeeder extends Seeder
         $Dish->restaurant_id = 2;
         $Dish->name = "Burrito con Carne Asada";
         $Dish->description = "Burrito con carne asada, insalata, salsa speciale";
-        $Dish->image = "https://picsum.photos/200/300";
+        $Dish->image = "https://raw.githubusercontent.com/GiuseppeDeRosa1992/immaginiDeliveboo-ristoranti-e-piatti/d19a3e2bcfc896c7c45a678e8e22db26b28097ac/IMG/el-taco-loco/burrito-carne.webp";
         $Dish->price = 5.5;
         $Dish->visible = true;
         $Dish->save();
@@ -272,7 +272,7 @@ class DishSeeder extends Seeder
         $Dish->restaurant_id = 2;
         $Dish->name = "Burrito con Pollo";
         $Dish->description = "Burrito con carne di pollo, coriandolo, peperoni, peperoncino";
-        $Dish->image = "https://picsum.photos/200/300";
+        $Dish->image = "https://raw.githubusercontent.com/GiuseppeDeRosa1992/immaginiDeliveboo-ristoranti-e-piatti/d19a3e2bcfc896c7c45a678e8e22db26b28097ac/IMG/el-taco-loco/burrito-pollo.webp";
         $Dish->price = 4.5;
         $Dish->visible = true;
         $Dish->save();
@@ -281,7 +281,7 @@ class DishSeeder extends Seeder
         $Dish->restaurant_id = 2;
         $Dish->name = "Burrito Vegetariano";
         $Dish->description = "Tacos con verdure, lattuga, pomodoro, cipolla, coriandolo, salsa formaggio";
-        $Dish->image = "https://picsum.photos/200/300";
+        $Dish->image = "https://raw.githubusercontent.com/GiuseppeDeRosa1992/immaginiDeliveboo-ristoranti-e-piatti/d19a3e2bcfc896c7c45a678e8e22db26b28097ac/IMG/el-taco-loco/burrito-vegetariano.webp";
         $Dish->price = 3.5;
         $Dish->visible = true;
         $Dish->save();
@@ -290,7 +290,7 @@ class DishSeeder extends Seeder
         $Dish->restaurant_id = 2;
         $Dish->name = "Burrito con Gamberi";
         $Dish->description = "Burrito con gamberi, pomodoro, peperone, maionese";
-        $Dish->image = "https://picsum.photos/200/300";
+        $Dish->image = "https://raw.githubusercontent.com/GiuseppeDeRosa1992/immaginiDeliveboo-ristoranti-e-piatti/d19a3e2bcfc896c7c45a678e8e22db26b28097ac/IMG/el-taco-loco/burrito-gamberi.webp";
         $Dish->price = 4.5;
         $Dish->visible = true;
         $Dish->save();
@@ -299,7 +299,7 @@ class DishSeeder extends Seeder
         $Dish->restaurant_id = 2;
         $Dish->name = "Quesadilla con Chorizo";
         $Dish->description = "Piadina con formaggio, salamino, peperoni";
-        $Dish->image = "https://picsum.photos/200/300";
+        $Dish->image = "https://raw.githubusercontent.com/GiuseppeDeRosa1992/immaginiDeliveboo-ristoranti-e-piatti/d19a3e2bcfc896c7c45a678e8e22db26b28097ac/IMG/el-taco-loco/quesadilla-chorizo.webp";
         $Dish->price = 4.5;
         $Dish->visible = true;
         $Dish->save();
@@ -308,7 +308,7 @@ class DishSeeder extends Seeder
         $Dish->restaurant_id = 2;
         $Dish->name = "Quesadilla con funghi";
         $Dish->description = "Piadina con fomrmaggio, funghi";
-        $Dish->image = "https://picsum.photos/200/300";
+        $Dish->image = "https://raw.githubusercontent.com/GiuseppeDeRosa1992/immaginiDeliveboo-ristoranti-e-piatti/d19a3e2bcfc896c7c45a678e8e22db26b28097ac/IMG/el-taco-loco/quesadilla-funghi.webp";
         $Dish->price = 6.5;
         $Dish->visible = true;
         $Dish->save();
@@ -319,7 +319,7 @@ class DishSeeder extends Seeder
         $Dish->restaurant_id = 2;
         $Dish->name = "Nachos con formaggio fuso";
         $Dish->description = "Nachos con formaggio fuso sopra";
-        $Dish->image = "https://picsum.photos/200/300";
+        $Dish->image = "https://raw.githubusercontent.com/GiuseppeDeRosa1992/immaginiDeliveboo-ristoranti-e-piatti/d19a3e2bcfc896c7c45a678e8e22db26b28097ac/IMG/el-taco-loco/nachos-formaggio.webp";
         $Dish->price = 3.5;
         $Dish->visible = true;
         $Dish->save();
@@ -328,7 +328,7 @@ class DishSeeder extends Seeder
         $Dish->restaurant_id = 2;
         $Dish->name = "Nachos con Jalapenos";
         $Dish->description = "Nachos con Jalapenos sopra";
-        $Dish->image = "https://picsum.photos/200/300";
+        $Dish->image = "https://raw.githubusercontent.com/GiuseppeDeRosa1992/immaginiDeliveboo-ristoranti-e-piatti/d19a3e2bcfc896c7c45a678e8e22db26b28097ac/IMG/el-taco-loco/nachos-jalapenos.webp";
         $Dish->price = 4.5;
         $Dish->visible = true;
         $Dish->save();
@@ -337,7 +337,7 @@ class DishSeeder extends Seeder
         $Dish->restaurant_id = 2;
         $Dish->name = "Nachos con Guacamole";
         $Dish->description = "Nachos con Guacamole sopra";
-        $Dish->image = "https://picsum.photos/200/300";
+        $Dish->image = "https://raw.githubusercontent.com/GiuseppeDeRosa1992/immaginiDeliveboo-ristoranti-e-piatti/d19a3e2bcfc896c7c45a678e8e22db26b28097ac/IMG/el-taco-loco/nachos-guacamole.webp";
         $Dish->price = 3.5;
         $Dish->visible = true;
         $Dish->save();
@@ -349,7 +349,7 @@ class DishSeeder extends Seeder
         $Dish->restaurant_id = 3;
         $Dish->name = "Nigiri al Salmone";
         $Dish->description = "Morbida fetta di salmone fresco su riso compatto.";
-        $Dish->image = "https://picsum.photos/200/300";
+        $Dish->image = "https://raw.githubusercontent.com/GiuseppeDeRosa1992/immaginiDeliveboo-ristoranti-e-piatti/3c2438a901b258812ae1c8ef8c41530e553500c4/IMG/sushi-zen/nigiri-salmone.webp";
         $Dish->price = 4.30;
         $Dish->visible = true;
         $Dish->save();
@@ -358,7 +358,7 @@ class DishSeeder extends Seeder
         $Dish->restaurant_id = 3;
         $Dish->name = "Nigiri al Tonno";
         $Dish->description = "Tonno crudo di alta qualità su una base di riso leggermente pressato.";
-        $Dish->image = "https://picsum.photos/200/300";
+        $Dish->image = "https://raw.githubusercontent.com/GiuseppeDeRosa1992/immaginiDeliveboo-ristoranti-e-piatti/3c2438a901b258812ae1c8ef8c41530e553500c4/IMG/sushi-zen/nigiri-tonno.webp";
         $Dish->price = 5.50;
         $Dish->visible = true;
         $Dish->save();
@@ -367,7 +367,7 @@ class DishSeeder extends Seeder
         $Dish->restaurant_id = 3;
         $Dish->name = "Nigiri al Gambero";
         $Dish->description = "Gambero cotto e dolce, servito su un letto di riso.";
-        $Dish->image = "https://picsum.photos/200/300";
+        $Dish->image = "https://raw.githubusercontent.com/GiuseppeDeRosa1992/immaginiDeliveboo-ristoranti-e-piatti/3c2438a901b258812ae1c8ef8c41530e553500c4/IMG/sushi-zen/nigiri-gambero.webp";
         $Dish->price = 6.60;
         $Dish->visible = true;
         $Dish->save();
@@ -376,7 +376,7 @@ class DishSeeder extends Seeder
         $Dish->restaurant_id = 3;
         $Dish->name = "Sashimi Misto";
         $Dish->description = "Selezione di pesce crudo fresco, tagliato sottilmente.";
-        $Dish->image = "https://picsum.photos/200/300";
+        $Dish->image = "https://raw.githubusercontent.com/GiuseppeDeRosa1992/immaginiDeliveboo-ristoranti-e-piatti/3c2438a901b258812ae1c8ef8c41530e553500c4/IMG/sushi-zen/sashimi-misto.webp";
         $Dish->price = 4.40;
         $Dish->visible = true;
         $Dish->save();
@@ -385,26 +385,8 @@ class DishSeeder extends Seeder
         $Dish->restaurant_id = 3;
         $Dish->name = "Hosamaki al Salmone";
         $Dish->description = "Riso e salmone avvolti in alga nori.";
-        $Dish->image = "https://picsum.photos/200/300";
+        $Dish->image = "https://raw.githubusercontent.com/GiuseppeDeRosa1992/immaginiDeliveboo-ristoranti-e-piatti/3c2438a901b258812ae1c8ef8c41530e553500c4/IMG/sushi-zen/hosamaki-salmone.webp";
         $Dish->price = 6.30;
-        $Dish->visible = true;
-        $Dish->save();
-
-        $Dish = new Dish();
-        $Dish->restaurant_id = 3;
-        $Dish->name = "Nigiri al Salmone";
-        $Dish->description = "Morbida fetta di salmone fresco su riso compatto.";
-        $Dish->image = "https://picsum.photos/200/300";
-        $Dish->price = 5.20;
-        $Dish->visible = true;
-        $Dish->save();
-
-        $Dish = new Dish();
-        $Dish->restaurant_id = 3;
-        $Dish->name = "Nigiri al Tonno";
-        $Dish->description = "Tonno crudo di alta qualità su una base di riso leggermente pressato.";
-        $Dish->image = "https://picsum.photos/200/300";
-        $Dish->price = 5.40;
         $Dish->visible = true;
         $Dish->save();
 
@@ -412,17 +394,8 @@ class DishSeeder extends Seeder
         $Dish->restaurant_id = 3;
         $Dish->name = "Nigiri al Branzino";
         $Dish->description = "Filetto di branzino delicato, adagiato su riso sushi.";
-        $Dish->image = "https://picsum.photos/200/300";
+        $Dish->image = "https://raw.githubusercontent.com/GiuseppeDeRosa1992/immaginiDeliveboo-ristoranti-e-piatti/3c2438a901b258812ae1c8ef8c41530e553500c4/IMG/sushi-zen/nigiri-branzino.webp";
         $Dish->price = 5.60;
-        $Dish->visible = true;
-        $Dish->save();
-
-        $Dish = new Dish();
-        $Dish->restaurant_id = 3;
-        $Dish->name = "Sashimi Misto";
-        $Dish->description = "Selezione di pesce crudo fresco, tagliato sottilmente.";
-        $Dish->image = "https://picsum.photos/200/300";
-        $Dish->price = 5.20;
         $Dish->visible = true;
         $Dish->save();
 
@@ -430,26 +403,8 @@ class DishSeeder extends Seeder
         $Dish->restaurant_id = 3;
         $Dish->name = "Hosomaki al Cetriolo";
         $Dish->description = " Rotolo di riso e cetriolo croccante, avvolto in alga nori.";
-        $Dish->image = "https://picsum.photos/200/300";
+        $Dish->image = "https://raw.githubusercontent.com/GiuseppeDeRosa1992/immaginiDeliveboo-ristoranti-e-piatti/3c2438a901b258812ae1c8ef8c41530e553500c4/IMG/sushi-zen/hosomaki-cetriolo.webp";
         $Dish->price = 4.30;
-        $Dish->visible = true;
-        $Dish->save();
-
-        $Dish = new Dish();
-        $Dish->restaurant_id = 3;
-        $Dish->name = "Nigiri al Salmone";
-        $Dish->description = "Morbida fetta di salmone fresco su riso compatto.";
-        $Dish->image = "https://picsum.photos/200/300";
-        $Dish->price = 3.60;
-        $Dish->visible = true;
-        $Dish->save();
-
-        $Dish = new Dish();
-        $Dish->restaurant_id = 3;
-        $Dish->name = "Nigiri al Tonno";
-        $Dish->description = "Tonno crudo di alta qualità su una base di riso leggermente pressato.";
-        $Dish->image = "https://picsum.photos/200/300";
-        $Dish->price = 4.60;
         $Dish->visible = true;
         $Dish->save();
 
@@ -457,7 +412,7 @@ class DishSeeder extends Seeder
         $Dish->restaurant_id = 3;
         $Dish->name = "Nigiri al Polpo";
         $Dish->description = " Fettina di polpo tenero su un letto di riso compatto.";
-        $Dish->image = "https://picsum.photos/200/300";
+        $Dish->image = "https://raw.githubusercontent.com/GiuseppeDeRosa1992/immaginiDeliveboo-ristoranti-e-piatti/3c2438a901b258812ae1c8ef8c41530e553500c4/IMG/sushi-zen/nigiri-polpo.webp";
         $Dish->price = 6.60;
         $Dish->visible = true;
         $Dish->save();
@@ -466,53 +421,8 @@ class DishSeeder extends Seeder
         $Dish->restaurant_id = 3;
         $Dish->name = "Sashimi di Salmone";
         $Dish->description = "Fettine di salmone crudo, fresche e succulente.";
-        $Dish->image = "https://picsum.photos/200/300";
+        $Dish->image = "https://raw.githubusercontent.com/GiuseppeDeRosa1992/immaginiDeliveboo-ristoranti-e-piatti/3c2438a901b258812ae1c8ef8c41530e553500c4/IMG/sushi-zen/sashimi-salmone.webp";
         $Dish->price = 4.80;
-        $Dish->visible = true;
-        $Dish->save();
-
-        $Dish = new Dish();
-        $Dish->restaurant_id = 3;
-        $Dish->name = "Hosomaki al Salmone";
-        $Dish->description = "Riso e salmone avvolti in alga nori.";
-        $Dish->image = "https://picsum.photos/200/300";
-        $Dish->price = 5.20;
-        $Dish->visible = true;
-        $Dish->save();
-
-        $Dish = new Dish();
-        $Dish->restaurant_id = 3;
-        $Dish->name = "Nigiri al Salmone";
-        $Dish->description = "Morbida fetta di salmone fresco su riso compatto.";
-        $Dish->image = "https://picsum.photos/200/300";
-        $Dish->price = 3.90;
-        $Dish->visible = true;
-        $Dish->save();
-
-        $Dish = new Dish();
-        $Dish->restaurant_id = 3;
-        $Dish->name = "Nigiri al Tonno";
-        $Dish->description = "Tonno crudo di alta qualità su una base di riso leggermente pressato.";
-        $Dish->image = "https://picsum.photos/200/300";
-        $Dish->price = 4.90;
-        $Dish->visible = true;
-        $Dish->save();
-
-        $Dish = new Dish();
-        $Dish->restaurant_id = 3;
-        $Dish->name = "Nigiri al Gambero";
-        $Dish->description = "Gambero cotto e dolce, servito su un letto di riso.";
-        $Dish->image = "https://picsum.photos/200/300";
-        $Dish->price = 5.20;
-        $Dish->visible = true;
-        $Dish->save();
-
-        $Dish = new Dish();
-        $Dish->restaurant_id = 3;
-        $Dish->name = "Sashimi di Salmone";
-        $Dish->description = "Fettine di salmone crudo, fresche e succulente.";
-        $Dish->image = "https://picsum.photos/200/300";
-        $Dish->price = 5.40;
         $Dish->visible = true;
         $Dish->save();
 
@@ -520,55 +430,56 @@ class DishSeeder extends Seeder
         $Dish->restaurant_id = 3;
         $Dish->name = "Sashimi di Tonno";
         $Dish->description = "Tonno crudo tagliato con precisione, ricco di sapore.";
-        $Dish->image = "https://picsum.photos/200/300";
+        $Dish->image = "https://raw.githubusercontent.com/GiuseppeDeRosa1992/immaginiDeliveboo-ristoranti-e-piatti/3c2438a901b258812ae1c8ef8c41530e553500c4/IMG/sushi-zen/sashimi-tonno.webp";
         $Dish->price = 6.10;
         $Dish->visible = true;
         $Dish->save();
 
         $Dish = new Dish();
         $Dish->restaurant_id = 3;
-        $Dish->name = "Nigiri al Salmone";
-        $Dish->description = "Morbida fetta di salmone fresco su riso compatto.";
-        $Dish->image = "https://picsum.photos/200/300";
-        $Dish->price = 5.20;
+        $Dish->name = "Kung Pao Chicken";
+        $Dish->description = "Pollo saltato con arachidi, peperoncino e verdure.";
+        $Dish->image = "https://raw.githubusercontent.com/GiuseppeDeRosa1992/immaginiDeliveboo-ristoranti-e-piatti/c3402642436f008c7356421533bb91ce12ff07d8/IMG/dragone-doro/kung-pao-chicken.webp";
+        $Dish->price = 7.8;
         $Dish->visible = true;
         $Dish->save();
 
         $Dish = new Dish();
         $Dish->restaurant_id = 3;
-        $Dish->name = "Nigiri al Tonno";
-        $Dish->description = "Tonno crudo di alta qualità su una base di riso leggermente pressato.";
-        $Dish->image = "https://picsum.photos/200/300";
-        $Dish->price = 5.40;
+        $Dish->name = "Xiao Long Bao";
+        $Dish->description = "Ravioli al vapore ripieni di carne e brodo.";
+        $Dish->image = "https://raw.githubusercontent.com/GiuseppeDeRosa1992/immaginiDeliveboo-ristoranti-e-piatti/c3402642436f008c7356421533bb91ce12ff07d8/IMG/dragone-doro/xiao-long-bao.webp";
+        $Dish->price = 8.0;
         $Dish->visible = true;
         $Dish->save();
 
         $Dish = new Dish();
         $Dish->restaurant_id = 3;
-        $Dish->name = "Nigiri al Branzino";
-        $Dish->description = "Filetto di branzino delicato, adagiato su riso sushi.";
-        $Dish->image = "https://picsum.photos/200/300";
-        $Dish->price = 4.80;
+        $Dish->name = "Sweet and Sour Pork";
+        $Dish->description = "Maiale fritto in salsa agrodolce.";
+        $Dish->image = "https://raw.githubusercontent.com/GiuseppeDeRosa1992/immaginiDeliveboo-ristoranti-e-piatti/c3402642436f008c7356421533bb91ce12ff07d8/IMG/dragone-doro/sweet-and-sour-pork.webp";
+        $Dish->price = 8.0;
         $Dish->visible = true;
         $Dish->save();
 
         $Dish = new Dish();
         $Dish->restaurant_id = 3;
-        $Dish->name = "Sashimi di Tonno";
-        $Dish->description = "Tonno crudo tagliato con precisione, ricco di sapore.";
-        $Dish->image = "https://picsum.photos/200/300";
-        $Dish->price = 5.30;
+        $Dish->name = "Wonton Soup";
+        $Dish->description = "Zuppa leggera con wonton ripieni di carne o gamberi.";
+        $Dish->image = "https://raw.githubusercontent.com/GiuseppeDeRosa1992/immaginiDeliveboo-ristoranti-e-piatti/c3402642436f008c7356421533bb91ce12ff07d8/IMG/dragone-doro/wonton-soup.webp";
+        $Dish->price = 8.0;
         $Dish->visible = true;
         $Dish->save();
 
         $Dish = new Dish();
         $Dish->restaurant_id = 3;
-        $Dish->name = "Sashimi Misto";
-        $Dish->description = "Selezione di pesce crudo fresco, tagliato sottilmente.";
-        $Dish->image = "https://picsum.photos/200/300";
-        $Dish->price = 4.80;
+        $Dish->name = "Zongzi";
+        $Dish->description = "Riso glutinoso avvolto in foglie di bambù, ripieno di carne o fagioli.";
+        $Dish->image = "https://raw.githubusercontent.com/GiuseppeDeRosa1992/immaginiDeliveboo-ristoranti-e-piatti/c3402642436f008c7356421533bb91ce12ff07d8/IMG/dragone-doro/zongzi.webp";
+        $Dish->price = 8.0;
         $Dish->visible = true;
         $Dish->save();
+
 
         /*************************************************************  CINESE  ***********************************************/
 
@@ -576,16 +487,16 @@ class DishSeeder extends Seeder
         $Dish->restaurant_id = 4;
         $Dish->name = "Ma Po Tofu";
         $Dish->description = "Tofu piccante del Sichuan con carne macinata e pepe di Sichuan.";
-        $Dish->image = "https://picsum.photos/200/300";
+        $Dish->image = "https://raw.githubusercontent.com/GiuseppeDeRosa1992/immaginiDeliveboo-ristoranti-e-piatti/c3402642436f008c7356421533bb91ce12ff07d8/IMG/dragone-doro/ma-po-tofu.webp";
         $Dish->price = 9.5;
         $Dish->visible = true;
         $Dish->save();
 
         $Dish = new Dish();
         $Dish->restaurant_id = 4;
-        $Dish->name = "Jiaozi ";
+        $Dish->name = "Gyoza";
         $Dish->description = "Ravioli ripieni di carne o verdure, spesso cotti al vapore o fritti.";
-        $Dish->image = "https://picsum.photos/200/300";
+        $Dish->image = "https://raw.githubusercontent.com/GiuseppeDeRosa1992/immaginiDeliveboo-ristoranti-e-piatti/c3402642436f008c7356421533bb91ce12ff07d8/IMG/dragone-doro/jiaozi.webp";
         $Dish->price = 9.5;
         $Dish->visible = true;
         $Dish->save();
@@ -594,7 +505,7 @@ class DishSeeder extends Seeder
         $Dish->restaurant_id = 4;
         $Dish->name = "Peking Duck";
         $Dish->description = "Anatra arrosto servita con crepes sottili, cipollotto e salsa hoisin.";
-        $Dish->image = "https://picsum.photos/200/300";
+        $Dish->image = "https://raw.githubusercontent.com/GiuseppeDeRosa1992/immaginiDeliveboo-ristoranti-e-piatti/c3402642436f008c7356421533bb91ce12ff07d8/IMG/dragone-doro/peking-duck.webp";
         $Dish->price = 9.5;
         $Dish->visible = true;
         $Dish->save();
@@ -603,43 +514,43 @@ class DishSeeder extends Seeder
         $Dish->restaurant_id = 4;
         $Dish->name = "Chow Mein";
         $Dish->description = "Noodles saltati con carne, verdure e salsa di soia.";
-        $Dish->image = "https://picsum.photos/200/300";
+        $Dish->image = "https://raw.githubusercontent.com/GiuseppeDeRosa1992/immaginiDeliveboo-ristoranti-e-piatti/c3402642436f008c7356421533bb91ce12ff07d8/IMG/dragone-doro/chow-mein.webp";
         $Dish->price = 9.5;
         $Dish->visible = true;
         $Dish->save();
 
         $Dish = new Dish();
         $Dish->restaurant_id = 4;
-        $Dish->name = "Hot Pot ";
-        $Dish->description = "Brodo caldo in cui si cuociono carne, verdure e tofu direttamente a tavola.";
-        $Dish->image = "https://picsum.photos/200/300";
+        $Dish->name = "Riso Cantonese";
+        $Dish->description = "Riso con uova, prosciutto, piselli, carote e formaggio.";
+        $Dish->image = "https://raw.githubusercontent.com/GiuseppeDeRosa1992/immaginiDeliveboo-ristoranti-e-piatti/c3402642436f008c7356421533bb91ce12ff07d8/IMG/dragone-doro/hot-pot.webp";
         $Dish->price = 9.5;
         $Dish->visible = true;
         $Dish->save();
 
         $Dish = new Dish();
         $Dish->restaurant_id = 4;
-        $Dish->name = "Kung Pao Chicken ";
+        $Dish->name = "Kung Pao Chicken";
         $Dish->description = "Pollo saltato con arachidi, peperoncino e verdure.";
-        $Dish->image = "https://picsum.photos/200/300";
+        $Dish->image = "https://raw.githubusercontent.com/GiuseppeDeRosa1992/immaginiDeliveboo-ristoranti-e-piatti/c3402642436f008c7356421533bb91ce12ff07d8/IMG/dragone-doro/kung-pao-chicken.webp";
         $Dish->price = 7.8;
         $Dish->visible = true;
         $Dish->save();
 
         $Dish = new Dish();
         $Dish->restaurant_id = 4;
-        $Dish->name = "Xiao Long Bao ";
+        $Dish->name = "Xiao Long Bao";
         $Dish->description = "Ravioli al vapore ripieni di carne e brodo.";
-        $Dish->image = "https://picsum.photos/200/300";
+        $Dish->image = "https://raw.githubusercontent.com/GiuseppeDeRosa1992/immaginiDeliveboo-ristoranti-e-piatti/c3402642436f008c7356421533bb91ce12ff07d8/IMG/dragone-doro/xiao-long-bao.webp";
         $Dish->price = 8.0;
         $Dish->visible = true;
         $Dish->save();
 
         $Dish = new Dish();
         $Dish->restaurant_id = 4;
-        $Dish->name = "Sweet and Sour Pork ";
+        $Dish->name = "Sweet and Sour Pork";
         $Dish->description = "Maiale fritto in salsa agrodolce.";
-        $Dish->image = "https://picsum.photos/200/300";
+        $Dish->image = "https://raw.githubusercontent.com/GiuseppeDeRosa1992/immaginiDeliveboo-ristoranti-e-piatti/c3402642436f008c7356421533bb91ce12ff07d8/IMG/dragone-doro/sweet-and-sour-pork.webp";
         $Dish->price = 8.0;
         $Dish->visible = true;
         $Dish->save();
@@ -648,7 +559,7 @@ class DishSeeder extends Seeder
         $Dish->restaurant_id = 4;
         $Dish->name = "Wonton Soup";
         $Dish->description = "Zuppa leggera con wonton ripieni di carne o gamberi.";
-        $Dish->image = "https://picsum.photos/200/300";
+        $Dish->image = "https://raw.githubusercontent.com/GiuseppeDeRosa1992/immaginiDeliveboo-ristoranti-e-piatti/c3402642436f008c7356421533bb91ce12ff07d8/IMG/dragone-doro/wonton-soup.webp";
         $Dish->price = 8.0;
         $Dish->visible = true;
         $Dish->save();
@@ -657,7 +568,7 @@ class DishSeeder extends Seeder
         $Dish->restaurant_id = 4;
         $Dish->name = "Zongzi";
         $Dish->description = "Riso glutinoso avvolto in foglie di bambù, ripieno di carne o fagioli.";
-        $Dish->image = "https://picsum.photos/200/300";
+        $Dish->image = "https://raw.githubusercontent.com/GiuseppeDeRosa1992/immaginiDeliveboo-ristoranti-e-piatti/c3402642436f008c7356421533bb91ce12ff07d8/IMG/dragone-doro/zongzi.webp";
         $Dish->price = 8.0;
         $Dish->visible = true;
         $Dish->save();
@@ -666,7 +577,7 @@ class DishSeeder extends Seeder
         $Dish->restaurant_id = 4;
         $Dish->name = "Mapo Eggplant";
         $Dish->description = " Melanzane saltate con carne macinata in salsa piccante.";
-        $Dish->image = "https://picsum.photos/200/300";
+        $Dish->image = "https://raw.githubusercontent.com/GiuseppeDeRosa1992/immaginiDeliveboo-ristoranti-e-piatti/c3402642436f008c7356421533bb91ce12ff07d8/IMG/dragone-doro/mapo-eggplant.webp";
         $Dish->price = 8.0;
         $Dish->visible = true;
         $Dish->save();
@@ -675,7 +586,7 @@ class DishSeeder extends Seeder
         $Dish->restaurant_id = 4;
         $Dish->name = "Sichuan Hot and Sour Soup";
         $Dish->description = "Zuppa piccante e agrodolce con tofu, funghi e bambù.";
-        $Dish->image = "https://picsum.photos/200/300";
+        $Dish->image = "https://raw.githubusercontent.com/GiuseppeDeRosa1992/immaginiDeliveboo-ristoranti-e-piatti/c3402642436f008c7356421533bb91ce12ff07d8/IMG/dragone-doro/sichuan-hot-and-sour-soup.webp";
         $Dish->price = 8.0;
         $Dish->visible = true;
         $Dish->save();
@@ -684,7 +595,7 @@ class DishSeeder extends Seeder
         $Dish->restaurant_id = 4;
         $Dish->name = "Char Siu";
         $Dish->description = " Maiale caramellato alla griglia con salsa dolce.";
-        $Dish->image = "https://picsum.photos/200/300";
+        $Dish->image = "https://raw.githubusercontent.com/GiuseppeDeRosa1992/immaginiDeliveboo-ristoranti-e-piatti/c3402642436f008c7356421533bb91ce12ff07d8/IMG/dragone-doro/char-siu.webp";
         $Dish->price = 4.5;
         $Dish->visible = true;
         $Dish->save();
@@ -693,7 +604,7 @@ class DishSeeder extends Seeder
         $Dish->restaurant_id = 4;
         $Dish->name = "Dim Sum";
         $Dish->description = "Piccoli bocconi serviti a vapore o fritti, come involtini primavera e baozi.";
-        $Dish->image = "https://picsum.photos/200/300";
+        $Dish->image = "https://raw.githubusercontent.com/GiuseppeDeRosa1992/immaginiDeliveboo-ristoranti-e-piatti/c3402642436f008c7356421533bb91ce12ff07d8/IMG/dragone-doro/dim-sum.webp";
         $Dish->price = 5;
         $Dish->visible = true;
         $Dish->save();
@@ -702,7 +613,7 @@ class DishSeeder extends Seeder
         $Dish->restaurant_id = 4;
         $Dish->name = "Lo Mai Gai";
         $Dish->description = "Riso glutinoso al vapore con pollo e funghi, avvolto in foglie di loto.";
-        $Dish->image = "https://picsum.photos/200/300";
+        $Dish->image = "https://raw.githubusercontent.com/GiuseppeDeRosa1992/immaginiDeliveboo-ristoranti-e-piatti/c3402642436f008c7356421533bb91ce12ff07d8/IMG/dragone-doro/lo-mai-gai.webp";
         $Dish->price = 5;
         $Dish->visible = true;
         $Dish->save();
@@ -710,9 +621,9 @@ class DishSeeder extends Seeder
 
         $Dish = new Dish();
         $Dish->restaurant_id = 4;
-        $Dish->name = "Moo Shu Pork ";
+        $Dish->name = "Moo Shu Pork";
         $Dish->description = "Carne di maiale saltata con uova e verdure, servita con pancake sottili.";
-        $Dish->image = "https://picsum.photos/200/300";
+        $Dish->image = "https://raw.githubusercontent.com/GiuseppeDeRosa1992/immaginiDeliveboo-ristoranti-e-piatti/c3402642436f008c7356421533bb91ce12ff07d8/IMG/dragone-doro/moo-shu-pork.webp";
         $Dish->price = 5.0;
         $Dish->visible = true;
         $Dish->save();
@@ -721,34 +632,34 @@ class DishSeeder extends Seeder
         $Dish->restaurant_id = 4;
         $Dish->name = "Lion’s Head Meatballs";
         $Dish->description = "Grandi polpette di maiale cotte in un brodo leggero.";
-        $Dish->image = "https://picsum.photos/200/300";
+        $Dish->image = "https://raw.githubusercontent.com/GiuseppeDeRosa1992/immaginiDeliveboo-ristoranti-e-piatti/c3402642436f008c7356421533bb91ce12ff07d8/IMG/dragone-doro/lion-head-meatballs.webp";
         $Dish->price = 5.0;
         $Dish->visible = true;
         $Dish->save();
 
         $Dish = new Dish();
         $Dish->restaurant_id = 4;
-        $Dish->name = "Scallion Pancakes  ";
-        $Dish->description = "Pancake croccanti con cipollotto all'interno.";
-        $Dish->image = "https://picsum.photos/200/300";
+        $Dish->name = "Pollo alle Mandorle";
+        $Dish->description = "Pollo con salsa agrodolce e mandrole.";
+        $Dish->image = "https://raw.githubusercontent.com/GiuseppeDeRosa1992/immaginiDeliveboo-ristoranti-e-piatti/c3402642436f008c7356421533bb91ce12ff07d8/IMG/dragone-doro/scallion-pancackes.webp";
         $Dish->price = 5.0;
         $Dish->visible = true;
         $Dish->save();
 
         $Dish = new Dish();
         $Dish->restaurant_id = 4;
-        $Dish->name = "Beef Chow Fun ";
+        $Dish->name = "Beef Chow Fun";
         $Dish->description = " Tagliatelle di riso saltate con manzo e verdure.";
-        $Dish->image = "https://picsum.photos/200/300";
+        $Dish->image = "https://raw.githubusercontent.com/GiuseppeDeRosa1992/immaginiDeliveboo-ristoranti-e-piatti/c3402642436f008c7356421533bb91ce12ff07d8/IMG/dragone-doro/beef-cho-fun.webp";
         $Dish->price = 5.0;
         $Dish->visible = true;
         $Dish->save();
 
         $Dish = new Dish();
         $Dish->restaurant_id = 4;
-        $Dish->name = "Red-Braised Pork ";
+        $Dish->name = "Red-Braised Pork";
         $Dish->description = "Maiale brasato in salsa di soia dolce e vino di riso.";
-        $Dish->image = "https://picsum.photos/200/300";
+        $Dish->image = "https://raw.githubusercontent.com/GiuseppeDeRosa1992/immaginiDeliveboo-ristoranti-e-piatti/c3402642436f008c7356421533bb91ce12ff07d8/IMG/dragone-doro/red-braised-pork.webp";
         $Dish->price = 5.0;
         $Dish->visible = true;
         $Dish->save();
@@ -757,44 +668,62 @@ class DishSeeder extends Seeder
         $Dish->restaurant_id = 4;
         $Dish->name = "Dan Dan Noodles";
         $Dish->description = "Noodles sottili con carne macinata piccante, verdure e salsa di arachidi.";
-        $Dish->image = "https://picsum.photos/200/300";
+        $Dish->image = "https://raw.githubusercontent.com/GiuseppeDeRosa1992/immaginiDeliveboo-ristoranti-e-piatti/c3402642436f008c7356421533bb91ce12ff07d8/IMG/dragone-doro/dan-dan-noodles.webp";
         $Dish->price = 5.0;
         $Dish->visible = true;
         $Dish->save();
 
         $Dish = new Dish();
         $Dish->restaurant_id = 4;
-        $Dish->name = "Tea Eggs";
-        $Dish->description = " Uova sode cotte lentamente in tè e spezie.";
-        $Dish->image = "https://picsum.photos/200/300";
-        $Dish->price = 5.0;
+        $Dish->name = "Nigiri al Tonno";
+        $Dish->description = "Tonno crudo di alta qualità su una base di riso leggermente pressato.";
+        $Dish->image = "https://raw.githubusercontent.com/GiuseppeDeRosa1992/immaginiDeliveboo-ristoranti-e-piatti/3c2438a901b258812ae1c8ef8c41530e553500c4/IMG/sushi-zen/nigiri-tonno.webp";
+        $Dish->price = 5.50;
         $Dish->visible = true;
         $Dish->save();
 
         $Dish = new Dish();
         $Dish->restaurant_id = 4;
-        $Dish->name = "Fish-Fragrant Shredded Pork";
-        $Dish->description = " Maiale sminuzzato saltato in salsa dolce e piccante con aglio e zenzero.";
-        $Dish->image = "https://picsum.photos/200/300";
-        $Dish->price = 5.0;
+        $Dish->name = "Nigiri al Gambero";
+        $Dish->description = "Gambero cotto e dolce, servito su un letto di riso.";
+        $Dish->image = "https://raw.githubusercontent.com/GiuseppeDeRosa1992/immaginiDeliveboo-ristoranti-e-piatti/3c2438a901b258812ae1c8ef8c41530e553500c4/IMG/sushi-zen/nigiri-gambero.webp";
+        $Dish->price = 6.60;
         $Dish->visible = true;
         $Dish->save();
 
         $Dish = new Dish();
         $Dish->restaurant_id = 4;
-        $Dish->name = "Egg Fried Rice";
-        $Dish->description = " Riso fritto con uova, verdure e salsa di soia.";
-        $Dish->image = "https://picsum.photos/200/300";
-        $Dish->price = 5.0;
+        $Dish->name = "Sashimi Misto";
+        $Dish->description = "Selezione di pesce crudo fresco, tagliato sottilmente.";
+        $Dish->image = "https://raw.githubusercontent.com/GiuseppeDeRosa1992/immaginiDeliveboo-ristoranti-e-piatti/3c2438a901b258812ae1c8ef8c41530e553500c4/IMG/sushi-zen/sashimi-misto.webp";
+        $Dish->price = 4.40;
         $Dish->visible = true;
         $Dish->save();
 
         $Dish = new Dish();
         $Dish->restaurant_id = 4;
-        $Dish->name = "Twice-Cooked Pork";
-        $Dish->description = " Maiale cotto due volte, prima bollito e poi saltato con verdure e peperoncino.";
-        $Dish->image = "https://picsum.photos/200/300";
-        $Dish->price = 7.0;
+        $Dish->name = "Hosamaki al Salmone";
+        $Dish->description = "Riso e salmone avvolti in alga nori.";
+        $Dish->image = "https://raw.githubusercontent.com/GiuseppeDeRosa1992/immaginiDeliveboo-ristoranti-e-piatti/3c2438a901b258812ae1c8ef8c41530e553500c4/IMG/sushi-zen/hosamaki-salmone.webp";
+        $Dish->price = 6.30;
+        $Dish->visible = true;
+        $Dish->save();
+
+        $Dish = new Dish();
+        $Dish->restaurant_id = 4;
+        $Dish->name = "Nigiri al Branzino";
+        $Dish->description = "Filetto di branzino delicato, adagiato su riso sushi.";
+        $Dish->image = "https://raw.githubusercontent.com/GiuseppeDeRosa1992/immaginiDeliveboo-ristoranti-e-piatti/3c2438a901b258812ae1c8ef8c41530e553500c4/IMG/sushi-zen/nigiri-branzino.webp";
+        $Dish->price = 5.60;
+        $Dish->visible = true;
+        $Dish->save();
+
+        $Dish = new Dish();
+        $Dish->restaurant_id = 4;
+        $Dish->name = "Hosomaki al Cetriolo";
+        $Dish->description = " Rotolo di riso e cetriolo croccante, avvolto in alga nori.";
+        $Dish->image = "https://raw.githubusercontent.com/GiuseppeDeRosa1992/immaginiDeliveboo-ristoranti-e-piatti/3c2438a901b258812ae1c8ef8c41530e553500c4/IMG/sushi-zen/hosomaki-cetriolo.webp";
+        $Dish->price = 4.30;
         $Dish->visible = true;
         $Dish->save();
     }
