@@ -16,7 +16,7 @@ class RestaurantSeeder extends Seeder
         $PizzaNapoli = new Restaurant();
         $PizzaNapoli->user_id = 1;
         $PizzaNapoli->name = "Pizza Napoli";
-        $PizzaNapoli->image = "https://picsum.photos/200/300";
+        $PizzaNapoli->image = "https://raw.githubusercontent.com/GiuseppeDeRosa1992/immaginiDeliveboo-ristoranti-e-piatti/32bc242330f8b4a713b314dea1ca8803d82a5153/IMG/Pizza%20Napoli/ristorante-napoli.webp";
         $PizzaNapoli->p_iva = "12345678901";
         $PizzaNapoli->address = "Via dei Ciclamini 8";
         $PizzaNapoli->save();
@@ -56,7 +56,7 @@ class RestaurantSeeder extends Seeder
         $ElTacoLoco = new Restaurant();
         $ElTacoLoco->user_id = 2;
         $ElTacoLoco->name = "El Taco Loco";
-        $ElTacoLoco->image = "https://picsum.photos/200/300";
+        $ElTacoLoco->image = "https://raw.githubusercontent.com/GiuseppeDeRosa1992/immaginiDeliveboo-ristoranti-e-piatti/c5bb83f5c09d8207a6ce7e9d2b31f9dde67492b6/IMG/el-taco-loco/el-taco-loco.webp";
         $ElTacoLoco->p_iva = "12345678901";
         $ElTacoLoco->address = "Via Milano 69";
         $ElTacoLoco->save();
@@ -96,7 +96,7 @@ class RestaurantSeeder extends Seeder
         $SushiZen = new Restaurant();
         $SushiZen->user_id = 3;
         $SushiZen->name = "Sushi Zen";
-        $SushiZen->image = "https://picsum.photos/200/300";
+        $SushiZen->image = "https://raw.githubusercontent.com/GiuseppeDeRosa1992/immaginiDeliveboo-ristoranti-e-piatti/c5bb83f5c09d8207a6ce7e9d2b31f9dde67492b6/IMG/sushi-zen/sushi-zen.webp";
         $SushiZen->p_iva = "12345678901";
         $SushiZen->address = "Via Tokyo 32";
         $SushiZen->save();
@@ -136,7 +136,7 @@ class RestaurantSeeder extends Seeder
         $DragoneDOro = new Restaurant();
         $DragoneDOro->user_id = 4;
         $DragoneDOro->name = "Dragone D'Oro";
-        $DragoneDOro->image = "https://picsum.photos/200/300";
+        $DragoneDOro->image = "https://raw.githubusercontent.com/GiuseppeDeRosa1992/immaginiDeliveboo-ristoranti-e-piatti/c5bb83f5c09d8207a6ce7e9d2b31f9dde67492b6/IMG/dragone-doro/dragone-doro.webp";
         $DragoneDOro->p_iva = "12345678901";
         $DragoneDOro->address = "Via Firenze 11";
         $DragoneDOro->save();

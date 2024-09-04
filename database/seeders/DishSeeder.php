@@ -18,7 +18,7 @@ class DishSeeder extends Seeder
         $Dish->restaurant_id = 1;
         $Dish->name = "Margherita";
         $Dish->description = "Pizza con pomodoro e mozzarella";
-        $Dish->image = "https://picsum.photos/200/300";
+        $Dish->image = "https://raw.githubusercontent.com/GiuseppeDeRosa1992/immaginiDeliveboo-ristoranti-e-piatti/32bc242330f8b4a713b314dea1ca8803d82a5153/IMG/Pizza%20Napoli/margherita.webp";
         $Dish->price = 5;
         $Dish->visible = true;
         $Dish->save();
@@ -27,7 +27,7 @@ class DishSeeder extends Seeder
         $Dish->restaurant_id = 1;
         $Dish->name = "Napoli";
         $Dish->description = "Pizza con pomodoro e alici";
-        $Dish->image = "https://picsum.photos/200/300";
+        $Dish->image = "https://raw.githubusercontent.com/GiuseppeDeRosa1992/immaginiDeliveboo-ristoranti-e-piatti/32bc242330f8b4a713b314dea1ca8803d82a5153/IMG/Pizza%20Napoli/napoli.webp";
         $Dish->price = 6;
         $Dish->visible = true;
         $Dish->save();
@@ -36,7 +36,7 @@ class DishSeeder extends Seeder
         $Dish->restaurant_id = 1;
         $Dish->name = "Diavola";
         $Dish->description = "Pizza con pomodoro, mozzarella e salame piccante";
-        $Dish->image = "https://picsum.photos/200/300";
+        $Dish->image = "https://raw.githubusercontent.com/GiuseppeDeRosa1992/immaginiDeliveboo-ristoranti-e-piatti/32bc242330f8b4a713b314dea1ca8803d82a5153/IMG/Pizza%20Napoli/diavola.webp";
         $Dish->price = 6.50;
         $Dish->visible = true;
         $Dish->save();
@@ -45,7 +45,7 @@ class DishSeeder extends Seeder
         $Dish->restaurant_id = 1;
         $Dish->name = "Quattro Stagioni";
         $Dish->description = "Pizza con pomodoro, mozzarella, funghi champignon, carciofi";
-        $Dish->image = "https://picsum.photos/200/300";
+        $Dish->image = "https://raw.githubusercontent.com/GiuseppeDeRosa1992/immaginiDeliveboo-ristoranti-e-piatti/32bc242330f8b4a713b314dea1ca8803d82a5153/IMG/Pizza%20Napoli/quattro-stagioni.webp";
         $Dish->price = 7.50;
         $Dish->visible = true;
         $Dish->save();
@@ -54,17 +54,8 @@ class DishSeeder extends Seeder
         $Dish->restaurant_id = 1;
         $Dish->name = "Capricciosa";
         $Dish->description = "Pizza con pomodoro, funghi champignon, olive, carciofi, prosciutto";
-        $Dish->image = "https://picsum.photos/200/300";
+        $Dish->image = "https://raw.githubusercontent.com/GiuseppeDeRosa1992/immaginiDeliveboo-ristoranti-e-piatti/32bc242330f8b4a713b314dea1ca8803d82a5153/IMG/Pizza%20Napoli/capricciosa.webp";
         $Dish->price = 7.50;
-        $Dish->visible = true;
-        $Dish->save();
-
-        $Dish = new Dish();
-        $Dish->restaurant_id = 1;
-        $Dish->name = "Margherita";
-        $Dish->description = "Pizza con pomodoro, mozzarella";
-        $Dish->image = "https://picsum.photos/200/300";
-        $Dish->price = 5.50;
         $Dish->visible = true;
         $Dish->save();
 
@@ -72,7 +63,7 @@ class DishSeeder extends Seeder
         $Dish->restaurant_id = 1;
         $Dish->name = "Pizza Tonno e Cipolla";
         $Dish->description = "Pizza con pomodoro, mozzarella, tonno e cipolla";
-        $Dish->image = "https://picsum.photos/200/300";
+        $Dish->image = "https://raw.githubusercontent.com/GiuseppeDeRosa1992/immaginiDeliveboo-ristoranti-e-piatti/32bc242330f8b4a713b314dea1ca8803d82a5153/IMG/Pizza%20Napoli/tonno-e-cipolla.webp";
         $Dish->price = 7.50;
         $Dish->visible = true;
         $Dish->save();
@@ -81,44 +72,17 @@ class DishSeeder extends Seeder
         $Dish->restaurant_id = 1;
         $Dish->name = "Quattro Formaggi";
         $Dish->description = "Pizza con pomodoro, mozzarella, brie, grana, parmigiano";
-        $Dish->image = "https://picsum.photos/200/300";
+        $Dish->image = "https://raw.githubusercontent.com/GiuseppeDeRosa1992/immaginiDeliveboo-ristoranti-e-piatti/32bc242330f8b4a713b314dea1ca8803d82a5153/IMG/Pizza%20Napoli/quattro-formaggi.webp";
         $Dish->price = 8.50;
         $Dish->visible = true;
         $Dish->save();
 
         $Dish = new Dish();
         $Dish->restaurant_id = 1;
-        $Dish->name = "Diavola";
-        $Dish->description = "Pizza con pomodoro, mozzarella e salama piccante";
-        $Dish->image = "https://picsum.photos/200/300";
-        $Dish->price = 7.50;
-        $Dish->visible = true;
-        $Dish->save();
-
-        $Dish = new Dish();
-        $Dish->restaurant_id = 1;
         $Dish->name = "Marinara";
         $Dish->description = "Pizza con pomodoro, origano, aglio e acciughe";
-        $Dish->image = "https://picsum.photos/200/300";
+        $Dish->image = "https://raw.githubusercontent.com/GiuseppeDeRosa1992/immaginiDeliveboo-ristoranti-e-piatti/32bc242330f8b4a713b314dea1ca8803d82a5153/IMG/Pizza%20Napoli/marinara.webp";
         $Dish->price = 5;
-        $Dish->visible = true;
-        $Dish->save();
-
-        $Dish = new Dish();
-        $Dish->restaurant_id = 1;
-        $Dish->name = "Margherita";
-        $Dish->description = "Pizza con pomodoro e mozzarella";
-        $Dish->image = "https://picsum.photos/200/300";
-        $Dish->price = 4.50;
-        $Dish->visible = true;
-        $Dish->save();
-
-        $Dish = new Dish();
-        $Dish->restaurant_id = 1;
-        $Dish->name = "Marinara";
-        $Dish->description = "Pizza con pomodoro, origano, aglio e acciughe";
-        $Dish->image = "https://picsum.photos/200/300";
-        $Dish->price = 4;
         $Dish->visible = true;
         $Dish->save();
 
@@ -126,7 +90,7 @@ class DishSeeder extends Seeder
         $Dish->restaurant_id = 1;
         $Dish->name = "Pizza Prosciutto Cotto";
         $Dish->description = "Pizza con pomodoro, mopzzarella e prosciutto cotto";
-        $Dish->image = "https://picsum.photos/200/300";
+        $Dish->image = "https://raw.githubusercontent.com/GiuseppeDeRosa1992/immaginiDeliveboo-ristoranti-e-piatti/32bc242330f8b4a713b314dea1ca8803d82a5153/IMG/Pizza%20Napoli/prosciutto-cotto.webp";
         $Dish->price = 6.50;
         $Dish->visible = true;
         $Dish->save();
@@ -135,7 +99,7 @@ class DishSeeder extends Seeder
         $Dish->restaurant_id = 1;
         $Dish->name = "Bufala";
         $Dish->description = "Pizza con pomodoro, mozzarella di bufala e pomodori secchi";
-        $Dish->image = "https://picsum.photos/200/300";
+        $Dish->image = "https://raw.githubusercontent.com/GiuseppeDeRosa1992/immaginiDeliveboo-ristoranti-e-piatti/32bc242330f8b4a713b314dea1ca8803d82a5153/IMG/Pizza%20Napoli/bufala.webp";
         $Dish->price = 6.50;
         $Dish->visible = true;
         $Dish->save();
@@ -144,17 +108,8 @@ class DishSeeder extends Seeder
         $Dish->restaurant_id = 1;
         $Dish->name = "Pancetta e Scamorza";
         $Dish->description = "Pizza con pomodoro, mozzarella, pancetta e scamorza affumicata";
-        $Dish->image = "https://picsum.photos/200/300";
+        $Dish->image = "https://raw.githubusercontent.com/GiuseppeDeRosa1992/immaginiDeliveboo-ristoranti-e-piatti/32bc242330f8b4a713b314dea1ca8803d82a5153/IMG/Pizza%20Napoli/pancetta-e-scamorza.webp";
         $Dish->price = 7.50;
-        $Dish->visible = true;
-        $Dish->save();
-
-        $Dish = new Dish();
-        $Dish->restaurant_id = 1;
-        $Dish->name = "Margherita";
-        $Dish->description = "Pizza con pomodoro e mozzarella";
-        $Dish->image = "https://picsum.photos/200/300";
-        $Dish->price = 5.50;
         $Dish->visible = true;
         $Dish->save();
 
@@ -162,7 +117,7 @@ class DishSeeder extends Seeder
         $Dish->restaurant_id = 1;
         $Dish->name = "Pizza Mortadella e Pistacchi";
         $Dish->description = "Pizza con pomodoro, mozzarella, mortadella e pistacchi di bronte";
-        $Dish->image = "https://picsum.photos/200/300";
+        $Dish->image = "https://raw.githubusercontent.com/GiuseppeDeRosa1992/immaginiDeliveboo-ristoranti-e-piatti/32bc242330f8b4a713b314dea1ca8803d82a5153/IMG/Pizza%20Napoli/mortadella-e-pistacchi.webp";
         $Dish->price = 7.50;
         $Dish->visible = true;
         $Dish->save();
@@ -171,7 +126,7 @@ class DishSeeder extends Seeder
         $Dish->restaurant_id = 1;
         $Dish->name = "Pizza Bresaola e Rucola";
         $Dish->description = "Pizza con pomodoro, mozzarella, bresaola e rucola";
-        $Dish->image = "https://picsum.photos/200/300";
+        $Dish->image = "https://raw.githubusercontent.com/GiuseppeDeRosa1992/immaginiDeliveboo-ristoranti-e-piatti/32bc242330f8b4a713b314dea1ca8803d82a5153/IMG/Pizza%20Napoli/bresaola-e-rucola.webp";
         $Dish->price = 6.50;
         $Dish->visible = true;
         $Dish->save();
@@ -180,7 +135,7 @@ class DishSeeder extends Seeder
         $Dish->restaurant_id = 1;
         $Dish->name = "Pizza Gamberetti e Zucchine";
         $Dish->description = "Pizza con pomodoro, mozzarella, gamberetti e zucchine";
-        $Dish->image = "https://picsum.photos/200/300";
+        $Dish->image = "https://raw.githubusercontent.com/GiuseppeDeRosa1992/immaginiDeliveboo-ristoranti-e-piatti/32bc242330f8b4a713b314dea1ca8803d82a5153/IMG/Pizza%20Napoli/gamberetti-e-zucchine.webp";
         $Dish->price = 8;
         $Dish->visible = true;
         $Dish->save();
@@ -189,17 +144,8 @@ class DishSeeder extends Seeder
         $Dish->restaurant_id = 1;
         $Dish->name = "Bufala e Pesto";
         $Dish->description = "Pizza con pomodoro, mozzarella di bufala e pesto alla genovese";
-        $Dish->image = "https://picsum.photos/200/300";
+        $Dish->image = "https://raw.githubusercontent.com/GiuseppeDeRosa1992/immaginiDeliveboo-ristoranti-e-piatti/32bc242330f8b4a713b314dea1ca8803d82a5153/IMG/Pizza%20Napoli/bufala-e-pesto.webp";
         $Dish->price = 8.50;
-        $Dish->visible = true;
-        $Dish->save();
-
-        $Dish = new Dish();
-        $Dish->restaurant_id = 1;
-        $Dish->name = "Margherita";
-        $Dish->description = "Pizza con pomodoro e mozzarella";
-        $Dish->image = "https://picsum.photos/200/300";
-        $Dish->price = 5;
         $Dish->visible = true;
         $Dish->save();
 
@@ -207,7 +153,7 @@ class DishSeeder extends Seeder
         $Dish->restaurant_id = 1;
         $Dish->name = "Diavola con Olive";
         $Dish->description = "Pizza con pomodoro, mozzarella salame piccante e olive nere";
-        $Dish->image = "https://picsum.photos/200/300";
+        $Dish->image = "https://raw.githubusercontent.com/GiuseppeDeRosa1992/immaginiDeliveboo-ristoranti-e-piatti/32bc242330f8b4a713b314dea1ca8803d82a5153/IMG/Pizza%20Napoli/diavola-e-olive.webp";
         $Dish->price = 6.50;
         $Dish->visible = true;
         $Dish->save();
@@ -216,7 +162,7 @@ class DishSeeder extends Seeder
         $Dish->restaurant_id = 1;
         $Dish->name = "Pizza Cotto e Funghi";
         $Dish->description = "Pizza con pomodoro, mozzarella, cotto e funghi";
-        $Dish->image = "https://picsum.photos/200/300";
+        $Dish->image = "https://raw.githubusercontent.com/GiuseppeDeRosa1992/immaginiDeliveboo-ristoranti-e-piatti/32bc242330f8b4a713b314dea1ca8803d82a5153/IMG/Pizza%20Napoli/cotto-e-funghi.webp";
         $Dish->price = 7.50;
         $Dish->visible = true;
         $Dish->save();
@@ -225,7 +171,7 @@ class DishSeeder extends Seeder
         $Dish->restaurant_id = 1;
         $Dish->name = "Bufala e Pomodorini";
         $Dish->description = "Pizza con pomodoro, mozzarella di bufala e pomodorini";
-        $Dish->image = "https://picsum.photos/200/300";
+        $Dish->image = "https://raw.githubusercontent.com/GiuseppeDeRosa1992/immaginiDeliveboo-ristoranti-e-piatti/32bc242330f8b4a713b314dea1ca8803d82a5153/IMG/Pizza%20Napoli/bufala-e-pomodorini.webp";
         $Dish->price = 8.50;
         $Dish->visible = true;
         $Dish->save();
@@ -234,7 +180,7 @@ class DishSeeder extends Seeder
         $Dish->restaurant_id = 1;
         $Dish->name = "Pizza Salsiccia e Peperoni";
         $Dish->description = "Pizza con pomodoro, mozzarella, salsiccia e peperoni";
-        $Dish->image = "https://picsum.photos/200/300";
+        $Dish->image = "https://raw.githubusercontent.com/GiuseppeDeRosa1992/immaginiDeliveboo-ristoranti-e-piatti/32bc242330f8b4a713b314dea1ca8803d82a5153/IMG/Pizza%20Napoli/salsiccia-e-peperoni.webp";
         $Dish->price = 9.50;
         $Dish->visible = true;
         $Dish->save();
@@ -286,17 +232,6 @@ class DishSeeder extends Seeder
         $Dish->visible = true;
         $Dish->save();
 
-
-
-        $Dish = new Dish();
-        $Dish->restaurant_id = 2;
-        $Dish->name = "Tacos al Pastor";
-        $Dish->description = "Tacos con carne di pecora, avocado, peperoni";
-        $Dish->image = "https://picsum.photos/200/300";
-        $Dish->price = 5.5;
-        $Dish->visible = true;
-        $Dish->save();
-
         $Dish = new Dish();
         $Dish->restaurant_id = 2;
         $Dish->name = "Tacos de Chorizo";
@@ -317,23 +252,12 @@ class DishSeeder extends Seeder
 
         $Dish = new Dish();
         $Dish->restaurant_id = 2;
-        $Dish->name = "Tacos de Pescado";
-        $Dish->description = "Tacos con polpo, jalapeno, pomodoro";
-        $Dish->image = "https://picsum.photos/200/300";
-        $Dish->price = 4.5;
-        $Dish->visible = true;
-        $Dish->save();
-
-        $Dish = new Dish();
-        $Dish->restaurant_id = 2;
         $Dish->name = "Enchiladas de Pollo";
         $Dish->description = "Carne di pollo con cheddar";
         $Dish->image = "https://picsum.photos/200/300";
         $Dish->price = 6.5;
         $Dish->visible = true;
         $Dish->save();
-
-
 
         $Dish = new Dish();
         $Dish->restaurant_id = 2;
@@ -368,44 +292,6 @@ class DishSeeder extends Seeder
         $Dish->description = "Burrito con gamberi, pomodoro, peperone, maionese";
         $Dish->image = "https://picsum.photos/200/300";
         $Dish->price = 4.5;
-        $Dish->visible = true;
-        $Dish->save();
-
-        $Dish = new Dish();
-        $Dish->restaurant_id = 2;
-        $Dish->name = "Tacos al Pastor";
-        $Dish->description = "Tacos con carne di pecora, avocado, peperoni";
-        $Dish->image = "https://picsum.photos/200/300";
-        $Dish->price = 5.5;
-        $Dish->visible = true;
-        $Dish->save();
-
-
-
-        $Dish = new Dish();
-        $Dish->restaurant_id = 2;
-        $Dish->name = "Tacos de Barbacoa";
-        $Dish->description = "Tacos con carne di mucca, coriandolo, cheddar";
-        $Dish->image = "https://picsum.photos/200/300";
-        $Dish->price = 3.5;
-        $Dish->visible = true;
-        $Dish->save();
-
-        $Dish = new Dish();
-        $Dish->restaurant_id = 2;
-        $Dish->name = "Tacos de Pescado";
-        $Dish->description = "Tacos con polpo, jalapeno, pomodoro";
-        $Dish->image = "https://picsum.photos/200/300";
-        $Dish->price = 4.5;
-        $Dish->visible = true;
-        $Dish->save();
-
-        $Dish = new Dish();
-        $Dish->restaurant_id = 2;
-        $Dish->name = "Tacos de Pollo";
-        $Dish->description = "Tacos con carne di pollo, coriandolo, formaggio";
-        $Dish->image = "https://picsum.photos/200/300";
-        $Dish->price = 3.5;
         $Dish->visible = true;
         $Dish->save();
 
@@ -456,23 +342,6 @@ class DishSeeder extends Seeder
         $Dish->visible = true;
         $Dish->save();
 
-        $Dish = new Dish();
-        $Dish->restaurant_id = 2;
-        $Dish->name = "Tacos al Pastor";
-        $Dish->description = "Tacos con carne di pecora, avocado, peperoni";
-        $Dish->image = "https://picsum.photos/200/300";
-        $Dish->price = 5.5;
-        $Dish->visible = true;
-        $Dish->save();
-
-        $Dish = new Dish();
-        $Dish->restaurant_id = 2;
-        $Dish->name = "Tacos de Carnitas";
-        $Dish->description = "Tacos con carne di mucca, centriolini, peperoncino, coriandolo";
-        $Dish->image = "https://picsum.photos/200/300";
-        $Dish->price = 4.5;
-        $Dish->visible = true;
-        $Dish->save();
 
         /***********************************************  SUSHI  *************************************************/
 
