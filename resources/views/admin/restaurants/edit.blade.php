@@ -30,17 +30,17 @@
 				@enderror
 			</div>
 
-            {{-- Step 2: Immagine Ristorante --}}
+			{{-- Step 2: Immagine Ristorante --}}
 			<div class="mb-3">
 				<label for="image" class="form-label">Scegli una nuova immagine per il tuo ristorante</label>
 				<input type="file" class="form-control" name="image">
 				@error('image')
-					<div class="form-text text-danger">The Image field is required.</div>
+					<div class="form-text text-danger">Inserisci un'immagine.</div>
 				@enderror
 			</div>
 
-            {{-- Step 3: PIva Ristorante --}}
-            <div class="mb-3">
+			{{-- Step 3: PIva Ristorante --}}
+			<div class="mb-3">
 				<label for="description" class="form-label">Qual'è la tua Partita Iva?</label>
 				<input type="text" class="form-control" name="p_iva" value="{{ old('p_iva', $restaurants->p_iva) }}">
 				@error('p_iva')
@@ -48,7 +48,7 @@
 				@enderror
 			</div>
 
-            {{-- Step 4: Indirizzo Ristorante --}}
+			{{-- Step 4: Indirizzo Ristorante --}}
 			<div class="mb-3">
 				<label for="address" class="form-label">Qual'è il tuo nuovo indirizzo del ristorante</label>
 				<input type="text" class="form-control" name="address" value="{{ old('address', $restaurants->address) }}">
@@ -65,4 +65,3 @@
 		</form>
 	</div>
 @endsection
-

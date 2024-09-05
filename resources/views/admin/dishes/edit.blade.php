@@ -43,7 +43,7 @@
 				<label for="image" class="form-label">Modifica File Immagine Piatto</label>
 				<input type="file" id="image" class="form-control" name="image" value="" accept="image" required>
 				@error('image')
-					<div class="form-text text-danger">The Link Preview field is required.</div>
+					<div class="form-text text-danger">Inserisci un'immagine.</div>
 				@enderror
 			</div>
 
@@ -56,10 +56,13 @@
 				@enderror
 			</div>
 
+
 			<div class="mb-3">
 				<label for="visible" class="form-label">Modifica Visibilità Piatto</label>
-				<input type="boolean" id="visible" class="form-control" name="visible"
-					value="{{ old('visible', $dishes->visible) }}" required>
+				<select class="form-select" name="visible" id="visible" required>
+					<option value="1" {{ old('visible') == '1' ? 'selected' : '' }}>Visibile</option>
+					<option value="0" {{ old('visible') == '0' ? 'selected' : '' }}>Non visibile</option>
+				</select>
 				@error('visible')
 					<div class="form-text text-danger">{{ $message }}</div>
 				@enderror

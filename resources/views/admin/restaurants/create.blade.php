@@ -21,7 +21,7 @@
 		<form method="POST" action="{{ route('admin.restaurants.store') }}" enctype="multipart/form-data">
 			@csrf
 
-            {{-- Step 1: Nome Ristorante --}}
+			{{-- Step 1: Nome Ristorante --}}
 			<div class="mb-3">
 				<label for="title" class="form-label">Come si chiama il tuo ristorante?</label>
 				<input type="text" class="form-control" name="name" value="{{ old('name') }}" required>
@@ -30,25 +30,25 @@
 				@enderror
 			</div>
 
-            {{-- Step 2: Immagine Ristorante --}}
+			{{-- Step 2: Immagine Ristorante --}}
 			<div class="mb-3">
 				<label for="image" class="form-label">Scegli l'immagine per il tuo ristorante</label>
 				<input type="file" class="form-control" name="image" placeholder="" required accept="image/*">
 				@error('image')
-					<div class="form-text text-danger">The Image field is required.</div>
+					<div class="form-text text-danger">Inserisci un'immagine.</div>
 				@enderror
 			</div>
 
-            {{-- Step 3: PIva Ristorante --}}
-            <div class="mb-3">
+			{{-- Step 3: PIva Ristorante --}}
+			<div class="mb-3">
 				<label for="description" class="form-label">Qual'è la tua Partita Iva?</label>
-				<input type="text" class="form-control" name="p_iva" value="{{ old('p_iva') }}" pattern="\d{11}" required >
+				<input type="text" class="form-control" name="p_iva" value="{{ old('p_iva') }}" pattern="\d{11}" required>
 				@error('p_iva')
 					<div class="form-text text-danger">{{ $message }}</div>
 				@enderror
 			</div>
 
-            {{-- Step 4: Indirizzo Ristorante --}}
+			{{-- Step 4: Indirizzo Ristorante --}}
 			<div class="mb-3">
 				<label for="address" class="form-label">Qual'è l'indirizzo del ristorante</label>
 				<input type="text" class="form-control" name="address" value="{{ old('address') }}" required>
@@ -59,17 +59,17 @@
 
 
 			<div class="mb-3">
-                @foreach ($types as $type)
-                    <div>
-                        <label for="icon" class="form-check-label">{{ $type->name }}</label>
-                        <input type="checkbox" name="types[]" id="" value="{{ $type->id }}">
-                    </div>
-                @endforeach
+				@foreach ($types as $type)
+					<div>
+						<label for="icon" class="form-check-label">{{ $type->name }}</label>
+						<input type="checkbox" name="types[]" id="" value="{{ $type->id }}">
+					</div>
+				@endforeach
 
-                @error('types[]')
-                    <div class="form-text text-danger">The Link Preview field is required.</div>
-                @enderror
-            </div>
+				@error('types[]')
+					<div class="form-text text-danger">Il campo è richiesto.</div>
+				@enderror
+			</div>
 
 
 			<button type="submit" class="btn btn-outline-success">Aggiungi il tuo ristorante
