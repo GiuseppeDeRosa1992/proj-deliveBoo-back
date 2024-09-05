@@ -4,6 +4,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Models\Restaurant;
 use App\Models\Type;
+use App\Models\Dish;
 
 use App\Http\Controllers\Api\RestaurantController;
 
@@ -24,5 +25,6 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 
 Route::get('restaurant', function()  {
-    return Restaurant::with('type')->get();;
+    return Restaurant::with(['type','dish'])->get();;
 });
+
