@@ -906,7 +906,7 @@ class DishSeeder extends Seeder
         $Dish->restaurant_id = 6;
         $Dish->name = "Cornetto Vuoto";
         $Dish->description = "Cornetto Vuoto";
-        $Dish->image = "";
+        $Dish->image = "https://raw.githubusercontent.com/GiuseppeDeRosa1992/immaginiDeliveboo-ristoranti-e-piatti/e99c4f2b7894afb4a34ddd6eab03f81a7a0b4b0c/IMG/peccati-di-gola/Cornetto-vuoto.webp";
         $Dish->price = 1.50;
         $Dish->visible = true;
         $Dish->save();
@@ -915,7 +915,7 @@ class DishSeeder extends Seeder
         $Dish->restaurant_id = 6;
         $Dish->name = "Cornetto Con Nutella";
         $Dish->description = "Cornetto Con Nutella";
-        $Dish->image = "";
+        $Dish->image = "https://raw.githubusercontent.com/GiuseppeDeRosa1992/immaginiDeliveboo-ristoranti-e-piatti/e99c4f2b7894afb4a34ddd6eab03f81a7a0b4b0c/IMG/peccati-di-gola/Cornetto-con-nutella.webp";
         $Dish->price = 1.50;
         $Dish->visible = true;
         $Dish->save();
@@ -924,7 +924,7 @@ class DishSeeder extends Seeder
         $Dish->restaurant_id = 6;
         $Dish->name = "Cornetto Con Crema";
         $Dish->description = "Cornetto Con Crema";
-        $Dish->image = "";
+        $Dish->image = "https://raw.githubusercontent.com/GiuseppeDeRosa1992/immaginiDeliveboo-ristoranti-e-piatti/e99c4f2b7894afb4a34ddd6eab03f81a7a0b4b0c/IMG/peccati-di-gola/cornetto-con-crema.webp";
         $Dish->price = 1.50;
         $Dish->visible = true;
         $Dish->save();
@@ -933,7 +933,7 @@ class DishSeeder extends Seeder
         $Dish->restaurant_id = 6;
         $Dish->name = "Cornetto Con Crema Al Pistacchio";
         $Dish->description = "Cornetto Con Crema Al Pistacchio";
-        $Dish->image = "";
+        $Dish->image = "https://raw.githubusercontent.com/GiuseppeDeRosa1992/immaginiDeliveboo-ristoranti-e-piatti/e99c4f2b7894afb4a34ddd6eab03f81a7a0b4b0c/IMG/peccati-di-gola/cornetto-con-crema-al-pistacchio.webp";
         $Dish->price = 1.80;
         $Dish->visible = true;
         $Dish->save();
@@ -942,7 +942,7 @@ class DishSeeder extends Seeder
         $Dish->restaurant_id = 6;
         $Dish->name = "Krapfen alla Crema";
         $Dish->description = "Krapfen alla Crema";
-        $Dish->image = "";
+        $Dish->image = "https://raw.githubusercontent.com/GiuseppeDeRosa1992/immaginiDeliveboo-ristoranti-e-piatti/e99c4f2b7894afb4a34ddd6eab03f81a7a0b4b0c/IMG/peccati-di-gola/krapfen-alla-crema.webp";
         $Dish->price = 1.80;
         $Dish->visible = true;
         $Dish->save();
@@ -951,7 +951,7 @@ class DishSeeder extends Seeder
         $Dish->restaurant_id = 6;
         $Dish->name = "Krapfen alla Nutella";
         $Dish->description = "Krapfen alla Nutella";
-        $Dish->image = "";
+        $Dish->image = "https://raw.githubusercontent.com/GiuseppeDeRosa1992/immaginiDeliveboo-ristoranti-e-piatti/e99c4f2b7894afb4a34ddd6eab03f81a7a0b4b0c/IMG/peccati-di-gola/krapfen-alla-nutella.webp";
         $Dish->price = 1.80;
         $Dish->visible = true;
         $Dish->save();
@@ -960,7 +960,7 @@ class DishSeeder extends Seeder
         $Dish->restaurant_id = 6;
         $Dish->name = "Crepes alla Nutella";
         $Dish->description = "Crepes alla Nutella";
-        $Dish->image = "";
+        $Dish->image = "https://raw.githubusercontent.com/GiuseppeDeRosa1992/immaginiDeliveboo-ristoranti-e-piatti/e99c4f2b7894afb4a34ddd6eab03f81a7a0b4b0c/IMG/peccati-di-gola/crepes-alla-nutella.webp";
         $Dish->price = 1.80;
         $Dish->visible = true;
         $Dish->save();
@@ -971,7 +971,7 @@ class DishSeeder extends Seeder
         $Dish->restaurant_id = 7;
         $Dish->name = "Cornetto Vuoto";
         $Dish->description = "Cornetto Vuoto";
-        $Dish->image = "";
+        $Dish->image = "https://raw.githubusercontent.com/GiuseppeDeRosa1992/immaginiDeliveboo-ristoranti-e-piatti/e99c4f2b7894afb4a34ddd6eab03f81a7a0b4b0c/IMG/brothers-cafe/Cornetto-vuoto.webp";
         $Dish->price = 1.50;
         $Dish->visible = true;
         $Dish->save();
@@ -980,7 +980,7 @@ class DishSeeder extends Seeder
         $Dish->restaurant_id = 7;
         $Dish->name = "Cornetto Con Nutella";
         $Dish->description = "Cornetto Con Nutella";
-        $Dish->image = "";
+        $Dish->image = "https://raw.githubusercontent.com/GiuseppeDeRosa1992/immaginiDeliveboo-ristoranti-e-piatti/e99c4f2b7894afb4a34ddd6eab03f81a7a0b4b0c/IMG/brothers-cafe/Cornetto-con-nutella.webp";
         $Dish->price = 1.50;
         $Dish->visible = true;
         $Dish->save();
@@ -989,7 +989,7 @@ class DishSeeder extends Seeder
         $Dish->restaurant_id = 7;
         $Dish->name = "Cornetto Con Crema";
         $Dish->description = "Cornetto Con Crema";
-        $Dish->image = "";
+        $Dish->image = "https://raw.githubusercontent.com/GiuseppeDeRosa1992/immaginiDeliveboo-ristoranti-e-piatti/e99c4f2b7894afb4a34ddd6eab03f81a7a0b4b0c/IMG/brothers-cafe/cornetto-con-crema.webp";
         $Dish->price = 1.50;
         $Dish->visible = true;
         $Dish->save();
@@ -998,7 +998,7 @@ class DishSeeder extends Seeder
         $Dish->restaurant_id = 7;
         $Dish->name = "Cornetto Con Crema Al Pistacchio";
         $Dish->description = "Cornetto Con Crema Al Pistacchio";
-        $Dish->image = "";
+        $Dish->image = "https://raw.githubusercontent.com/GiuseppeDeRosa1992/immaginiDeliveboo-ristoranti-e-piatti/e99c4f2b7894afb4a34ddd6eab03f81a7a0b4b0c/IMG/brothers-cafe/cornetto-con-crema-al-pistacchio.webp";
         $Dish->price = 1.80;
         $Dish->visible = true;
         $Dish->save();
@@ -1007,7 +1007,7 @@ class DishSeeder extends Seeder
         $Dish->restaurant_id = 7;
         $Dish->name = "Krapfen alla Crema";
         $Dish->description = "Krapfen alla Crema";
-        $Dish->image = "";
+        $Dish->image = "https://raw.githubusercontent.com/GiuseppeDeRosa1992/immaginiDeliveboo-ristoranti-e-piatti/e99c4f2b7894afb4a34ddd6eab03f81a7a0b4b0c/IMG/peccati-di-gola/krapfen-alla-crema.webp";
         $Dish->price = 1.80;
         $Dish->visible = true;
         $Dish->save();
@@ -1016,7 +1016,7 @@ class DishSeeder extends Seeder
         $Dish->restaurant_id = 7;
         $Dish->name = "Krapfen alla Nutella";
         $Dish->description = "Krapfen alla Nutella";
-        $Dish->image = "";
+        $Dish->image = "https://raw.githubusercontent.com/GiuseppeDeRosa1992/immaginiDeliveboo-ristoranti-e-piatti/e99c4f2b7894afb4a34ddd6eab03f81a7a0b4b0c/IMG/peccati-di-gola/krapfen-alla-nutella.webp";
         $Dish->price = 1.80;
         $Dish->visible = true;
         $Dish->save();
@@ -1025,7 +1025,7 @@ class DishSeeder extends Seeder
         $Dish->restaurant_id = 7;
         $Dish->name = "Caffè Espresso";
         $Dish->description = "Caffè Espresso";
-        $Dish->image = "";
+        $Dish->image = "https://raw.githubusercontent.com/GiuseppeDeRosa1992/immaginiDeliveboo-ristoranti-e-piatti/e99c4f2b7894afb4a34ddd6eab03f81a7a0b4b0c/IMG/brothers-cafe/caffe-espresso.webp";
         $Dish->price = 1.50;
         $Dish->visible = true;
         $Dish->save();
@@ -1034,7 +1034,7 @@ class DishSeeder extends Seeder
         $Dish->restaurant_id = 7;
         $Dish->name = "Cappuccino";
         $Dish->description = "Cappuccino";
-        $Dish->image = "";
+        $Dish->image = "https://raw.githubusercontent.com/GiuseppeDeRosa1992/immaginiDeliveboo-ristoranti-e-piatti/e99c4f2b7894afb4a34ddd6eab03f81a7a0b4b0c/IMG/brothers-cafe/cappuccino.webp";
         $Dish->price = 1.50;
         $Dish->visible = true;
         $Dish->save();
@@ -1043,7 +1043,7 @@ class DishSeeder extends Seeder
         $Dish->restaurant_id = 7;
         $Dish->name = "Thè Caldo";
         $Dish->description = "Thè Caldo";
-        $Dish->image = "";
+        $Dish->image = "https://raw.githubusercontent.com/GiuseppeDeRosa1992/immaginiDeliveboo-ristoranti-e-piatti/e99c4f2b7894afb4a34ddd6eab03f81a7a0b4b0c/IMG/brothers-cafe/the-caldo.webp";
         $Dish->price = 1.50;
         $Dish->visible = true;
         $Dish->save();
@@ -1767,7 +1767,7 @@ class DishSeeder extends Seeder
         $Dish->restaurant_id = 12;
         $Dish->name = "Tagliata di carne";
         $Dish->description = "Tagliata di carne con pomodoro, rucola e scaglie di grana.";
-        $Dish->image = "";
+        $Dish->image = "https://raw.githubusercontent.com/GiuseppeDeRosa1992/immaginiDeliveboo-ristoranti-e-piatti/e99c4f2b7894afb4a34ddd6eab03f81a7a0b4b0c/IMG/la-braceria-sotto-casa/tagliata-di-carne.webp";
         $Dish->price = 15.50;
         $Dish->visible = true;
         $Dish->save();
@@ -1776,7 +1776,7 @@ class DishSeeder extends Seeder
         $Dish->restaurant_id = 12;
         $Dish->name = "Fiorentina";
         $Dish->description = "Costata da 500g taglio fiorentina cotta alla brace";
-        $Dish->image = "";
+        $Dish->image = "https://raw.githubusercontent.com/GiuseppeDeRosa1992/immaginiDeliveboo-ristoranti-e-piatti/e99c4f2b7894afb4a34ddd6eab03f81a7a0b4b0c/IMG/la-braceria-sotto-casa/fiorentina.webp";
         $Dish->price = 30.00;
         $Dish->visible = true;
         $Dish->save();
@@ -1785,7 +1785,7 @@ class DishSeeder extends Seeder
         $Dish->restaurant_id = 12;
         $Dish->name = "Pollo alla brace";
         $Dish->description = "Pollo cotto alla brace con patate";
-        $Dish->image = "";
+        $Dish->image = "https://raw.githubusercontent.com/GiuseppeDeRosa1992/immaginiDeliveboo-ristoranti-e-piatti/e99c4f2b7894afb4a34ddd6eab03f81a7a0b4b0c/IMG/la-braceria-sotto-casa/pollo-alla-brace.webp";
         $Dish->price = 14.00;
         $Dish->visible = true;
         $Dish->save();
@@ -1794,7 +1794,7 @@ class DishSeeder extends Seeder
         $Dish->restaurant_id = 12;
         $Dish->name = "CheeseBurger";
         $Dish->description = "Hamburger cotto alla brace con formaggio cheddar";
-        $Dish->image = "";
+        $Dish->image = "https://raw.githubusercontent.com/GiuseppeDeRosa1992/immaginiDeliveboo-ristoranti-e-piatti/e99c4f2b7894afb4a34ddd6eab03f81a7a0b4b0c/IMG/la-braceria-sotto-casa/cheesburger.webp";
         $Dish->price = 10.00;
         $Dish->visible = true;
         $Dish->save();
@@ -1803,7 +1803,7 @@ class DishSeeder extends Seeder
         $Dish->restaurant_id = 12;
         $Dish->name = "Hamburger";
         $Dish->description = "Hamburger cotto alla brace";
-        $Dish->image = "";
+        $Dish->image = "https://raw.githubusercontent.com/GiuseppeDeRosa1992/immaginiDeliveboo-ristoranti-e-piatti/e99c4f2b7894afb4a34ddd6eab03f81a7a0b4b0c/IMG/la-braceria-sotto-casa/hamburger.webp";
         $Dish->price = 8.00;
         $Dish->visible = true;
         $Dish->save();
@@ -1812,7 +1812,7 @@ class DishSeeder extends Seeder
         $Dish->restaurant_id = 12;
         $Dish->name = "Fettina alla griglia";
         $Dish->description = "Fettina di manzo cotta alla griglia con insalata";
-        $Dish->image = "";
+        $Dish->image = "https://raw.githubusercontent.com/GiuseppeDeRosa1992/immaginiDeliveboo-ristoranti-e-piatti/e99c4f2b7894afb4a34ddd6eab03f81a7a0b4b0c/IMG/la-braceria-sotto-casa/fettina-alla-griglia.webp";
         $Dish->price = 9.00;
         $Dish->visible = true;
         $Dish->save();
@@ -1821,7 +1821,7 @@ class DishSeeder extends Seeder
         $Dish->restaurant_id = 12;
         $Dish->name = "Caesar Salad";
         $Dish->description = "Insalata con pollo alla griglia, pomodorini e maionese";
-        $Dish->image = "";
+        $Dish->image = "https://raw.githubusercontent.com/GiuseppeDeRosa1992/immaginiDeliveboo-ristoranti-e-piatti/e99c4f2b7894afb4a34ddd6eab03f81a7a0b4b0c/IMG/la-braceria-sotto-casa/ceasar-salad.webp";
         $Dish->price = 7.00;
         $Dish->visible = true;
         $Dish->save();
