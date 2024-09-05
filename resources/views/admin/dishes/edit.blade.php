@@ -24,7 +24,7 @@
 			<div class="mb-3">
 				<label for="name" class="form-label">Modifica Nome Piatto</label>
 				<input type="text" id="name" class="form-control" name="name" value="{{ old('name', $dishes->name) }}"
-					required>
+					required minlength="4">
 				@error('name')
 					<div class="form-text text-danger">{{ $message }}</div>
 				@enderror
@@ -33,7 +33,7 @@
 			<div class="mb-3">
 				<label for="description" class="form-label">Modifica Descrizione Piatto</label>
 				<input type="text" id="description" class="form-control" name="description"
-					value="{{ old('description', $dishes->description) }}" required>
+					value="{{ old('description', $dishes->description) }}" required minlength="10">
 				@error('description')
 					<div class="form-text text-danger">{{ $message }}</div>
 				@enderror
