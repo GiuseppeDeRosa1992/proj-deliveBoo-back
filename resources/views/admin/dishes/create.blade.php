@@ -79,7 +79,7 @@
 			</div>
 
 			<button type="submit" class="btn btn-primary">
-				Salva
+				Salva il Piatto.
 			</button>
 		</form>
 	</div>
