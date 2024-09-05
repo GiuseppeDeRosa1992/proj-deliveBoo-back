@@ -172,5 +172,69 @@ class RestaurantSeeder extends Seeder
         // $SaporeDiShanghai->p_iva = "12345678901";
         // $SaporeDiShanghai->address = "Via Paolo Sarpi 49";
         // $SaporeDiShanghai->save();
+
+        $LaVerace = new Restaurant();
+        $LaVerace->user_id = 5;
+        $LaVerace->name = "La Verace";
+        $LaVerace->image = "https://picsum.photos/200/300";
+        $LaVerace->p_iva = "12345678901";
+        $LaVerace->address = "Via Rossi 22";
+        $LaVerace->save();
+
+        $PeccatiDiGola = new Restaurant();
+        $PeccatiDiGola->user_id = 6;
+        $PeccatiDiGola->name = "Peccati di Gola";
+        $PeccatiDiGola->image = "https://picsum.photos/200/300";
+        $PeccatiDiGola->p_iva = "12345678901";
+        $PeccatiDiGola->address = "Via Arrigo Rossi 22";
+        $PeccatiDiGola->save();
+
+        $BrothersCafè = new Restaurant();
+        $BrothersCafè->user_id = 7;
+        $BrothersCafè->name = "Brother's Cafè";
+        $BrothersCafè->image = "https://picsum.photos/200/300";
+        $BrothersCafè->p_iva = "12345678901";
+        $BrothersCafè->address = "Via Trieste 22";
+        $BrothersCafè->save();
+
+        $IlFornoMagico = new Restaurant();
+        $IlFornoMagico->user_id = 8;
+        $IlFornoMagico->name = "Il Forno Magico";
+        $IlFornoMagico->image = "https://picsum.photos/200/300";
+        $IlFornoMagico->p_iva = "12345678901";
+        $IlFornoMagico->address = "Via Genova 55";
+        $IlFornoMagico->save();
+
+        $BurritoBrothers = new Restaurant();
+        $BurritoBrothers->user_id = 9;
+        $BurritoBrothers->name = "Burrito Brothers";
+        $BurritoBrothers->image = "https://picsum.photos/200/300";
+        $BurritoBrothers->p_iva = "12345678901";
+        $BurritoBrothers->address = "Via Roma 55";
+        $BurritoBrothers->save();
+
+        $SaporeDiShanghai = new Restaurant();
+        $SaporeDiShanghai->user_id = 10;
+        $SaporeDiShanghai->name = "Sapore Di Shanghai";
+        $SaporeDiShanghai->image = "https://picsum.photos/200/300";
+        $SaporeDiShanghai->p_iva = "12345678901";
+        $SaporeDiShanghai->address = "Via Pescara 85";
+        $SaporeDiShanghai->save();
+
+        $OceanoBlu = new Restaurant();
+        $OceanoBlu->user_id = 11;
+        $OceanoBlu->name = "Oceano Blu";
+        $OceanoBlu->image = "https://picsum.photos/200/300";
+        $OceanoBlu->p_iva = "12345678901";
+        $OceanoBlu->address = "Via Praga 45";
+        $OceanoBlu->save();
+
+        $LaBraceriaSottoCasa = new Restaurant();
+        $LaBraceriaSottoCasa->user_id = 12;
+        $LaBraceriaSottoCasa->name = "La Braceria Sotto Casa";
+        $LaBraceriaSottoCasa->image = "";
+        $LaBraceriaSottoCasa->p_iva = "12345678901";
+        $LaBraceriaSottoCasa->address = "Via Gramsci 33";
+        $LaBraceriaSottoCasa->save();
     }
 }
