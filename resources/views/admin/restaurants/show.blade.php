@@ -4,8 +4,11 @@
 	<div class="col-4 mt-3 m-auto">
 		<div class="card p-0 h-100">
 			<div class="col-12 text-center">
-				<img src="{{ Storage::url($restaurants->image) }}" class="img-fluid rounded-start" alt="immagine-ristorante">
-
+				@if (Str::startsWith($restaurants->image, 'http'))
+					<img src="{{ $restaurants->image }}" class="img-fluid rounded-start" alt="immagine-ristorante">
+				@else
+					<img src="{{ asset('storage/' . $restaurants->image) }}" class="img-fluid rounded-start" alt="immagine-ristorante">
+				@endif
 			</div>
 			<div class="row g-0 m-0">
 				<div class="col-12">

@@ -39,7 +39,7 @@ class RestaurantController extends Controller
         //    'types' => $types
         //   ];
 
-        //  return view('admin.restaurants.create', $data);
+        return redirect()->route('admin.restaurants.index');
     }
 
     /**
@@ -107,13 +107,13 @@ class RestaurantController extends Controller
     public function edit(Restaurant $restaurant)
     {
 
-        $types = Type::all();
+        // $types = Type::all();
 
-        $data = [
-            'restaurants' => $restaurant,
-            'types' => $types
-        ];
-        return view('admin.restaurants.edit', $data);
+        // $data = [
+        //     'restaurants' => $restaurant,
+        //     'types' => $types
+        // ];
+        return redirect()->route('admin.restaurants.index');
     }
 
     /**
@@ -121,31 +121,31 @@ class RestaurantController extends Controller
      */
     public function update(Request $request, Restaurant $restaurant)
     {
-        $data = $request->validate([
-            'name' => 'required|min:5',
-            'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg,webp|max:2048',
-            'p_iva' => 'required|numeric|digits:11',
-            'address' => 'required|max:255',
-            'types' => 'array',
-            'types.*' => 'exist:types,id'
-        ]);
+        // $data = $request->validate([
+        //     'name' => 'required|min:5',
+        //     'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg,webp|max:2048',
+        //     'p_iva' => 'required|numeric|digits:11',
+        //     'address' => 'required|max:255',
+        //     'types' => 'array',
+        //     'types.*' => 'exist:types,id'
+        // ]);
 
-        if ($request->hasFile('image')) {
-            // save the new image
-            $img_path = $request->file('image')->store('images', 'public');
-            $data['image'] = $img_path;
+        // if ($request->hasFile('image')) {
+        //     // save the new image
+        //     $img_path = $request->file('image')->store('images', 'public');
+        //     $data['image'] = $img_path;
 
-            // delete the old image if it exists and is not a URL
-            if ($restaurant->image && !Str::startsWith($restaurant->image, 'http')) {
-                Storage::delete($restaurant->image);
-            }
-        } else {
-            // keep the existing image if no new image is uploaded
-            $data['image'] = $restaurant->image;
-        }
+        //     // delete the old image if it exists and is not a URL
+        //     if ($restaurant->image && !Str::startsWith($restaurant->image, 'http')) {
+        //         Storage::delete($restaurant->image);
+        //     }
+        // } else {
+        //     // keep the existing image if no new image is uploaded
+        //     $data['image'] = $restaurant->image;
+        // }
 
 
-        $restaurant->update($data);
+        // $restaurant->update($data);
 
         return redirect()->route('admin.restaurants.index');
     }
@@ -157,7 +157,7 @@ class RestaurantController extends Controller
     {
         // Storage::delete($restaurant->image);
 
-        $restaurant->delete();
+        // $restaurant->delete();
 
         return redirect()->route('admin.restaurants.index');
     }
