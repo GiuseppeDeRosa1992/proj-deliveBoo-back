@@ -70,6 +70,9 @@
 
 			<button type="submit" class="btn btn-primary">Salva modifiche</button>
 
+			<a href="{{ route('admin.dishes.index') }}" class="btn btn-dark p-2">
+				Torna Alla lista Piatti
+			</a>
 
 		</form>
 
