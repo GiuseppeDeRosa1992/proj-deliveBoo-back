@@ -7,6 +7,7 @@ use App\Models\Type;
 use App\Models\Dish;
 
 use App\Http\Controllers\Api\RestaurantController;
+use App\Http\Controllers\Admin\DishController;
 
 /*
 |--------------------------------------------------------------------------
@@ -30,3 +31,5 @@ Route::get('restaurants', function () {
 
 //creo rotta per i dettagli del progetto
 Route::get('restaurants/{restaurant:slug}', [RestaurantController::class, 'show']);
+
+Route::get('restaurants/{id}/dishes', [DishController::class, 'getDishesByRestaurant']);
