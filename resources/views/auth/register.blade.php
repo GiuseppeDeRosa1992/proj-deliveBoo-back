@@ -22,7 +22,7 @@
                                 <div class="col-md-6">
                                     <input id="email" type="email"
                                         class="form-control @error('email') is-invalid @enderror" name="email"
-                                        value="{{ old('email') }}" required autocomplete="email" pattern=".+@.+.(com|it)$"
+                                        value="{{ old('email') }}" required autocomplete="email" pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
                                         title="Per favore, inserisci un'email valida che termini con .it o .com">
 
                                     @error('email')
