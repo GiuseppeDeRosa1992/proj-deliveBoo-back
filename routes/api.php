@@ -8,7 +8,7 @@ use App\Models\Dish;
 
 use App\Http\Controllers\Api\RestaurantController;
 use App\Http\Controllers\Admin\DishController;
-use App\Http\Controllers\Admin\DishController;
+
 
 /*
 |--------------------------------------------------------------------------
