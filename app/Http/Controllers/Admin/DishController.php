@@ -15,24 +15,24 @@ class DishController extends Controller
      * Display a listing of the resource.
      */
     public function index()
-{
-    // Recupero l'utente loggato
-    $user = Auth::user();
+    {
+        // Recupero l'utente loggato
+        $user = Auth::user();
 
-    // Recupero i piatti associati ai ristoranti dell'utente loggato
-    $dishes = Dish::whereIn('restaurant_id', $user->restaurants()->pluck('id'))->orderByDesc('id')->get();
+        // Recupero i piatti associati ai ristoranti dell'utente loggato
+        $dishes = Dish::whereIn('restaurant_id', $user->restaurants()->pluck('id'))->orderByDesc('id')->get();
 
-    // Calcolo il numero totale dei piatti
-    $totalDishes = $dishes->count();
+        // Calcolo il numero totale dei piatti
+        $totalDishes = $dishes->count();
 
-    // Aggiungo piatti e totale all'array $data
-    $data = [
-        'dishes' => $dishes,
-        'totalDishes' => $totalDishes,
-    ];
+        // Aggiungo piatti e totale all'array $data
+        $data = [
+            'dishes' => $dishes,
+            'totalDishes' => $totalDishes,
+        ];
 
-    return view('admin.dishes.index', $data);
-}
+        return view('admin.dishes.index', $data);
+    }
 
     /**
      * Show the form for creating a new resource.
@@ -68,8 +68,8 @@ class DishController extends Controller
 
         $data['restaurant_id'] = $restaurant->id;
 
-        //aggiungo slug al progetto
-        //$data['slug'] = Str::slug($request->title, '-');
+        //aggiungo slug ai piatti
+        $data['slug'] = Str::slug($request->name, '-');
 
         //creo variabile dove metto il percorso per lo storage dove vanno a finire le immagini che prendo dal create e poi le attacco alla variabile data dove passo tutti i dati del validate
         $img_path = Storage::put('images', $request['image']);
@@ -127,6 +127,9 @@ class DishController extends Controller
             ],
             'visible' => 'required|boolean'
         ]);
+
+        //aggiungo slug ai piatti
+        $data['slug'] = Str::slug($request->name, '-');
 
         if ($request->has('image')) {
             // save the image

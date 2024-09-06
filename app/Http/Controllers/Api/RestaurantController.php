@@ -32,6 +32,7 @@ class RestaurantController extends Controller
 
     public function show($slug)
     {
+        //creo variabile per lo slug dei ristoranti
         $restaurant = Restaurant::with(['type'])->where('slug', $slug)->first();
 
         if ($restaurant) {

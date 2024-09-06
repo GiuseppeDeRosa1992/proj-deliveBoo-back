@@ -12,17 +12,20 @@ class Dish extends Model
     protected $fillable = [
         'restaurant_id',
         'name',
+        'slug',
         'description',
         'image',
         'price',
         'visible'
     ];
 
-    public function restaurant() {
+    public function restaurant()
+    {
         return $this->belongsTo(Restaurant::class);
     }
 
-    public function order() {
+    public function order()
+    {
         return $this->belongsToMany(Order::class);
     }
 }
