@@ -31,12 +31,9 @@
 
                             <!-- Password -->
                             <div class="mb-4 row">
-                                <label for="password"
-                                    class="col-md-4 col-form-label text-md-right">{{ __('Password:') }}</label>
+                                <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Password:') }}</label>
                                 <div class="col-md-6">
-                                    <input id="password" type="password"
-                                        class="form-control @error('password') is-invalid @enderror" name="password"
-                                        required autocomplete="new-password" minlength="6" maxlength="255">
+                                    <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password" minlength="6" maxlength="255">
                                     @error('password')
                                         <span class="invalid-feedback" role="alert">
                                             <strong>{{ $message }}</strong>
@@ -44,15 +41,10 @@
                                     @enderror
                                 </div>
                             </div>
-
-                            <!-- Conferma Password -->
                             <div class="mb-4 row">
-                                <label for="password-confirm"
-                                    class="col-md-4 col-form-label text-md-right">{{ __('Conferma Password:') }}</label>
+                                <label for="password-confirm" class="col-md-4 col-form-label text-md-right">{{ __('Confirm Password:') }}</label>
                                 <div class="col-md-6">
-                                    <input id="password-confirm" type="password" class="form-control"
-                                        name="password_confirmation" required autocomplete="new-password" minlength="6"
-                                        maxlength="255">
+                                    <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
                                 </div>
                             </div>
 
@@ -148,4 +140,18 @@
         </div>
     </div>
     </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const password = document.getElementById('password');
+            const passwordConfirm = document.getElementById('password-confirm');
+            const form = password.closest('form');
+
+            form.addEventListener('submit', function (event) {
+                if (password.value !== passwordConfirm.value) {
+                    event.preventDefault();
+                    alert('Le password non coincidono. Per favore, riprova.');
+                }
+            });
+        });
+        </script>
 @endsection
