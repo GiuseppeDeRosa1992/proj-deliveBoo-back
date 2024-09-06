@@ -18,6 +18,11 @@
 						<p class="card-text"><b>Indirizzo Ristorante:</b> {{ $restaurants->address }}</p>
 					</div>
 				</div>
+
+				<div class="text-center">
+					<a href="{{ route('admin.dashboard') }}" class="btn btn-outline-success my-2 py-1 px-3">Torna alla lista dei Piatti
+						<i class="fa-solid fa-plate-wheat fa-lg fa-fw"></i></a>
+				</div>
 			</div>
 		</div>
 	</div>
