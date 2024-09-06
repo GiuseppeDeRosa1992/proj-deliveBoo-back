@@ -5,6 +5,7 @@ namespace App\Console\Commands;
 use Illuminate\Console\Command;
 use App\Models\Restaurant;
 use Illuminate\Support\Str;
+use App\Models\Dish;
 
 class GenerateSlugs extends Command
 {
@@ -19,8 +20,11 @@ class GenerateSlugs extends Command
 
     public function handle()
     {
-        // Recupera tutti i post senza slug
+        // Recupera tutti i ristoranti senza slug
         $restaurants = Restaurant::whereNull('slug')->get();
+
+        // Recupera tutti i piatti senza slug
+        $dishes = Dish::whereNull('slug')->get();
 
         foreach ($restaurants as $restaurant) {
             // Genera lo slug basato sul titolo
@@ -28,6 +32,14 @@ class GenerateSlugs extends Command
             $restaurant->save();
 
             $this->info("Slug generato per il post: {$restaurant->name}");
+        }
+
+        foreach ($dishes as $dish) {
+            // Genera lo slug basato sul nome
+            $dish->slug = Str::slug($dish->name);
+            $dish->save();
+
+            $this->info("Slug generato per il post: {$dish->name}");
         }
 
         $this->info('Slugs generati con successo per tutti i post.');

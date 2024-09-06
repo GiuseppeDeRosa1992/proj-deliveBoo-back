@@ -68,8 +68,8 @@ class DishController extends Controller
 
         $data['restaurant_id'] = $restaurant->id;
 
-        //aggiungo slug al progetto
-        //$data['slug'] = Str::slug($request->title, '-');
+        //aggiungo slug ai piatti
+        $data['slug'] = Str::slug($request->name, '-');
 
         //creo variabile dove metto il percorso per lo storage dove vanno a finire le immagini che prendo dal create e poi le attacco alla variabile data dove passo tutti i dati del validate
         $img_path = Storage::put('images', $request['image']);
@@ -127,6 +127,9 @@ class DishController extends Controller
             ],
             'visible' => 'required|boolean'
         ]);
+
+        //aggiungo slug ai piatti
+        $data['slug'] = Str::slug($request->name, '-');
 
         if ($request->has('image')) {
             // save the image
