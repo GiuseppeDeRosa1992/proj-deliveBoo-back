@@ -16,7 +16,7 @@ class RestaurantController extends Controller
 
         // Se viene fornito un filtro per il tipo, applicalo
         if ($type) {
-            $query->whereHas('type', function($q) use ($type) {
+            $query->whereHas('type', function ($q) use ($type) {
                 $q->where('name', 'LIKE', '%' . $type . '%');
             });
         }
@@ -29,5 +29,21 @@ class RestaurantController extends Controller
             'result' => $restaurants
         ]);
     }
-}
 
+    public function show($slug)
+    {
+        $restaurant = Restaurant::with(['type'])->where('slug', $slug)->first();
+
+        if ($restaurant) {
+            return response()->json([
+                'success' => true,
+                'restaurant' => $restaurant
+            ]);
+        } else {
+            return response()->json([
+                'success' => false,
+                'message' => 'not found'
+            ]);
+        };
+    }
+}

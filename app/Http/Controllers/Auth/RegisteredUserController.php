@@ -10,6 +10,7 @@ use App\Providers\RouteServiceProvider;
 use Illuminate\Auth\Events\Registered;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
+use Illuminate\Support\Str;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Validation\Rules;
@@ -68,11 +69,15 @@ class RegisteredUserController extends Controller
         $restaurant = Restaurant::create([
             'user_id' => $user->id,
             'name' => $request->restaurant_name,
+            //aggiungo slug al database per ogni utente nuovo che si registra e lo associo al nome del ristorante
+            'slug' => Str::slug($request->restaurant_name, '-'),
             'address' => $request->restaurant_address,
             'p_iva' => $request->p_iva,
             'image' => $img_path,
             //'types_id' => $types
         ]);
+
+
 
         // $user_id = auth()->user()->user_id;
         // Restaurant::create([
