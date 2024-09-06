@@ -95,7 +95,8 @@ class DishController extends Controller
     public function edit(Dish $dish)
     {
         $data = [
-            'dishes' => $dish
+            'dishes' => $dish,
+            $dish = Dish::where('id', $dish->id)->where('restaurant_id', auth()->id())->firstOrFail(),
         ];
         return view('admin.dishes.edit', $data);
     }
