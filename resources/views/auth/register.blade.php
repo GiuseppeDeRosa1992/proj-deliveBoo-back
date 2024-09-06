@@ -11,6 +11,10 @@
                         <form method="POST" action="{{ route('register') }}" enctype="multipart/form-data">
                             @csrf
 
+
+                            <div class="mb-3 row">
+                                <p class="text-danger">Tutti i campi sono obbligatori</p>
+                            </div>
                             <!-- Email -->
                             <div class="mb-4 row">
                                 <label for="e-mail"
@@ -42,7 +46,7 @@
                                 </div>
                             </div>
                             <div class="mb-4 row">
-                                <label for="password-confirm" class="col-md-4 col-form-label text-md-right">{{ __('Confirm Password:') }}</label>
+                                <label for="password-confirm" class="col-md-4 col-form-label text-md-right">{{ __('Conferma Password:') }}</label>
                                 <div class="col-md-6">
                                     <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
                                 </div>
@@ -114,16 +118,19 @@
                                 </div>
                             </div>
                             <!-- types -->
-                            @foreach ($types as $type)
-                                <div>
-                                    <label for="icon" class="form-check-label">{{ $type->name }}</label>
-                                    <input type="checkbox" name="types[]" id="" value="{{ $type->id }}">
-                                </div>
-                            @endforeach
+                            <div id="type-form">
+                                @foreach ($types as $type)
+                                    <div>
+                                        <input type="checkbox" name="types[]" id="type-{{ $type->id }}" value="{{ $type->id }}">
+                                        <label for="icon" class="form-check-label">{{ $type->name }}</label>
+                                    </div>
+                                @endforeach
 
-                            @error('types[]')
-                                <div class="form-text text-danger">The Link Preview field is required.</div>
-                            @enderror
+                                <div class="invalid-feedback" role="alert" id="error-message" style="display: none;">
+                                    <strong>Errore: seleziona almeno un'opzione</strong>
+                                </div>
+                            </div>
+
                     </div>
 
                     <!-- Pulsante di invio -->
@@ -140,11 +147,15 @@
         </div>
     </div>
     </div>
+
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             const password = document.getElementById('password');
             const passwordConfirm = document.getElementById('password-confirm');
             const form = password.closest('form');
+            const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+            const errorMessage = document.getElementById('error-message');
+            const typeForm = document.getElementById('type-form');
 
             form.addEventListener('submit', function (event) {
                 if (password.value !== passwordConfirm.value) {
@@ -152,6 +163,24 @@
                     alert('Le password non coincidono. Per favore, riprova.');
                 }
             });
+
+            function validateCheckboxes() {
+                const anyChecked = Array.from(checkboxes).some(checkbox => checkbox.checked);
+                if (anyChecked) {
+                    errorMessage.style.display = 'none';
+                } else {
+                errorMessage.style.display = 'block';
+                }
+            };
+            checkboxes.forEach(checkbox => {
+                checkbox.addEventListener('change', validateCheckboxes);
+            });
+            typeForm.addEventListener('submit', function(event) {
+                if (!validateCheckboxes()) {
+                    event.preventDefault();
+            }
+            });
+            validateCheckboxes();
         });
-        </script>
+    </script>
 @endsection
