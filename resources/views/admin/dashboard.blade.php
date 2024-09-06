@@ -5,7 +5,7 @@
 		<div class="row justify-content-center">
 			<div class="col-md-8">
 				<div class="card">
-					<div class="card-header">{{ __('Pannello di Controllo') }}</div>
+					<div class="card-header">{{ __('Sei Loggato!') }}</div>
 
 					<div class="card-body">
 						@if (session('status'))
@@ -14,10 +14,15 @@
 							</div>
 						@endif
 
-						{{ __('Sei Loggato!') }}
+
 					</div>
 
 					@include('partials.cardRestaurant')
+
+					<p class="fs-5 mb-3">
+						Totale piatti presenti: {{ $totalDishes }}
+					</p>
+					@include('partials.cardDish')
 				</div>
 			</div>
 		</div>
