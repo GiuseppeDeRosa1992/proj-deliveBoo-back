@@ -11,7 +11,9 @@
 			</div>
 		</div>
 		<h2 class="m-0 py-2 text-center">Questi sono i nostri Piatti</h2>
-
+		<p class="fs-5 mb-3">
+            Totale piatti presenti: {{ $totalDishes }}
+        </p>
 		@include('partials.cardDish')
 	</div>
 @endsection

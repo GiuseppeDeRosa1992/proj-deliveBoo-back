@@ -15,15 +15,24 @@ class DishController extends Controller
      * Display a listing of the resource.
      */
     public function index()
-    {
-        //filtro i piatti tramite l'user loggato
-        $user = Auth::user();
-        //recupero con wherein solo i piatti con il restaurant_id associato
-        $data = [
-            'dishes' => Dish::whereIn('restaurant_id', $user->restaurants()->pluck('id'))->orderByDesc('id')->get()
-        ];
-        return view('admin.dishes.index', $data);
-    }
+{
+    // Recupero l'utente loggato
+    $user = Auth::user();
+
+    // Recupero i piatti associati ai ristoranti dell'utente loggato
+    $dishes = Dish::whereIn('restaurant_id', $user->restaurants()->pluck('id'))->orderByDesc('id')->get();
+
+    // Calcolo il numero totale dei piatti
+    $totalDishes = $dishes->count();
+
+    // Aggiungo piatti e totale all'array $data
+    $data = [
+        'dishes' => $dishes,
+        'totalDishes' => $totalDishes,
+    ];
+
+    return view('admin.dishes.index', $data);
+}
 
     /**
      * Show the form for creating a new resource.
