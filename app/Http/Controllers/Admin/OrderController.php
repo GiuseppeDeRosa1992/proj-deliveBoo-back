@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Models\Order;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
 
@@ -16,8 +17,10 @@ class OrderController extends Controller
      */
     public function index()
     {
+        $user = Auth::user();
+        $orders = Order::whereIn('restaurant_id', $user->restaurants()->pluck('id'))->orderByDesc('id')->get();
         $data = [
-            'orders' => Order::orderByDesc('id')
+            'orders' => $orders
         ];
         return view('admin.orders.index', $data);
     }
@@ -35,12 +38,21 @@ class OrderController extends Controller
      */
     public function store(Request $request)
     {
+
+        $user = Auth::user();
+
+        $orders = $user->restaurants()->first();
+
+        if (!$orders) {
+            return redirect()->back()->with('error', 'Nessun ordine associato a questo ristorante.');
+        };
+
         $data = $request->validate([
             'restaurant_id' => 'required',
             'name_client' => 'required|min:3',
-            'email_client' => 'required|min:10',
+            'email_client' => 'required|min:4',
             'number_phone' => 'required|numeric',
-            'address_client' => 'required|min:10',
+            'address_client' => 'required|min:4',
             'date' => 'required|date',
             'total' => 'required|decimal:5,2',
         ]);
@@ -71,7 +83,8 @@ class OrderController extends Controller
     public function show(Order $order)
     {
         $data = [
-            'orders' => $order
+            'orders' => $order,
+            $order = Order::where('id', $order->id)->where('restaurant_id', auth()->id())->firstOrFail(),
         ];
         return view('admin.orders.show', $data);
     }
