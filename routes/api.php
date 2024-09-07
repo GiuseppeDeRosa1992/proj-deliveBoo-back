@@ -7,7 +7,7 @@ use App\Models\Type;
 use App\Models\Dish;
 
 use App\Http\Controllers\Api\RestaurantController;
-use App\Http\Controllers\Admin\DishController;
+use App\Http\Controllers\Api\DishController;
 
 
 /*
@@ -36,4 +36,5 @@ Route::get('restaurants/{restaurant:slug}', [RestaurantController::class, 'show'
 //creo rotta per i dettagli dei piatti che richiamo in js
 Route::get('dishes/{dish:slug}', [Dishcontroller::class, 'show']);
 
-Route::get('restaurants/{id}/dishes', [DishController::class, 'getDishesByRestaurant']);
+Route::get('/dishes', [DishController::class, 'index']); // Per ottenere tutti i piatti
+Route::get('/restaurants/{slug}/dishes', [DishController::class, 'getDishesByRestaurant']); // Per ottenere i piatti di un ristorante specifico

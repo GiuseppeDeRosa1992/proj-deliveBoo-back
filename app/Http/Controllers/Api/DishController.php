@@ -6,13 +6,22 @@ use App\Http\Controllers\Controller;
 use App\Models\Dish;
 use Illuminate\Http\Request;
 
-class RestaurantController extends Controller
+class DishController extends Controller
 {
-    public function index(Request $request)
+    public function index()
     {
+        $dishes = Dish::orderByDesc('id')->get();
+
+        if ($dishes->isEmpty()) {
+            return response()->json([
+                'success' => false,
+                'message' => 'Nessun piatto disponibile'
+            ], 404);
+        }
+
         return response()->json([
             'success' => true,
-            'dishes' => Dish::orderByDesc('id'),
+            'dishes' => $dishes
         ]);
     }
 
@@ -32,5 +41,25 @@ class RestaurantController extends Controller
                 'message' => 'not found'
             ]);
         };
+    }
+
+    public function getDishesByRestaurant($restaurantSlug)
+    {
+        // Recupera i piatti del ristorante con lo slug fornito
+        $dishes = Dish::whereHas('restaurant', function ($query) use ($restaurantSlug) {
+            $query->where('slug', $restaurantSlug);
+        })->get();
+
+        if ($dishes->isEmpty()) {
+            return response()->json([
+                'success' => false,
+                'message' => 'Nessun piatto trovato per questo ristorante'
+            ], 404);
+        }
+
+        return response()->json([
+            'success' => true,
+            'dishes' => $dishes
+        ]);
     }
 }
