@@ -9,7 +9,7 @@ use App\Http\Controllers\BraintreeController;
 
 use App\Http\Controllers\Api\RestaurantController;
 use App\Http\Controllers\Api\DishController;
-
+use App\Http\Controllers\Api\OrderController;
 
 /*
 |--------------------------------------------------------------------------
@@ -41,3 +41,6 @@ Route::get('/dishes', [DishController::class, 'index']); // Per ottenere tutti i
 Route::get('/restaurants/{slug}/dishes', [DishController::class, 'getDishesByRestaurant']); // Per ottenere i piatti di un ristorante specifico
 Route::get('/braintree/token', [BraintreeController::class, 'generateToken']);
 Route::post('/braintree/checkout', [BraintreeController::class, 'checkout']);
+
+//rotta per gli ordini che mi arrivano dal front
+Route::post('/orders', [OrderController::class, 'store']);
