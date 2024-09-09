@@ -6,13 +6,18 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Order;
 use App\Models\Dish;
+use App\Models\Restaurant;
 use App\Models\DishOrder;
+use App\Mail\NewOrder;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\DB;
 
 class OrderController extends Controller
 {
     public function store(Request $request)
     {
+        $order = $request->all();
+
         $validatedOrder = $request->validate([
             'restaurant_id' => 'required|integer',
             'name_client' => 'required|string',
@@ -51,6 +56,20 @@ class OrderController extends Controller
                 ]);
             }
         });
+
+        // Recupera l'indirizzo email del ristorante
+        $restaurant = Restaurant::find($validatedOrder['restaurant_id']);
+
+        if (!$restaurant) {
+            return response()->json(['error' => 'Ristorante non trovato'], 404);
+        }
+
+        $user = $restaurant->user;
+        $restaurantEmail = $user->email;
+
+
+        // Invia l'email
+        Mail::to($restaurantEmail)->send(new NewOrder($order));
 
         return response()->json(['message' => 'Ordine Effettuato con Successo']);
     }
