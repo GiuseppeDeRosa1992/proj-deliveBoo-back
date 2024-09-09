@@ -15,15 +15,16 @@ class Order extends Model
         'email_client',
         'number_phone',
         'address_client',
-        'date',
         'total'
     ];
 
-    public function restaurant() {
+    public function restaurant()
+    {
         return $this->hasMany(Restaurant::class);
     }
 
-    public function dish() {
+    public function dish()
+    {
         return $this->belongsToMany(Dish::class);
     }
 }

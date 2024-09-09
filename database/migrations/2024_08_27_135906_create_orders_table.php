@@ -19,7 +19,6 @@ return new class extends Migration
             $table->string('email_client');
             $table->string('number_phone');
             $table->string('address_client', 255);
-            $table->dateTime('date');
             $table->decimal('total', 5, 2);
             $table->timestamps();
         });

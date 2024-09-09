@@ -19,7 +19,6 @@ class OrderController extends Controller
             'email_client' => 'required|email',
             'number_phone' => 'required|string',
             'address_client' => 'required|string',
-            'date' => 'required|date',
             'total' => 'required|string',
             'dishes' => 'required|array',
             'dishes.*.dish_id' => 'required|integer|exists:dishes,id',
@@ -37,7 +36,7 @@ class OrderController extends Controller
                 'email_client' => $validatedOrder['email_client'],
                 'number_phone' => $validatedOrder['number_phone'],
                 'address_client' => $validatedOrder['address_client'],
-                'date' => $validatedOrder['date'],
+                //FLOATVAL SERVE A CAMBAIRE LA STRINGA CHE MI VIENE PASSATA DA JS IN DECIMAL CH ESERVE AL BACK-END
                 'total' => floatval($validatedOrder['total']),
             ]);
 
