@@ -19,6 +19,9 @@
 					class="btn btn-outline-success my-2 py-1 px-3">Dettagli
 					Ristorante
 					<i class="fa-solid fa-info"></i></a>
+					<a href="{{ route('admin.orders.index') }}"
+						class="btn btn-outline-primary my-2 py-1 px-3">Ordini
+						<i class="fa-solid fa-info"></i></a>
 			</div>
 
 			{{-- <div>
