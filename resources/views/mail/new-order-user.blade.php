@@ -1,13 +1,12 @@
 <!DOCTYPE html>
 <html>
-
 <head>
-    <title>Nuovo Ordine</title>
+    <title>Conferma del Tuo Ordine</title>
 </head>
-
 <body>
-    <h1>Nuovo Ordine Ricevuto</h1>
-    <p>Dettagli dell'ordine:</p>
+    <h1>Conferma del Tuo Ordine</h1>
+    <p>Grazie per aver effettuato un ordine con noi!</p>
+    <p>Dettagli del tuo ordine:</p>
     <ul>
         <li><strong>Nome:</strong> {{ $order['name_client'] }}</li>
         <li><strong>Email:</strong> {{ $order['email_client'] }}</li>
@@ -21,6 +20,6 @@
             <li>{{ $dish['name_dish'] }} - €{{ $dish['price_dish'] }} x {{ $dish['quantity'] }}</li>
         @endforeach
     </ul>
+    <p>Riceverai presto una notifica quando il tuo ordine sarà pronto. Grazie per aver scelto il nostro ristorante!</p>
 </body>
-
 </html>

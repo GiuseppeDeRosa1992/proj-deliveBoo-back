@@ -3,12 +3,14 @@
 namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
+
 use Illuminate\Http\Request;
 use App\Models\Order;
 use App\Models\Dish;
 use App\Models\Restaurant;
 use App\Models\DishOrder;
 use App\Mail\NewOrder;
+use App\Mail\NewOrderUser;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\DB;
 
@@ -59,6 +61,7 @@ class OrderController extends Controller
 
         // Recupera l'indirizzo email del ristorante
         $restaurant = Restaurant::find($validatedOrder['restaurant_id']);
+        $emailClient = $validatedOrder['email_client'];
 
         if (!$restaurant) {
             return response()->json(['error' => 'Ristorante non trovato'], 404);
@@ -70,6 +73,7 @@ class OrderController extends Controller
 
         // Invia l'email
         Mail::to($restaurantEmail)->send(new NewOrder($order));
+        Mail::to($emailClient)->send(new NewOrderUser($order));
 
         return response()->json(['message' => 'Ordine Effettuato con Successo']);
     }

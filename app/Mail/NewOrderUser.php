@@ -9,7 +9,7 @@ use Illuminate\Mail\Mailables\Content;
 use Illuminate\Mail\Mailables\Envelope;
 use Illuminate\Queue\SerializesModels;
 
-class NewOrder extends Mailable
+class NewOrderUser extends Mailable
 {
     use Queueable, SerializesModels;
 
@@ -28,7 +28,7 @@ class NewOrder extends Mailable
     {
         return new Envelope(
             // replyTo: $this->order->email,
-            subject: 'Nuovo Ordine Ricevuto!',
+            subject: 'Hai effetuato un nuovo Ordine!',
         );
     }
 
@@ -38,7 +38,7 @@ class NewOrder extends Mailable
     public function content(): Content
     {
         return new Content(
-            view: 'mail.new-order',
+            view: 'mail.new-order-user',
         );
     }
 
