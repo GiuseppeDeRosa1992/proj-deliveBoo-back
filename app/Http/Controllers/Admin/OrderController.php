@@ -16,14 +16,25 @@ class OrderController extends Controller
      * Display a listing of the resource.
      */
     public function index()
-    {
-        $user = Auth::user();
-        $orders = Order::whereIn('restaurant_id', $user->restaurants()->pluck('id'))->orderByDesc('id')->get();
-        $data = [
-            'orders' => $orders
-        ];
-        return view('admin.orders.index', $data);
+{
+    $user = Auth::user();
+    $restaurantIds = $user->restaurants()->pluck('id');
+
+    // Verifica che ci siano ID di ristoranti
+    if ($restaurantIds->isEmpty()) {
+        return "Nessun ristorante associato a questo utente.";
     }
+
+    // Recupera gli ordini e verifica se ci sono ordini associati
+    $orders = Order::whereIn('restaurant_id', $restaurantIds)->get();
+
+    // Verifica se $orders è null
+    if (is_null($orders)) {
+        return "Nessun ordine trovato.";
+    }
+
+    return view('admin.orders.index', ['orders' => $orders]);
+}
 
     /**
      * Show the form for creating a new resource.

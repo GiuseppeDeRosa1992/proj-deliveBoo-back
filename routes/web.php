@@ -40,6 +40,7 @@ Route::middleware(['auth'])
         Route::resource('/dishes', DishController::class);
         Route::resource('/orders', OrderController::class);
         Route::get('/', [DashboardController::class, 'index'])->name('dashboard');
+        
     });
 
 require __DIR__ . '/auth.php';

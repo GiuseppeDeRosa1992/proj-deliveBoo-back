@@ -24,7 +24,7 @@ class Restaurant extends Model
     }
     public function order()
     {
-        return $this->belongsTo(Order::class);
+        return $this->hasMany(Order::class);
     }
 
     public function dish()
