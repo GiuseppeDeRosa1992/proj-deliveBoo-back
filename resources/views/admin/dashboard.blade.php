@@ -5,7 +5,7 @@
 		<div class="row justify-content-center">
 			<div class="col-md-8">
 				<div class="card">
-					<div class="card-header">{{ __('Sei Loggato!') }}</div>
+					{{-- <div class="card-header">{{ __('Sei Loggato!') }}</div> --}}
 
 					<div class="card-body">
 						@if (session('status'))
@@ -19,7 +19,7 @@
 
 					@include('partials.cardRestaurant')
 
-					<p class="fs-5 mb-3">
+					<p class="fs-5 mb-3 text-center">
 						Totale piatti presenti: {{ $totalDishes }}
 					</p>
 					@include('partials.cardDish')

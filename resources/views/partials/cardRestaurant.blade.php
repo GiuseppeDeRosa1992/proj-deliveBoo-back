@@ -11,7 +11,7 @@
 						<img src="{{ asset('storage/' . $restaurant->image) }}" class="img-fluid rounded-start mb-2"
 							alt="{{ $restaurant->name }}">
 					@endif --}}
-					<h3 class="card-title"><b>Ristorante:</b> {{ $restaurant->name }}</h3>
+					<h3 class="card-title fs-2"><b>{{ $restaurant->name }}</b></h3>
 				</div>
 			</div>
 			<div>
