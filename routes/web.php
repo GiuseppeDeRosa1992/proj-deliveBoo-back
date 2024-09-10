@@ -3,12 +3,14 @@
 
 
 
+
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\Admin\UserController;
+// use App\Http\Controllers\Admin\UserController;
 use App\Http\Controllers\Admin\RestaurantController;
 use App\Http\Controllers\Admin\DishController;
 use App\Http\Controllers\Admin\OrderController;
 use App\Http\Controllers\Admin\DashboardController; //<---- Import del controller precedentemente creato!
+use App\Http\Controllers\Admin\ChartController;
 
 /*
 |--------------------------------------------------------------------------
@@ -35,12 +37,13 @@ Route::middleware(['auth'])
         //Siamo nel gruppo quindi:
         // - il percorso "/" diventa "admin/"
         // - il nome della rotta ->name("dashboard") diventa ->name("admin.dashboard")
-        Route::resource('/users', UserController::class);
+        // Route::resource('/users', UserController::class);
         Route::resource('/restaurants', RestaurantController::class);
         Route::resource('/dishes', DishController::class);
         Route::resource('/orders', OrderController::class);
         Route::get('/', [DashboardController::class, 'index'])->name('dashboard');
-        
+        Route::get('/chart', [ChartController::class, 'index']);
+
     });
 
 require __DIR__ . '/auth.php';
