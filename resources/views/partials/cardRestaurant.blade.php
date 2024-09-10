@@ -11,17 +11,23 @@
 						<img src="{{ asset('storage/' . $restaurant->image) }}" class="img-fluid rounded-start mb-2"
 							alt="{{ $restaurant->name }}">
 					@endif --}}
-					<h3 class="card-title"><b>Nome Ristorante:</b> {{ $restaurant->name }}</h3>
+					<h3 class="card-title"><b>Ristorante:</b> {{ $restaurant->name }}</h3>
 				</div>
 			</div>
 			<div>
 				<a href="{{ route('admin.restaurants.show', $restaurant->id) }}"
 					class="btn btn-outline-success my-2 py-1 px-3">Dettagli
-					Ristorante
-					<i class="fa-solid fa-info"></i></a>
+					
+					<i class="fa-solid fa-circle-info"></i></a>
 					<a href="{{ route('admin.orders.index') }}"
 						class="btn btn-outline-primary my-2 py-1 px-3">Ordini
-						<i class="fa-solid fa-info"></i></a>
+						<i class="fa-solid fa-truck-fast"></i></a>
+						<a href="{{ ('admin/chart') }}"
+						class="btn btn-outline-secondary my-2 py-1 px-3">Statistiche
+						<i class="fa-solid fa-chart-line"></i></a>
+					{{--<a href="http://127.0.0.1:8000/admin/chart" class="btn btn-primary">Vai alla Pagina dei Grafici</a>--}}	
+
+
 			</div>
 
 			{{-- <div>
