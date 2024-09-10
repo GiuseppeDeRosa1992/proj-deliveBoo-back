@@ -22,8 +22,9 @@
                                 <div class="col-md-6">
                                     <input id="email" type="email"
                                         class="form-control @error('email') is-invalid @enderror" name="email"
-                                        value="{{ old('email') }}" required autocomplete="email" pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
-                                        title="Per favore, inserisci un'email valida che termini con .it o .com">
+                                        value="{{ old('email') }}" required autocomplete="email"
+                                        pattern="^[^\s@]+@[^\s@]+\.[^\s@]{2,}$"
+                                        title="Per favore, inserisci un'email valida">
 
                                     @error('email')
                                         <span class="invalid-feedback" role="alert">
@@ -35,9 +36,13 @@
 
                             <!-- Password -->
                             <div class="mb-4 row">
-                                <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Password:') }}</label>
+                                <label for="passwordInput"
+                                    class="col-md-4 col-form-label text-md-right">{{ 'Password:' }}</label>
                                 <div class="col-md-6">
-                                    <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password" minlength="6" maxlength="255">
+                                    <input id="passwordInput" type="password"
+                                        class="form-control @error('password') is-invalid @enderror" name="password"
+                                        required autocomplete="new-password" minlength="6" maxlength="255"
+                                        oninput="validatePassword()">
                                     @error('password')
                                         <span class="invalid-feedback" role="alert">
                                             <strong>{{ $message }}</strong>
@@ -46,9 +51,13 @@
                                 </div>
                             </div>
                             <div class="mb-4 row">
-                                <label for="password-confirm" class="col-md-4 col-form-label text-md-right">{{ __('Conferma Password:') }}</label>
+                                <label for="password-confirm"
+                                    class="col-md-4 col-form-label text-md-right">{{ 'Conferma Password:' }}</label>
                                 <div class="col-md-6">
-                                    <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
+                                    <input id="password-confirm" type="password" class="form-control"
+                                        name="password_confirmation" required autocomplete="new-password"
+                                        oninput="validatePassword()">
+                                    <span id="feedbackPassword" style="color: red;"></span>
                                 </div>
                             </div>
 
@@ -119,16 +128,18 @@
                             </div>
                             <!-- types -->
                             <div id="type-form">
+                                <div class="invalid-feedback" role="alert" id="error-message" style="display: none;">
+                                    <strong> Seleziona almeno un'opzione</strong>
+                                </div>
                                 @foreach ($types as $type)
                                     <div>
-                                        <input type="checkbox" name="types[]" id="type-{{ $type->id }}" value="{{ $type->id }}">
+                                        <input type="checkbox" name="types[]" id="type-{{ $type->id }}"
+                                            value="{{ $type->id }}">
                                         <label for="icon" class="form-check-label">{{ $type->name }}</label>
                                     </div>
                                 @endforeach
 
-                                <div class="invalid-feedback" role="alert" id="error-message" style="display: none;">
-                                    <strong>Errore: seleziona almeno un'opzione</strong>
-                                </div>
+
                             </div>
 
                     </div>
@@ -149,27 +160,19 @@
     </div>
 
     <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const password = document.getElementById('password');
-            const passwordConfirm = document.getElementById('password-confirm');
-            const form = password.closest('form');
+        document.addEventListener('DOMContentLoaded', function() {
             const checkboxes = document.querySelectorAll('input[type="checkbox"]');
             const errorMessage = document.getElementById('error-message');
             const typeForm = document.getElementById('type-form');
 
-            form.addEventListener('submit', function (event) {
-                if (password.value !== passwordConfirm.value) {
-                    event.preventDefault();
-                    alert('Le password non coincidono. Per favore, riprova.');
-                }
-            });
+
 
             function validateCheckboxes() {
                 const anyChecked = Array.from(checkboxes).some(checkbox => checkbox.checked);
                 if (anyChecked) {
                     errorMessage.style.display = 'none';
                 } else {
-                errorMessage.style.display = 'block';
+                    errorMessage.style.display = 'block';
                 }
             };
             checkboxes.forEach(checkbox => {
@@ -178,9 +181,22 @@
             typeForm.addEventListener('submit', function(event) {
                 if (!validateCheckboxes()) {
                     event.preventDefault();
-            }
+                }
             });
             validateCheckboxes();
         });
+
+        function validatePassword() {
+            let passwordInput = document.getElementById('passwordInput').value;
+            console.log(passwordInput)
+            let passwordConfirm = document.getElementById('password-confirm').value;
+            let feedbackPassword = document.getElementById('feedbackPassword');
+
+            if (passwordInput === passwordConfirm) {
+                return feedbackPassword.textContent = "";
+            } else {
+                return feedbackPassword.textContent = "La password non corrisponde!";
+            }
+        };
     </script>
 @endsection

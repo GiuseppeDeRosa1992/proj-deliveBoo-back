@@ -19,11 +19,11 @@
                                     <input id="email" type="email"
                                         class="form-control @error('email') is-invalid @enderror" name="email"
                                         value="{{ old('email') }}" required autocomplete="email" autofocus
-                                        pattern=".+@.+.(com|it)$"
-                                        title="Per favore, inserisci un'email valida che termini con .it o .com">
+                                        pattern="^[^\s@]+@[^\s@]+\.[^\s@]{2,}$"
+                                        title="Per favore, inserisci un'email valida">
 
                                     @error('email')
-                                        <span class="invalid-feedback" role="alert">
+                                        <span id="emailHelp" class="invalid-feedback" role="alert">
                                             <strong>{{ $message }}</strong>
                                         </span>
                                     @enderror
@@ -46,37 +46,40 @@
                                     @enderror
                                 </div>
                             </div>
-
-                            <div class="mb-4 row">
-                                <div class="col-md-6 offset-md-4">
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" name="remember" id="remember"
-                                            {{ old('remember') ? 'checked' : '' }}>
-
-                                        <label class="form-check-label" for="remember">
-                                            {{ __('Ricordami') }}
-                                        </label>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="mb-4 row mb-0">
-                                <div class="col-md-8 offset-md-4">
-                                    <button type="submit" class="btn btn-primary">
-                                        {{ __('Accedi') }}
-                                    </button>
-
-                                    @if (Route::has('password.request'))
-                                        <a class="btn btn-link" href="{{ route('password.request') }}">
-                                            {{ __('Hai dimenticato la tua password?') }}
-                                        </a>
-                                    @endif
-                                </div>
-                            </div>
-                        </form>
                     </div>
+
+
+
+                    <div class="mb-4 row">
+                        <div class="col-md-6 offset-md-4">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" name="remember" id="remember"
+                                    {{ old('remember') ? 'checked' : '' }}>
+
+                                <label class="form-check-label" for="remember">
+                                    {{ __('Ricordami') }}
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mb-4 row mb-0">
+                        <div class="col-md-8 offset-md-4">
+                            <button type="submit" class="btn btn-primary">
+                                {{ __('Accedi') }}
+                            </button>
+
+                            @if (Route::has('password.request'))
+                                <a class="btn btn-link" href="{{ route('password.request') }}">
+                                    {{ __('Hai dimenticato la tua password?') }}
+                                </a>
+                            @endif
+                        </div>
+                    </div>
+                    </form>
                 </div>
             </div>
         </div>
+    </div>
     </div>
 @endsection
