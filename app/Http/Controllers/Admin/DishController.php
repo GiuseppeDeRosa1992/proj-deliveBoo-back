@@ -20,7 +20,7 @@ class DishController extends Controller
         $user = Auth::user();
 
         // Recupero i piatti associati ai ristoranti dell'utente loggato
-        $dishes = Dish::whereIn('restaurant_id', $user->restaurants()->pluck('id'))->orderByDesc('id')->get();
+        $dishes = Dish::whereIn('restaurant_id', $user->restaurants()->pluck('id'))->orderBy('name', 'asc')->get();
 
         // Calcolo il numero totale dei piatti
         $totalDishes = $dishes->count();
