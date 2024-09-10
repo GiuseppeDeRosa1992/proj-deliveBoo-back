@@ -57,8 +57,9 @@
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav me-auto">
                         <li class="nav-item d-flex">
-                            <a class="nav-link" href="{{ url('/') }}">{{ __('Home') }}</a>
-                            <a class="nav-link" href="{{ url('/admin/restaurants') }}">Ristoranti</a>
+
+                            <a class="nav-link"
+                                href="{{ route('admin.dashboard') }}">{{ __('Pannello di Controllo') }}</a>
                         </li>
                     </ul>
 
@@ -82,8 +83,6 @@
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item"
-                                        href="{{ route('admin.dashboard') }}">{{ __('Pannello di Controllo') }}</a>
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                         onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
