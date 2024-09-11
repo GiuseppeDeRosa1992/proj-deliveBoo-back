@@ -21,6 +21,9 @@ class OrderController extends Controller
             return "Nessun ristorante associato a questo utente.";
         }
 
+
+
+
         $orders = Order::with('dishes')  // Usa eager loading per includere i piatti
             ->whereIn('restaurant_id', $restaurantIds)
             ->orderByDesc('created_at')
@@ -30,7 +33,9 @@ class OrderController extends Controller
             return "Nessun ordine trovato.";
         }
 
-        return view('admin.orders.index', ['orders' => $orders]);
+        $totalOrders = $orders->count();
+
+        return view('admin.orders.index', ['orders' => $orders, 'totalOrders' => $totalOrders]);
     }
     /**
      * Mostra il modulo per creare una nuova risorsa.

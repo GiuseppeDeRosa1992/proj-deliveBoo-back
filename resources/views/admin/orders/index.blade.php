@@ -7,6 +7,9 @@
 		@if ($orders->isEmpty())
 			<p>Nessun ordine disponibile.</p>
 		@else
+        <p class="fs-5 mb-3 text-center">
+            Totale ordini ricevuti: {{ $totalOrders }}
+        </p>
 			<table class="table table-striped">
 				<thead>
 					<tr>
