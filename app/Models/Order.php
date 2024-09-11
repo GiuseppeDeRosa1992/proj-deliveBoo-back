@@ -27,4 +27,9 @@ class Order extends Model
     {
         return $this->belongsToMany(Dish::class);
     }
+    public function dishes()
+    {
+        return $this->belongsToMany(Dish::class, 'dish_order')
+            ->withPivot('quantity'); // Assicurati che il nome della tabella pivot e i campi siano corretti
+    }
 }

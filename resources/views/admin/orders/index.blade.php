@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="container">
-        <h1>Ordini </h1>
+        <h1>Ordini</h1>
 
         @if ($orders->isEmpty())
             <p>Nessun ordine disponibile.</p>
@@ -16,9 +16,10 @@
                         <th>Numero di Telefono</th>
                         <th>Indirizzo</th>
                         <th>Data Ordine</th>
+                        <th>Dettagli Piatti</th>
                         <th>Totale</th>
 
-                        <th>Azioni</th>
+
                     </tr>
                 </thead>
                 <tbody>
@@ -30,16 +31,28 @@
                             <td>{{ $order->number_phone }}</td>
                             <td>{{ $order->address_client }}</td>
                             <td>{{ $order->created_at->format('d/m/Y H:i') }}</td>
-                            <td>€{{ number_format($order->total, 2) }}</td>
 
                             <td>
-                                <!-- <a href="{{ route('admin.orders.show', $order->id) }}" class="btn btn-primary">Visualizza</a> -->
+                                @if ($order->dishes && $order->dishes->isNotEmpty())
+                                    <ul>
+                                        @foreach ($order->dishes as $dish)
+                                            <li>
+                                                {{ $dish->name }} - €{{ number_format($dish->price, 2) }} - Quantità:
+                                                {{ $dish->pivot->quantity }}
+                                            </li>
+                                        @endforeach
+                                    </ul>
+                                @else
+                                    <p>Nessun piatto associato a questo ordine.</p>
+                                @endif
+                            </td>
+                            <td>€{{ number_format($order->total, 2) }}</td>
+                            <td>
                                 <form action="{{ route('admin.orders.destroy', $order->id) }}" method="POST"
                                     style="display:inline-block;">
                                     @csrf
                                     @method('DELETE')
-                                    <button type="submit" class="btn btn-danger"
-                                        onclick="return confirm('Sei sicuro di voler eliminare questo ordine?')">Elimina</button>
+
                                 </form>
                             </td>
                         </tr>
