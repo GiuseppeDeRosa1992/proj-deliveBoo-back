@@ -21,7 +21,7 @@
                     <i class="fa-solid fa-circle-info"></i></a>
                 <a href="{{ route('admin.orders.index') }}" class="btn btn-outline-primary my-2 py-1 px-3">Ordini
                     <i class="fa-solid fa-truck-fast"></i></a>
-                <a href="{{ 'admin/chart' }}" class="btn btn-outline-secondary my-2 py-1 px-3">Statistiche
+                <a href="{{ url('admin/chart') }}" class="btn btn-outline-secondary my-2 py-1 px-3">Statistiche
                     <i class="fa-solid fa-chart-line"></i></a>
                 <a href="{{ route('admin.dishes.create') }}" class="btn btn-outline-warning my-2 py-1 px-3">
                     Crea un nuovo piatto

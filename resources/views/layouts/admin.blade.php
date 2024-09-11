@@ -39,6 +39,16 @@
 								</a>
 							</li>
 
+                            <li class="nav-item">
+								<a href="{{ route('admin.orders.index') }}" class="nav-link text-white">
+                                    <i class="fa-solid fa-truck-fast"></i> Ordini</a>
+							</li>
+
+                            <li class="nav-item">
+								<a href="{{ url('admin/chart') }}" class="nav-link text-white">
+                                    <i class="fa-solid fa-chart-line"></i> Statistiche</a>
+							</li>
+
 							<li class="nav-item">
 								<a class="nav-link text-white" href="{{ route('logout') }}"
 									onclick="event.preventDefault(); document.getElementById('logout-form').submit();">

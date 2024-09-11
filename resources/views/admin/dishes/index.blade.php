@@ -1,8 +1,8 @@
-@extends('layouts.app')
+@extends('layouts.admin')
 
 @section('content')
 	<div class="container">
-		
+
 		<div class="mb-4 text-start">
             <a href="{{ route('admin.dashboard') }}" class="btn btn-primary btn-dark p-2 mt-4">
                 Torna al Pannello di Controllo

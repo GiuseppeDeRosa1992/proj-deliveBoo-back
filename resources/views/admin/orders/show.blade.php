@@ -1,16 +1,12 @@
-@extends('layouts.app')
+@extends('layouts.admin')
 
 @section('content')
-	<div class="container">
-		<h1>Ordini</h1>
-
-		@if ($orders->isEmpty())
-			<p>Nessun ordine disponibile.</p>
-		@else
+	<div class="container my-3">
+		<h1 class="text-center">Ordine n {{$order->id}}</h1>
 			<table class="table table-striped">
 				<thead>
 					<tr>
-						<th>ID Ordine</th>
+						<th>Numero Identificativo Ordine</th>
 						<th>Nome Cliente</th>
 						<th>Email Cliente</th>
 						<th>Numero di Telefono</th>
@@ -23,7 +19,6 @@
 					</tr>
 				</thead>
 				<tbody>
-					@foreach ($orders as $order)
 						<tr>
 							<td>{{ $order->id }}</td>
 							<td>{{ $order->name_client }}</td>
@@ -48,19 +43,13 @@
 							</td>
 							<td>€{{ number_format($order->total, 2) }}</td>
 							<td>
-								<form action="{{ route('admin.orders.destroy', $order->id) }}" method="POST" style="display:inline-block;">
-									@csrf
-									@method('DELETE')
 
-								</form>
 							</td>
 						</tr>
-					@endforeach
 				</tbody>
 			</table>
-		@endif
 		<div class="text-center">
-			<a href="{{ route('admin.dashboard') }}" class="btn btn-outline-success my-2 py-1 px-3">Torna al ristorante
+			<a href="{{ route('admin.orders.index') }}" class="btn btn-outline-success my-2 py-1 px-3">Torna agli ordini
 				<i class="fa-solid fa-plate-wheat fa-lg fa-fw"></i></a>
 		</div>
 	</div>
