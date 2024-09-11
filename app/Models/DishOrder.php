@@ -20,11 +20,3 @@ class DishOrder extends Model
         'quantity'
     ];
 }
-
-Schema::create('dish_order', function (Blueprint $table) {
-    $table->id();
-    $table->foreignId('order_id')->constrained()->onDelete('cascade');
-    $table->foreignId('dish_id')->constrained()->onDelete('cascade');
-    $table->integer('quantity');
-    $table->timestamps();
-});

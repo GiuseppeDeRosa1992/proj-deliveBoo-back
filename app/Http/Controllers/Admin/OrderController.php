@@ -23,6 +23,7 @@ class OrderController extends Controller
 
         $orders = Order::with('dishes')  // Usa eager loading per includere i piatti
             ->whereIn('restaurant_id', $restaurantIds)
+            ->orderByDesc('created_at')
             ->get();
 
         if ($orders->isEmpty()) {
@@ -52,10 +53,16 @@ class OrderController extends Controller
             return redirect()->back()->with('error', 'Nessun ristorante associato a questo utente.');
         }
 
+        $orders = $user->restaurants()->first();
+
+        if (!$orders) {
+            return redirect()->back()->with('error', 'Nessun ordine associato a questo ristorante.');
+        };
+
         $data = $request->validate([
             'restaurant_id' => 'required',
             'name_client' => 'required|min:3',
-            'email_client' => 'required|email',
+            'email_client' => 'required|email|min:4',
             'number_phone' => 'required|numeric',
             'address_client' => 'required|min:4',
             'date' => 'required|date',
