@@ -5,11 +5,11 @@
 			<table class="table table-striped p-0">
 				<thead>
 					<tr>
-						<th scope="col" class="py-1">Nome Piatto</th>
-						<th scope="col" class="py-1">Immagine Piatto</th>
-						<th scope="col" class="py-1">Dettagli Piatto</th>
-						<th scope="col" class="py-1">Modifica Piatto</th>
-						<th scope="col" class="py-1">Elimina Piatto</th>
+						<th scope="col" class="py-1">Nome</th>
+						<th scope="col" class="py-1">Immagine</th>
+						<th scope="col" class="py-1">Dettagli</th>
+						<th scope="col" class="py-1">Modifica</th>
+						<th scope="col" class="py-1">Elimina</th>
 					</tr>
 				</thead>
 				<tbody>
@@ -18,7 +18,7 @@
 							<th scope="row" class="p-0 align-middle">{{ $dish->name }}</th>
 							<td class="p-0 align-middle py-1">
 								@if (Str::startsWith($dish->image, 'http'))
-									<img src="{{ $dish->image }}" class="img-fluid my-w" alt="immagine-ristorante">
+									<img src="{{ $dish->image }}" class="img-fluid my-w rounded" alt="immagine-ristorante">
 								@else
 									<img src="{{ asset('storage/' . $dish->image) }}" class="img-fluid my-w" />
 								@endif
@@ -52,13 +52,13 @@
 								<div class="modal-content">
 									<div class="modal-header">
 										<h5 class="modal-title" id="modalTitle-{{ $dish->id }}">
-											Elmina questo piatto
+											Elimina questo piatto
 										</h5>
 										<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 									</div>
 
 									<div class="modal-body">
-										Elimina questo piatto: <Strong>{{ $dish->name }}</Strong>
+										Elimina questo piatto:<br/><Strong>{{ $dish->name }}</Strong><br/>
 										⚡Attento, non puoi annullare questa operazione
 									</div>
 									<div class="modal-footer justify-content-center">
@@ -68,7 +68,7 @@
 
 											@method('DELETE')
 											<button type="submit" href="" class="btn btn-outline-danger my-2" data-bs-dismiss="modal">
-												elimina
+												Elimina
 												<i class="fa-solid fa-trash-can"></i>
 											</button>
 										</form>
