@@ -121,10 +121,10 @@
         let yearChart = new Chart(ctx3, {
             type: 'bar', // Puoi cambiare il tipo di grafico
             data: {
-                labels:{!! json_encode($labelsYear) !!} , // Etichette per l'asse X
+                labels:@json($labelsYear) , // Etichette per l'asse X
                 datasets: [{
                     label: 'Numero di Ordini Annuali',
-                    data: {!! json_encode($dataYear) !!}, // Dati per l'asse Y
+                    data: @json($dataYear), // Dati per l'asse Y
                     borderColor: '2 px solid black',
                     borderWidth: 1
                 }]
@@ -136,7 +136,7 @@
                     },
                     x: {
                         type:'category',
-                        labels: ['2024', '2025', '2026']
+                        // labels: ['2024', '2025', '2026']
                     }
                 }
             }
@@ -144,10 +144,10 @@
         let yearTotalChart = new Chart(ctx4, {
             type: 'bar', // Puoi cambiare il tipo di grafico
             data: {
-                labels:{!! json_encode($labelsTotalYear) !!}, // Etichette per l'asse X
+                labels:@json($labelsTotalYear), // Etichette per l'asse X
                 datasets: [{
                     label: 'Guadagni Annuali',
-                    data: {!! json_encode($dataTotalYear) !!}, // Dati per l'asse Y
+                    data: @json($dataTotalYear), // Dati per l'asse Y
                     borderColor: '2 px solid black',
                     borderWidth: 1
                 }]
@@ -159,7 +159,7 @@
                     },
                     x: {
                         type:'category',
-                        labels: ['2024', '2025', '2026']
+                        // labels: ['2024', '2025', '2026']
                     }
                 }
             }

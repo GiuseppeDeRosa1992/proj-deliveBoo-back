@@ -19,8 +19,8 @@ return new class extends Migration
             $table->string('email_client');
             $table->string('number_phone');
             $table->string('address_client', 255);
-            $table->decimal('total', 5, 2);
-            $table->timestamps();
+            $table->decimal('total', 5, 2)->nullable();
+            $table->timestamps(); // Aggiungi la colonna come nullable
         });
     }
 

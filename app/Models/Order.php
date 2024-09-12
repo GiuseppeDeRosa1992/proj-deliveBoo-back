@@ -5,6 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
+
 class Order extends Model
 {
     use HasFactory;
@@ -29,6 +30,12 @@ class Order extends Model
     }
     public function dishes()
     {
-        return $this->belongsToMany(Dish::class, 'dish_order')->withPivot('quantity');
+        return $this->belongsToMany(Dish::class, 'dish_order')->withPivot('quantity', 'price_dish');
+    }
+    public function calculateTotal()
+    {
+        return $this->dishes->sum(function($dish) {
+            return $dish->pivot->price_dish * $dish->pivot->quantity;
+        });
     }
 }

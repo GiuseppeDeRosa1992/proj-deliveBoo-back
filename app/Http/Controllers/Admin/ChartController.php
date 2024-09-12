@@ -22,7 +22,7 @@ class ChartController extends Controller
         $labelsMonth = $ordersMonth->pluck('month');
         $dataMonth = $ordersMonth->pluck('count');
         // Funzione che gestisce la visione del numero degli ordini per anno
-        $ordersYear = Order::selectRaw('DATE_FORMAT(created_at, "%Y-%m") as year, COUNT(*) as count')
+        $ordersYear = Order::selectRaw('YEAR(created_at) as year, COUNT(*) as count')
                         ->whereIn('restaurant_id', $restaurantIds)
                         ->groupBy('year')
                         ->get();
@@ -37,7 +37,7 @@ class ChartController extends Controller
         $labelsTotalMonth = $ordersTotalMonth->pluck('month');
         $dataTotalMonth = $ordersTotalMonth->pluck('total_amount');
         // Funzione che gestisce il totale dei guadagni per anno del ristorante
-        $ordersTotalYear = Order::selectRaw('DATE_FORMAT(created_at, "%Y-%m") as year, COUNT(*) as count, SUM(total) as total_amount')
+        $ordersTotalYear = Order::selectRaw('YEAR(created_at) as year, COUNT(*) as count, SUM(total) as total_amount')
                         ->whereIn('restaurant_id', $restaurantIds)
                         ->groupBy('year')
                         ->get();
