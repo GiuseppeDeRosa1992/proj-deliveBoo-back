@@ -29,9 +29,9 @@ class OrderController extends Controller
             ->orderByDesc('created_at')
             ->get();
 
-        if ($orders->isEmpty()) {
-            return "Nessun ordine trovato.";
-        }
+        // if ($orders->isEmpty()) {
+        //     return "Nessun ordine trovato.";
+        // }
 
         $totalOrders = $orders->count();
 
