@@ -12,18 +12,18 @@
             </div>
             <div class="col-8 p-4">
 
-                <h2>Nome Piatto: {{ $dishes->name }}</h2>
+                <h2>{{ $dishes->name }}</h2>
 
                 <p>
-                    <b>Descrizione Piatto:</b> {{ $dishes->description }}
+                    <b>Descrizione:</b> {{ $dishes->description }}
                 </p>
 
                 <p>
-                    <b>Prezzo Piatto: €</b> {{ $dishes->price }}
+                    <b>Prezzo: €</b> {{ $dishes->price }}
                 </p>
 
                 <a href="{{ route('admin.dashboard') }}" class="btn btn-dark p-2">
-                    Torna Alla lista Piatti
+                    Torna alla lista piatti
                 </a>
             </div>
         </div>
