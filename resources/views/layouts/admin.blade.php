@@ -33,13 +33,13 @@
 					<div class="position-sticky pt-3">
 						<ul class="nav flex-column">
 
-							<li class="nav-item">
+							<li class="nav-item mb-1">
 								<a class="nav-link text-white rounded {{ request()->is('admin') ? 'active' : '' }} px-1" href="/admin">
 									<i class="fa-solid fa-home-alt fa-lg fa-fw"></i> Home
 								</a>
 							</li>
 
-							<li class="nav-item">
+							<li class="nav-item mb-1">
 								<a
 									class="nav-link text-white rounded {{ Route::currentRouteName() == 'admin.dishes.index' ? 'active' : '' }} px-1"
 									href="{{ route('admin.dishes.index') }}">
@@ -47,21 +47,21 @@
 								</a>
 							</li>
 
-							<li class="nav-item">
+							<li class="nav-item mb-1">
 								<a
 									class="nav-link text-white rounded {{ Route::currentRouteName() == 'admin.orders.index' ? 'active' : '' }} px-1"
 									href="{{ route('admin.orders.index') }}">
 									<i class="fa-solid fa-truck-fast"></i> Ordini</a>
 							</li>
 
-							<li class="nav-item">
+							<li class="nav-item mb-1">
 								<a href="{{ url('admin/chart') }}"
 									class="nav-link text-white rounded {{ request()->is('admin/chart') ? 'active' : '' }} px-1">
 									<i class="fa-solid fa-chart-line"></i> Statistiche</a>
 							</li>
 
-							<li class="nav-item">
-								<a class="nav-link text-white px-1" href="{{ route('logout') }}"
+							<li class="nav-item mb-1">
+								<a class="nav-link text-white px-1 rounded" href="{{ route('logout') }}"
 									onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
 									<i class="fa-solid fa-sign-out-alt fa-lg fa-fw"></i> {{ __('Esci') }}
 								</a>

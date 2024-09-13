@@ -37,7 +37,11 @@
     width: 3rem;
 }
 
+.nav-link:hover {
+    background-color: #414141;
+}
+
 .nav-link.active {
-    background-color: #5b5b5b; /* Colore di sfondo per il link attivo */
+    background-color: #5c5c5c; /* Colore di sfondo per il link attivo */
     color: white; /* Colore del testo per il link attivo */
 }
