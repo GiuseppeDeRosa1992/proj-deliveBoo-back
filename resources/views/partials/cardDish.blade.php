@@ -5,42 +5,55 @@
 			<table class="table table-striped p-0">
 				<thead>
 					<tr>
-						<th scope="col" class="py-1">Nome</th>
-						<th scope="col" class="py-1">Immagine</th>
-						<th scope="col" class="py-1">Dettagli</th>
-						<th scope="col" class="py-1">Modifica</th>
-						<th scope="col" class="py-1">Elimina</th>
+						<th scope="col" class="py-1 px-0">Immagine</th>
+						<th scope="col" class="py-1 text-start px-2">Nome</th>
+						<th scope="col" class="py-1 px-1">Visibilità</th>
+						<th scope="col" class="py-1 px-1">Prezzo</th>
+						<th scope="col" class="py-1 px-1">Azioni</th>
 					</tr>
 				</thead>
 				<tbody>
 					@foreach ($dishes as $dish)
 						<tr>
-							<th scope="row" class="p-0 align-middle">{{ $dish->name }}</th>
 							<td class="p-0 align-middle py-1">
 								@if (Str::startsWith($dish->image, 'http'))
 									<img src="{{ $dish->image }}" class="img-fluid my-w rounded" alt="immagine-ristorante">
 								@else
-									<img src="{{ asset('storage/' . $dish->image) }}" class="img-fluid my-w" />
+									<img src="{{ asset('storage/' . $dish->image) }}" class="img-fluid my-w rounded" />
 								@endif
 							</td>
+
+							<th scope="row" class="p-0 align-middle text-start px-2">{{ $dish->name }}</th>
+
+							<td class="p-0 align-middle py-1 px-1">
+								@if ($dish->visible == 1)
+									<span>Si</span>
+								@else
+									<span>No</span>
+								@endif
+							</td>
+
+							<td class="p-0 align-middle py-1 px-1">
+								{{ $dish->price }}
+							</td>
+
 							<td class="p-0 align-middle py-1">
-								<div>
-									<a href="{{ route('admin.dishes.show', $dish->id) }}" class="btn btn-outline-primary py-2 px-3">
+
+								<div class="d-inline-block">
+									<a href="{{ route('admin.dishes.show', $dish->id) }}" class="btn btn-outline-primary py-1 px-3">
 										<i class="fa-solid fa-info"></i></a>
 								</div>
-							</td>
-							<td class="p-0 align-middle py-1">
-								<div>
-									<a href="{{ route('admin.dishes.edit', $dish->id) }}" class="btn btn-outline-primary py-2 px-2">
+
+								<div class="d-inline-block px-1 py-2">
+									<a href="{{ route('admin.dishes.edit', $dish->id) }}" class="btn btn-outline-primary py-1 px-2">
 										<i class="fa-solid fa-pencil"></i></a>
 								</div>
-							</td>
-							<td class="p-0 align-middle py-1">
-								<div>
-									<button type="button" class="btn btn-outline-danger" data-bs-toggle="modal"
+
+								<div class="d-inline-block">
+									<a type="button" class="btn btn-outline-danger px-2 py-1" data-bs-toggle="modal"
 										data-bs-target="#modal-{{ $dish->id }}">
 										<i class="fa-solid fa-trash-can"></i>
-									</button>
+									</a>
 								</div>
 							</td>
 						</tr>
@@ -51,14 +64,14 @@
 							<div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-sm" role="document">
 								<div class="modal-content">
 									<div class="modal-header">
-										<h5 class="modal-title" id="modalTitle-{{ $dish->id }}">
+										<h5 class="modal-title p-1" id="modalTitle-{{ $dish->id }}">
 											Elimina questo piatto
 										</h5>
 										<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 									</div>
 
-									<div class="modal-body">
-										Elimina questo piatto:<br/><Strong>{{ $dish->name }}</Strong><br/>
+									<div class="modal-body p-1">
+										Elimina il piatto:<br /><Strong>{{ $dish->name }}</Strong><br />
 										⚡Attento, non puoi annullare questa operazione
 									</div>
 									<div class="modal-footer justify-content-center">
