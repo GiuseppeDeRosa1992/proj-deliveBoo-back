@@ -9,7 +9,7 @@
 	<meta name="csrf-token" content="{{ csrf_token() }}">
 
 	<title>Deliveboo-back</title>
-	<link rel="shortcut icon" href="logo-deliveboo-no-scritta.png" type="image/x-icon">
+	<link rel="shortcut icon" href="public/logo-deliveboo-no-scritta.png" type="image/x-icon">
 
 	<!-- Fontawesome 6 cdn -->
 	<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css'
