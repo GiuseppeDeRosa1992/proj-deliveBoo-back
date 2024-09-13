@@ -2,7 +2,7 @@
 
 @section('content')
 	<div class="container my-3">
-		<h1 class="text-center">Ordine n {{$order->id}}</h1>
+		<h1 class="text-center">Dettaglio Ordine</h1>
 
             <div class="card col-12 col-6-sm p-3">
                 <p>Nome: <strong>{{ $order->name_client }}</strong></p>
@@ -14,9 +14,9 @@
                     <ul>
                         @foreach ($order->dishes as $dish)
                             <li>
-                                <strong>{{ $dish->pivot->quantity }}x</strong> - <strong>{{ $dish->name }}</strong> - 
+                                <strong>{{ $dish->pivot->quantity }}x</strong> - <strong>{{ $dish->name }}</strong> -
                                 <strong>€{{ number_format($dish->price, 2) }}</strong>
-                                
+
                             </li>
                         @endforeach
                     </ul>

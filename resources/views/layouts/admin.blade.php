@@ -40,6 +40,12 @@
 							</li>
 
                             <li class="nav-item">
+								<a class="nav-link text-white" href="{{ route('admin.dishes.index') }}">
+									<i class="fa-solid fa-plate-wheat fa-lg fa-fw"></i> Piatti
+								</a>
+							</li>
+
+                            <li class="nav-item">
 								<a href="{{ route('admin.orders.index') }}" class="nav-link text-white">
                                     <i class="fa-solid fa-truck-fast"></i> Ordini</a>
 							</li>
