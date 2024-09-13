@@ -16,7 +16,7 @@
 						<th>Nome Cliente</th>
 						<th>Data Ordine</th>
 						<th>Totale</th>
-						<th>Dettagli Ordine</th>
+						<th class="d-flex justify-content-end">Dettagli Ordine</th>
 					</tr>
 				</thead>
 				<tbody>
@@ -25,8 +25,8 @@
 							<td>{{ $order->name_client }}</td>
 							<td>{{ $order->created_at->format('d/m/Y H:i') }}</td>
 
-							<td>€{{ number_format($order->total, 2) }}</td>
-							<td>
+							<td>€{{ number_format($order->total, 2) }}</td>						
+							<td class="d-flex justify-content-end">
 								<a href="{{ route('admin.orders.show', $order->id) }}">Dettagli ordine
 									<i class="fa-solid fa-circle-info"></i>
 								</a>
