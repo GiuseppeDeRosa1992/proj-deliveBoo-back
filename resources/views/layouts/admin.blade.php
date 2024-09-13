@@ -34,24 +34,27 @@
 						<ul class="nav flex-column">
 
 							<li class="nav-item">
-								<a class="nav-link text-white" href="/admin">
+								<a class="nav-link text-white rounded {{ request()->is('admin') ? 'active' : '' }}" 
+									href="/admin">
 									<i class="fa-solid fa-home-alt fa-lg fa-fw"></i> Home
 								</a>
 							</li>
 
                             <li class="nav-item">
-								<a class="nav-link text-white" href="{{ route('admin.dishes.index') }}">
+								<a class="nav-link text-white rounded {{ Route::currentRouteName() == 'admin.dishes.index' ? 'active' : '' }}" 
+								href="{{ route('admin.dishes.index') }}">
 									<i class="fa-solid fa-plate-wheat fa-lg fa-fw"></i> Piatti
 								</a>
 							</li>
 
                             <li class="nav-item">
-								<a href="{{ route('admin.orders.index') }}" class="nav-link text-white">
+								<a class="nav-link text-white rounded {{ Route::currentRouteName() == 'admin.orders.index' ? 'active' : '' }}" 
+								href="{{ route('admin.orders.index') }}">
                                     <i class="fa-solid fa-truck-fast"></i> Ordini</a>
 							</li>
 
                             <li class="nav-item">
-								<a href="{{ url('admin/chart') }}" class="nav-link text-white">
+								<a href="{{ url('admin/chart') }}" class="nav-link text-white rounded {{ request()->is('admin/chart') ? 'active' : '' }}">
                                     <i class="fa-solid fa-chart-line"></i> Statistiche</a>
 							</li>
 

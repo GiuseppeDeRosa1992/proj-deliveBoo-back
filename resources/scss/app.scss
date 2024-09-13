@@ -36,3 +36,8 @@
 .my-w {
     width: 3rem;
 }
+
+.nav-link.active {
+    background-color: #5b5b5b; /* Colore di sfondo per il link attivo */
+    color: white; /* Colore del testo per il link attivo */
+}
