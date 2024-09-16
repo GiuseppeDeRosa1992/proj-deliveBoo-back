@@ -75,7 +75,7 @@
 					</div>
 				</nav>
 
-				<main class="col-md-10 p-0">
+				<main class="col-md-10 p-0 min-vh-100">
 					@yield('content')
 				</main>
 			</div>
